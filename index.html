@@ -15,39 +15,25 @@
 </head>
 <body>
 
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="#" class="nav-logo">R D G</a>
-        <div class="nav-controls">
-          <div class="social-links">
-            <a href="https://github.com/rafaeldiasgarcia" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
     <header id="hero">
         <div class="container hero-container">
             <img src="https://rafaeldiasgarcia.github.io/curriculo/src/assets/img/profile.png" alt="Foto de Rafael Dias Garcia" class="profile-pic">
             <h1 class="hero-title">Rafael Dias Garcia</h1>
-            <h2 class="hero-subtitle">Engenharia de Software</h2>
+            <h2 class="hero-subtitle"><span id="typing-effect"></span></h2>
             <p class="hero-description">
-                Bem-vindo à minha página principal. Navegue pelos links abaixo para conhecer meu trabalho e minhas qualificações.
+                Um portal para meu currículo, projetos e outras informações profissionais.
             </p>
-             <div class="skills-tags">
-                <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
-                <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
-                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
-            </div>
             <div class="cta-buttons">
                 <a href="https://rafaeldiasgarcia.github.io/curriculo/" class="btn btn-primary">
                     <i class="fas fa-file-alt"></i> Ver Currículo Completo
                 </a>
                 <a href="https://github.com/rafaeldiasgarcia" class="btn btn-outline" target="_blank">
-                    <i class="fab fa-github"></i> Meu GitHub
+                    <i class="fab fa-github"></i> Explorar Projetos
                 </a>
+            </div>
+            <div class="social-links" style="margin-top: 30px; justify-content: center;">
+                <a href="https://github.com/rafaeldiasgarcia" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </header>
@@ -78,12 +64,38 @@
 
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('light-mode');
-            let theme = 'dark-mode';
-            if (body.classList.contains('light-mode')) {
-                theme = 'light-mode';
-            }
+            let theme = body.classList.contains('light-mode') ? 'light-mode' : 'dark-mode';
             localStorage.setItem('theme', theme);
         });
+
+        const typingEffect = document.getElementById('typing-effect');
+        const words = ["Engenheiro de Software", "Desenvolvedor Backend", "Entusiasta de Java & Node.js"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingEffect.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingEffect.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            const typingSpeed = isDeleting ? 100 : 150;
+            setTimeout(type, typingSpeed);
+        }
+        
+        document.addEventListener('DOMContentLoaded', type);
     </script>
 
 </body>
