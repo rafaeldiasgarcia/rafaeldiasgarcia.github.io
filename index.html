@@ -12,12 +12,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <style>
+        /* Ajustes para o layout e novos elementos */
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o corpo ocupe no mínimo a altura da tela */
+        }
+        header#hero {
+            flex-grow: 1; /* Faz a seção principal crescer e empurrar o rodapé para baixo */
+        }
+        .monogram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5em; /* Tamanho das iniciais */
+            font-weight: 700; /* Deixa a fonte mais forte */
+            color: var(--primary-color); /* Usa sua cor primária */
+            background-color: var(--card-bg-color); /* Fundo sutil */
+        }
+        #theme-toggle-btn {
+            top: 25px; /* Posição a partir do topo */
+            right: 30px; /* Posição a partir da direita */
+            bottom: auto; /* Remove a antiga posição 'bottom' */
+            left: auto; /* Remove a antiga posição 'left' */
+        }
+    </style>
 </head>
 <body>
 
     <header id="hero">
         <div class="container hero-container">
-            <img src="https://rafaeldiasgarcia.github.io/curriculo/src/assets/img/profile.png" alt="Foto de Rafael Dias Garcia" class="profile-pic">
+            <!-- Monograma RDG no lugar da foto -->
+            <div class="profile-pic monogram">RDG</div>
+            
             <h1 class="hero-title">Rafael Dias Garcia</h1>
             <h2 class="hero-subtitle"><span id="typing-effect"></span></h2>
             <p class="hero-description">
