@@ -6,7 +6,6 @@
     <title>Rafael Dias Garcia - Portfólio</title>
     <meta name="description" content="Página principal de Rafael Dias Garcia, estudante de Engenharia de Software.">
 
-    <!-- Links para o CSS e fontes do seu projeto de currículo -->
     <link rel="stylesheet" href="https://rafaeldiasgarcia.github.io/curriculo/src/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,15 +15,32 @@
 </head>
 <body>
 
-    <!-- A seção "hero" é perfeita para uma apresentação inicial -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="nav-logo">R D G</a>
+        <div class="nav-controls">
+          <div class="social-links">
+            <a href="https://github.com/rafaeldiasgarcia" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <header id="hero">
         <div class="container hero-container">
-            <!-- Usando a mesma imagem de perfil do seu currículo -->
+            <img src="https://rafaeldiasgarcia.github.io/curriculo/src/assets/img/profile.png" alt="Foto de Rafael Dias Garcia" class="profile-pic">
             <h1 class="hero-title">Rafael Dias Garcia</h1>
             <h2 class="hero-subtitle">Engenharia de Software</h2>
             <p class="hero-description">
                 Bem-vindo à minha página principal. Navegue pelos links abaixo para conhecer meu trabalho e minhas qualificações.
             </p>
+             <div class="skills-tags">
+                <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+            </div>
             <div class="cta-buttons">
                 <a href="https://rafaeldiasgarcia.github.io/curriculo/" class="btn btn-primary">
                     <i class="fas fa-file-alt"></i> Ver Currículo Completo
@@ -36,16 +52,38 @@
         </div>
     </header>
 
-    <!-- Rodapé consistente com o restante do design -->
+    <button id="theme-toggle-btn" class="theme-toggle" aria-label="Alternar tema">
+      <i class="fas fa-sun theme-icon-sun"></i>
+      <i class="fas fa-moon theme-icon-moon"></i>
+    </button>
+
     <footer class="footer">
       <div class="container">
         <p>© <span id="currentYear"></span> Rafael Dias Garcia. Feito com <i class="fas fa-heart"></i> e <i class="fas fa-code"></i>.</p>
       </div>
     </footer>
 
-    <!-- Script simples para atualizar o ano no rodapé -->
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            body.classList.add('light-mode');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            let theme = 'dark-mode';
+            if (body.classList.contains('light-mode')) {
+                theme = 'light-mode';
+            }
+            localStorage.setItem('theme', theme);
+        });
     </script>
 
 </body>
