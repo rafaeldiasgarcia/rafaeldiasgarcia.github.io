@@ -3,129 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Dias Garcia - Portfólio</title>
-    <meta name="description" content="Página principal de Rafael Dias Garcia, estudante de Engenharia de Software.">
-
-    <link rel="stylesheet" href="https://rafaeldiasgarcia.github.io/curriculo/src/assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Rafael Dias Garcia - Curriculo</title>
+    <link rel="icon" type="image/svg+xml" href="src/img/favicon.svg">
     
-    <style>
-        /* Ajustes para o layout e novos elementos */
-        html, body {
-            height: 100%;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Garante que o corpo ocupe no mínimo a altura da tela */
-        }
-        header#hero {
-            flex-grow: 1; /* Faz a seção principal crescer e empurrar o rodapé para baixo */
-        }
-        .monogram {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5em; /* Tamanho das iniciais */
-            font-weight: 700; /* Deixa a fonte mais forte */
-            color: var(--primary-color); /* Usa sua cor primária */
-            background-color: var(--card-bg-color); /* Fundo sutil */
-        }
-        #theme-toggle-btn {
-            top: 25px; /* Posição a partir do topo */
-            right: 30px; /* Posição a partir da direita */
-            bottom: auto; /* Remove a antiga posição 'bottom' */
-            left: auto; /* Remove a antiga posição 'left' */
-        }
-    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    
+    
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/layout.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/language-menu.css">
+    
+    <script src="src/js/side-bar.js"></script>
+    <script src="src/js/language-menu.js"></script>
 </head>
 <body>
-
-    <header id="hero">
-        <div class="container hero-container">
-            
-            <h1 class="hero-title">Rafael Dias Garcia</h1>
-            <h2 class="hero-subtitle"><span id="typing-effect"></span></h2>
-            <p class="hero-description">
-                Um portal para meu currículo, projetos e outras informações profissionais.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://rafaeldiasgarcia.github.io/curriculo/" class="btn btn-primary">
-                    <i class="fas fa-file-alt"></i> Ver Currículo Completo
-                </a>
-                <a href="https://github.com/rafaeldiasgarcia" class="btn btn-outline" target="_blank">
-                    <i class="fab fa-github"></i> Explorar Projetos
-                </a>
-            </div>
-            <div class="social-links" style="margin-top: 30px; justify-content: center;">
-                <a href="https://github.com/rafaeldiasgarcia" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+<div class="rela-block page">
+    <div class="rela-block top-bar">
+        <div class="caps name"><div class="abs-center">Rafael Dias Garcia</div></div>
+    </div>
+    <div class="side-bar">
+        <div class="mugshot">
+            <div class="logo">
+                <div class="photo-container">
+                    <img src="src/img/foto.jpg" alt="Rafael Dias Garcia" class="profile-photo">
+                    <svg viewbox="0 0 80 80" class="rela-block logo-svg">
+                        <defs>
+                            <mask id="hexagon-mask">
+                                <rect width="100%" height="100%" fill="white"/>
+                                <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" fill="black"/>
+                            </mask>
+                        </defs>
+                        <rect width="100%" height="100%" fill="#F7E0C1" mask="url(#hexagon-mask)"/>
+                        <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" stroke-width="1" fill="none" stroke="black"/>
+                    </svg>
+                </div>
             </div>
         </div>
-    </header>
+        <p>Rua Cândido Corrêa de Araújo,</p>
+        <p>res. Matioli, 27</p>
+        <p>Ourinhos, São Paulo, 19901-750</p>
+        <a href="https://wa.me/5514997021605" class="rela-block social whatsapp" target="_blank">+55 14 99702-1605</a>
+        <a href="mailto:rafdgar@gmail.com" class="rela-block social email" target="_blank">rafdgar@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" class="rela-block social linked-in" target="_blank">/rafaeldiasgarcia</a>
+        <a href="https://github.com/rafaeldiasgarcia" class="rela-block social github" target="_blank">/rafaeldiasgarcia</a>
+        <p class="rela-block caps side-header" data-translate="technologies">Tecnologias</p>
+        <div class="rela-block technologies-container">
+            <div class="rela-block technologies-column">
+                <p class="rela-block list-thing">Java</p>
+                <p class="rela-block list-thing">PHP</p>
+                <p class="rela-block list-thing">JavaScript</p>
+                <p class="rela-block list-thing">HTML/CSS</p>
+            </div>
+            <div class="rela-block technologies-column">
+                <p class="rela-block list-thing">SQL</p>
+                <p class="rela-block list-thing">Python</p>
+                <p class="rela-block list-thing">Git</p>
+                <p class="rela-block list-thing">Docker</p>
+            </div>
+        </div>
 
-    <button id="theme-toggle-btn" class="theme-toggle" aria-label="Alternar tema">
-      <i class="fas fa-sun theme-icon-sun"></i>
-      <i class="fas fa-moon theme-icon-moon"></i>
-    </button>
+        <p class="rela-block caps side-header" data-translate="certifications">Certificações</p>
+        <p class="rela-block list-thing">CS50</p>
+        <p class="rela-block list-thing">JavaScript Essencials</p>
+        <p class="rela-block list-thing">JavaScript for Beckend</p>
+        <p class="rela-block list-thing">U-BEST | Advanced English</p>
+        <p class="rela-block list-thing">Learn Java with Object Oriented Programming</p>
 
-    <footer class="footer">
-      <div class="container">
-        <p>© <span id="currentYear"></span> Rafael Dias Garcia. Feito com <i class="fas fa-heart"></i> e <i class="fas fa-code"></i>.</p>
-      </div>
-    </footer>
 
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </div>
+    <div class="rela-block content-container">
+        <h2 class="rela-block caps title" data-translate="title">Estudante de Engenharia de Software</h2>
+        <div class="rela-block separator"></div>
+        <div class="rela-block caps greyed" data-translate="profile">Perfil</div>
+        <p class="long-margin justified" data-translate="profile-text">Atualmente, estou no segundo termo da graduação em Engenharia de Software, desenvolvendo minha base em lógica de programação, estrutura de dados e desenvolvimento de sistemas. Sou curioso, gosto de aprender novas tecnologias e estou sempre em busca de desafios que me permitam crescer como desenvolvedor.<br><br>Tenho interesse especial em desenvolvimento backend, arquitetura de software e otimização de código, mas também exploro outras áreas da tecnologia para me tornar um profissional completo. Além disso, tenho um forte apreço por lógica e criatividade, habilidades que também desenvolvi ao estudar violão clássico no Conservatório de Tatuí.</p>
+        <div class="rela-block caps greyed" data-translate="experience">Experiência</div>
 
-        const themeToggleBtn = document.getElementById('theme-toggle-btn');
-        const body = document.body;
-        const currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme) {
-            body.classList.add(currentTheme);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            body.classList.add('light-mode');
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
-            let theme = body.classList.contains('light-mode') ? 'light-mode' : 'dark-mode';
-            localStorage.setItem('theme', theme);
-        });
-
-        const typingEffect = document.getElementById('typing-effect');
-        const words = ["Engenheiro de Software", "Desenvolvedor Backend", "Entusiasta de Java & Node.js"];
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function type() {
-            const currentWord = words[wordIndex];
-            if (isDeleting) {
-                typingEffect.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingEffect.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentWord.length) {
-                setTimeout(() => isDeleting = true, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-            }
-
-            const typingSpeed = isDeleting ? 100 : 150;
-            setTimeout(type, typingSpeed);
-        }
-        
-        document.addEventListener('DOMContentLoaded', type);
-    </script>
+        <h3 data-translate="sge-title">SGE - Sistema de Gerenciamento de Eventos</h3>
+        <p class="light" data-translate="sge-company">UNIFIO - Centro Universitário das Faculdades Integradas de Ourinhos - Em Desenvolvimento</p>
+        <p class="justified" data-translate="sge-description">Sistema web completo para gerenciamento de agendamentos de quadras poliesportivas, administração de atléticas universitárias e organização de eventos. Desenvolvido com arquitetura MVC moderna, Repository Pattern, autenticação multi-nível e calendário interativo.</p>
+        <p class="justified" data-translate="sge-features"><strong>Funcionalidades Principais:</strong> Sistema de agendamento com validação de conflitos, gestão de atléticas, cursos e modalidades esportivas, autenticação com níveis de acesso (User/Admin/SuperAdmin), relatórios detalhados e calendário interativo.</p>
+        <p class="justified" data-translate="sge-tech"><strong>Stack Técnico:</strong> PHP 8.2, MySQL, JavaScript, Docker Compose, Composer com autoloading PSR-4, AJAX para interações assíncronas.</p>
+        <p class="justified" data-translate="sge-impact"><strong>Impacto:</strong> Otimizando gestão de eventos para toda a comunidade acadêmica.</p>
+        <p class="light"><a href="https://github.com/rafaeldiasgarcia/sge" target="_blank" style="color: #666; text-decoration: none;" data-translate="github-repo">🔗 Repositório GitHub</a></p>
+        <div class="rela-block caps greyed" data-translate="education">Formação</div>
+        <h3 data-translate="education-title">Unifio, Ourinhos — Bacharelado em Engenharia de Software</h3>
+        <p class="light">JAN 2025 - DEC 2028</p>
+        <p class="justified" data-translate="education-description">Curso preparatório para atuação profissional em todas as etapas do desenvolvimento de software, desde projeto e levantamento de requisitos até construção, testes, deployment e manutenção. Utiliza metodologias ágeis, frameworks modernos e ferramentas do mercado atual. Inclui Projetos Integradores com foco em extensão, pesquisa acadêmica e empreendedorismo, proporcionando vivência prática e interação multidisciplinar.</p>
+    </div>
+</div>
 
 </body>
 </html>
