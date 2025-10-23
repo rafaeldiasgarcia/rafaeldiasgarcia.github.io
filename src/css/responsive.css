@@ -1,5 +1,40 @@
 /* RESPONSIVE DESIGN */
 
+/* BOTÃO DE DOWNLOAD RESPONSIVO */
+@media screen and (max-width: 768px) {
+    .download-button {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .download-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .download-link svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .download-button {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .download-link {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .download-link svg {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 
 /* TABLET */
 @media screen and (min-width: 769px) and (max-width: 1024px) {

@@ -148,3 +148,50 @@
     flex: 1;
     min-width: 0;
 }
+
+/* BOTÃO DE DOWNLOAD DISCRETO */
+.download-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.download-button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.download-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-fast);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.download-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.download-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform var(--transition-fast);
+}
+
+.download-link:hover svg {
+    transform: translateY(-1px);
+}
