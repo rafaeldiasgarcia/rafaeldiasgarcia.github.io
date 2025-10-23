@@ -19,7 +19,10 @@ class LanguageMenu {
                 'github-repo': '🔗 Repositório GitHub',
                 'education': 'Formação',
                 'education-title': 'Unifio, Ourinhos — Bacharelado em Engenharia de Software',
-                'education-description': 'Curso preparatório para atuação profissional em todas as etapas do desenvolvimento de software, desde projeto e levantamento de requisitos até construção, testes, deployment e manutenção. Utiliza metodologias ágeis, frameworks modernos e ferramentas do mercado atual. Inclui Projetos Integradores com foco em extensão, pesquisa acadêmica e empreendedorismo, proporcionando vivência prática e interação multidisciplinar.'
+                'education-description': 'Curso preparatório para atuação profissional em todas as etapas do desenvolvimento de software, desde projeto e levantamento de requisitos até construção, testes, deployment e manutenção. Utiliza metodologias ágeis, frameworks modernos e ferramentas do mercado atual. Inclui Projetos Integradores com foco em extensão, pesquisa acadêmica e empreendedorismo, proporcionando vivência prática e interação multidisciplinar.',
+                'download-pdf': 'src/doc/rafaeldiasgarcia_github_io.pdf',
+                'download-filename': 'Rafael_Dias_Garcia_Curriculo.pdf',
+                'download-title': 'Baixar Currículo em PDF'
             },
             'en-US': {
                 'technologies': 'Technologies',
@@ -37,7 +40,10 @@ class LanguageMenu {
                 'github-repo': '🔗 GitHub Repository',
                 'education': 'Education',
                 'education-title': 'Unifio, Ourinhos — Bachelor in Software Engineering',
-                'education-description': 'Preparatory course for professional performance in all stages of software development, from project and requirements gathering to construction, testing, deployment and maintenance. Uses agile methodologies, modern frameworks and current market tools. Includes Integrated Projects with focus on extension, academic research and entrepreneurship, providing practical experience and multidisciplinary interaction.'
+                'education-description': 'Preparatory course for professional performance in all stages of software development, from project and requirements gathering to construction, testing, deployment and maintenance. Uses agile methodologies, modern frameworks and current market tools. Includes Integrated Projects with focus on extension, academic research and entrepreneurship, providing practical experience and multidisciplinary interaction.',
+                'download-pdf': 'src/doc/rafaeldiasgarcia_github_io_en.pdf',
+                'download-filename': 'Rafael_Dias_Garcia_Resume.pdf',
+                'download-title': 'Download Resume PDF'
             },
             'es-ES': {
                 'technologies': 'Tecnologías',
@@ -55,7 +61,10 @@ class LanguageMenu {
                 'github-repo': '🔗 Repositorio GitHub',
                 'education': 'Formación',
                 'education-title': 'Unifio, Ourinhos — Licenciatura en Ingeniería de Software',
-                'education-description': 'Curso preparatorio para actuación profesional en todas las etapas del desarrollo de software, desde proyecto y levantamiento de requisitos hasta construcción, pruebas, deployment y mantenimiento. Utiliza metodologías ágiles, frameworks modernos y herramientas del mercado actual. Incluye Proyectos Integradores con enfoque en extensión, investigación académica y emprendimiento, proporcionando experiencia práctica e interacción multidisciplinaria.'
+                'education-description': 'Curso preparatorio para actuación profesional en todas las etapas del desarrollo de software, desde proyecto y levantamiento de requisitos hasta construcción, pruebas, deployment y mantenimiento. Utiliza metodologías ágiles, frameworks modernos y herramientas del mercado actual. Incluye Proyectos Integradores con enfoque en extensión, investigación académica y emprendimiento, proporcionando experiencia práctica e interacción multidisciplinaria.',
+                'download-pdf': 'src/doc/rafaeldiasgarcia_github_io_es.pdf',
+                'download-filename': 'Rafael_Dias_Garcia_Curriculo.pdf',
+                'download-title': 'Descargar Currículo en PDF'
             },
             'de-DE': {
                 'technologies': 'Technologien',
@@ -73,7 +82,10 @@ class LanguageMenu {
                 'github-repo': '🔗 GitHub Repository',
                 'education': 'Bildung',
                 'education-title': 'Unifio, Ourinhos — Bachelor in Software Engineering',
-                'education-description': 'Vorbereitungskurs für professionelle Leistung in allen Phasen der Softwareentwicklung, von Projekt und Anforderungserhebung bis hin zu Konstruktion, Tests, Deployment und Wartung. Verwendet agile Methodologien, moderne Frameworks und aktuelle Markttools. Beinhaltet Integrierte Projekte mit Fokus auf Extension, akademische Forschung und Unternehmertum, bietet praktische Erfahrung und multidisziplinäre Interaktion.'
+                'education-description': 'Vorbereitungskurs für professionelle Leistung in allen Phasen der Softwareentwicklung, von Projekt und Anforderungserhebung bis hin zu Konstruktion, Tests, Deployment und Wartung. Verwendet agile Methodologien, moderne Frameworks und aktuelle Markttools. Beinhaltet Integrierte Projekte mit Fokus auf Extension, akademische Forschung und Unternehmertum, bietet praktische Erfahrung und multidisziplinäre Interaktion.',
+                'download-pdf': 'src/doc/rafaeldiasgarcia_github_io_de.pdf',
+                'download-filename': 'Rafael_Dias_Garcia_Lebenslauf.pdf',
+                'download-title': 'Lebenslauf PDF herunterladen'
             }
         };
         
@@ -192,6 +204,21 @@ class LanguageMenu {
         
         // Update document language
         document.documentElement.lang = lang;
+        
+        // Update download button
+        this.updateDownloadButton(lang);
+    }
+    
+    updateDownloadButton(lang) {
+        const downloadLink = document.querySelector('.download-link');
+        const translations = this.translations[lang];
+        
+        if (!downloadLink || !translations) return;
+        
+        // Update href, download attribute and title
+        downloadLink.href = translations['download-pdf'];
+        downloadLink.download = translations['download-filename'];
+        downloadLink.title = translations['download-title'];
     }
     
     saveLanguage(lang) {
