@@ -1,7 +1,10 @@
 /* RESPONSIVE DESIGN */
 
-/* BOTÃO DE DOWNLOAD RESPONSIVO */
-@media screen and (max-width: 768px) {
+/* DESABILITADO: Layout mobile agora usa a mesma view do desktop com zoom */
+/* Todas as media queries foram comentadas para manter o layout desktop em todas as telas */
+
+/* BOTÃO DE DOWNLOAD RESPONSIVO - Mantido apenas para ajustes mínimos */
+/* @media screen and (max-width: 768px) {
     .download-button {
         bottom: 15px;
         right: 15px;
@@ -33,11 +36,11 @@
         width: 10px;
         height: 10px;
     }
-}
+} */
 
 
-/* TABLET */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* TABLET - DESABILITADO */
+/* @media screen and (min-width: 769px) and (max-width: 1024px) {
     .name {
         top: 50%;
         transform: translateY(-50%);
@@ -67,10 +70,10 @@
     .side-bar {
         padding: 290px 30px var(--spacing-xxl);
     }
-}
+} */
 
-/* MOBILE FIRST */
-@media screen and (max-width: 768px) {
+/* MOBILE FIRST - DESABILITADO */
+/* @media screen and (max-width: 768px) {
     body {
         font-size: 16px;
         line-height: 24px;
@@ -190,7 +193,6 @@
         padding: 8px 0;
     }
     
-    /* Aumentar tamanho dos textos do sidebar */
     .side-bar p {
         font-size: 16px;
         line-height: 22px;
@@ -200,10 +202,10 @@
         font-size: 16px;
         line-height: 22px;
     }
-}
+} */
 
-/* SMALL MOBILE */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+/* SMALL MOBILE - DESABILITADO */
+/* @media screen and (min-width: 481px) and (max-width: 768px) {
     .mugshot {
         position: relative;
         top: auto;
@@ -223,9 +225,9 @@
     .side-bar {
         padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
     }
-}
+} */
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .mugshot {
         margin: var(--spacing-xl) auto var(--spacing-xl) auto;
     }
@@ -301,7 +303,6 @@
         margin-right: 4px;
     }
     
-    /* Aumentar tamanho dos textos do sidebar em telas pequenas */
     .side-bar p {
         font-size: 15px;
         line-height: 20px;
@@ -315,5 +316,5 @@
     .side-header {
         font-size: 18px;
     }
-}
+} */
 

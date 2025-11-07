@@ -33,7 +33,7 @@
     --page-width: 90%;
     --page-max-width: 1200px;
     --sidebar-width: 350px;
-    --content-padding: 25px 40px 50px;
+    --content-padding: 25px 40px 20px;
 
     /* Transitions */
     --transition-base: 0.35s ease;

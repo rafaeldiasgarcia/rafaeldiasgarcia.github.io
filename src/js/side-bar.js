@@ -1,54 +1,56 @@
-
-// Função para ajustar a altura da página baseada no conteúdo da sidebar
+// Função para ajustar a altura da página baseada no conteúdo mais baixo
 function adjustPageHeight() {
     const page = document.querySelector('.page');
     const sidebar = document.querySelector('.side-bar');
     const contentContainer = document.querySelector('.content-container');
     
     if (page && sidebar && contentContainer) {
-        // Verifica se é mobile (sidebar com position: static)
-        const isMobile = window.innerWidth <= 768;
+        // Calcula a posição inferior de cada elemento (top + height)
+        const sidebarBottom = sidebar.offsetTop + sidebar.offsetHeight;
+        const contentBottom = contentContainer.offsetTop + contentContainer.offsetHeight;
         
-        if (isMobile) {
-            // No mobile, não força altura na sidebar
-            page.style.minHeight = 'auto';
-            sidebar.style.height = 'auto';
-        } else {
-            // No desktop, mantém a lógica original
-            const sidebarHeight = sidebar.offsetHeight + 60; // 60px é o top da sidebar
-            const contentHeight = contentContainer.offsetHeight;
-            
-            // Usa a maior altura entre sidebar e conteúdo
-            const requiredHeight = Math.max(sidebarHeight, contentHeight) + 160; // 160px para margens
-            
-            // Aplica a altura mínima necessária
-            page.style.minHeight = Math.max(requiredHeight, window.innerHeight - 160) + 'px';
-            
-            // Ajusta a sidebar para seguir o limite da folha (página)
-            const pageContentHeight = Math.max(sidebarHeight, contentHeight) + 160;
-            const sidebarTop = 60; // top da sidebar
-            const sidebarBottom = 20; // espaçamento do bottom
-            const availableHeight = pageContentHeight - sidebarTop - sidebarBottom;
-            
-            sidebar.style.height = availableHeight + 'px';
-        }
+        // Pega o elemento mais baixo
+        const maxBottom = Math.max(sidebarBottom, contentBottom);
+        
+        // Calcula a altura necessária da página (posição do elemento mais baixo - top da página + pequena margem)
+        const pageTop = page.offsetTop;
+        const requiredHeight = maxBottom - pageTop + 20; // 20px de margem inferior
+        
+        // Aplica a altura mínima necessária (sem forçar altura muito grande)
+        page.style.minHeight = requiredHeight + 'px';
     }
 }
 
 // Executa quando a página carrega
 document.addEventListener('DOMContentLoaded', function() {
-    // Ajusta a altura da página
+    // Pequeno delay para garantir que o layout foi renderizado
+    setTimeout(adjustPageHeight, 100);
     adjustPageHeight();
 });
 
 // Executa quando a janela é redimensionada
-window.addEventListener('resize', adjustPageHeight);
+window.addEventListener('resize', function() {
+    setTimeout(adjustPageHeight, 100);
+});
 
 // Executa quando o conteúdo muda (para novos itens adicionados)
 const sidebar = document.querySelector('.side-bar');
+const contentContainer = document.querySelector('.content-container');
 if (sidebar) {
-    const observer = new MutationObserver(adjustPageHeight);
+    const observer = new MutationObserver(function() {
+        setTimeout(adjustPageHeight, 100);
+    });
     observer.observe(sidebar, {
+        childList: true,
+        subtree: true,
+        characterData: true
+    });
+}
+if (contentContainer) {
+    const observer = new MutationObserver(function() {
+        setTimeout(adjustPageHeight, 100);
+    });
+    observer.observe(contentContainer, {
         childList: true,
         subtree: true,
         characterData: true
