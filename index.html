@@ -21,6 +21,7 @@
     <script src="src/js/viewport-zoom.js"></script>
     <script src="src/js/side-bar.js"></script>
     <script src="src/js/language-menu.js"></script>
+    <script src="src/js/certifications-menu.js"></script>
 </head>
 <body>
 <div class="rela-block page">
@@ -71,9 +72,16 @@
         <p class="rela-block caps side-header" data-translate="certifications">Certificações</p>
         <p class="rela-block list-thing">CS50</p>
         <p class="rela-block list-thing">JavaScript Essencials</p>
-        <p class="rela-block list-thing">JavaScript for Beckend</p>
-        <p class="rela-block list-thing">U-BEST | Advanced English</p>
-        <p class="rela-block list-thing">Learn Java with Object Oriented Programming</p>
+        <div class="rela-block certifications-menu">
+            <button class="list-thing certifications-toggle" aria-label="Outras Certificações">
+                Outros
+            </button>
+            <div class="certifications-dropdown">
+                <div class="certification-option">JavaScript for Beckend</div>
+                <div class="certification-option">U-BEST | Advanced English</div>
+                <div class="certification-option">Learn Java with Object Oriented Programming</div>
+            </div>
+        </div>
 
 
     </div>
