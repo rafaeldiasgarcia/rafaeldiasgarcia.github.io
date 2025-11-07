@@ -104,7 +104,7 @@ class LanguageMenu {
                 'education': '教育',
                 'education-title': 'ウニフィオ、オウリーニョス — ソフトウェア工学学士',
                 'education-description': 'プロジェクトと要件収集から構築、テスト、デプロイ、メンテナンスまで、ソフトウェア開発のすべての段階でプロフェッショナルなパフォーマンスのための準備コース。アジャイル方法論、モダンなフレームワーク、現在の市場ツールを使用。拡張、学術研究、起業家精神に焦点を当てた統合プロジェクトを含み、実践的な経験と多分野の相互作用を提供。',
-                'download-pdf': 'src/doc/curriculos/rafaeldiasgarcia_github_io.pdf',
+                'download-pdf': 'src/doc/curriculos/rafaeldiasgarcia_github_io_jp.pdf',
                 'download-filename': 'Rafael_Dias_Garcia_履歴書.pdf',
                 'download-title': '履歴書PDFをダウンロード'
             }
