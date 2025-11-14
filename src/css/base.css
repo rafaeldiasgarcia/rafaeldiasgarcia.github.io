@@ -11,8 +11,7 @@ body {
     letter-spacing: 0px;
     font-weight: 400;
     line-height: 28px;
-    background: var(--bg-image) right no-repeat;
-    background-size: cover;
+    background: var(--bg-image);
     overflow-x: hidden;
 }
 

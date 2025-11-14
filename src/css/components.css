@@ -112,6 +112,11 @@
     background: url('https://cdn-icons-png.flaticon.com/512/25/25231.png') center no-repeat;
 }
 
+.social.portfolio:before {
+    background: url('https://cdn-icons-png.flaticon.com/512/3135/3135768.png') center no-repeat;
+    background-size: contain;
+}
+
 .social.whatsapp:before {
     display: none;
 }

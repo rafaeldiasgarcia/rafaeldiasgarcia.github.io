@@ -19,7 +19,7 @@
 
     /* Background */
     --bg-overlay: rgba(255, 255, 255, 0.92);
-    --bg-image: url('http://kingofwallpapers.com/leaves/leaves-016.jpg');
+    --bg-image: none;
 
     /* Spacing */
     --spacing-xs: 5px;

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafael Dias Garcia - Projetos</title>
+    <link rel="icon" type="image/svg+xml" href="src/img/favicon.svg">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Language Menu CSS -->
+    <link rel="stylesheet" href="src/css/language-menu.css">
     <style>
         .code-block {
             position: relative;
@@ -43,6 +46,100 @@
             padding-left: 1em;
             margin-left: 3.5em;
         }
+        /* README content styling */
+        [data-translate^="readme-"] ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        [data-translate^="readme-"] li {
+            display: list-item;
+        }
+        [data-translate^="readme-"] h1,
+        [data-translate^="readme-"] h2,
+        [data-translate^="readme-"] h3 {
+            font-weight: bold;
+        }
+        [data-translate^="readme-"] code {
+            font-family: 'Courier New', monospace;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+        }
+        [data-translate^="readme-"] pre code {
+            display: block;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        /* Modal footer mobile adjustments */
+        @media (max-width: 767.98px) {
+            .modal-footer {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .modal-github-btn {
+                order: -1;
+                width: 100%;
+                justify-content: center;
+            }
+            .modal-close-btn {
+                order: 1;
+                width: 100%;
+            }
+            .modal-code-text-full {
+                display: none !important;
+            }
+            .modal-code-text-short {
+                display: inline !important;
+            }
+        }
+        /* Language menu adjustments for Bootstrap navbar */
+        .navbar .language-menu {
+            position: relative;
+            top: auto;
+            left: auto;
+            margin-right: 1rem;
+            z-index: 1050;
+        }
+        .navbar .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            min-height: 40px;
+            width: auto;
+            height: auto;
+        }
+        .navbar .menu-toggle .flag-icon {
+            color: #fff;
+            font-size: 24px;
+            display: block;
+            line-height: 1;
+            text-align: center;
+        }
+        .navbar .menu-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 991.98px) {
+            .navbar .menu-toggle {
+                font-size: 20px;
+            }
+            .navbar .menu-toggle .flag-icon {
+                font-size: 20px;
+            }
+        }
+        .navbar .language-dropdown {
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 991.98px) {
+            .navbar .language-menu {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -58,10 +155,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Currículo</a>
+                        <a class="nav-link" href="index.html" data-translate="nav-resume">Currículo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="projects.html">Projetos</a>
+                        <a class="nav-link active" href="projects.html" data-translate="nav-projects">Projetos</a>
                     </li>
                 </ul>
             </div>
@@ -73,8 +170,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-4 fw-bold mb-3">Meus Projetos</h1>
-                    <p class="lead">Uma coleção dos principais projetos que desenvolvi, demonstrando minhas habilidades em diferentes tecnologias e áreas de desenvolvimento.</p>
+                    <h1 class="display-4 fw-bold mb-3" data-translate="hero-title">Meus Projetos</h1>
+                    <p class="lead" data-translate="hero-description">Uma coleção dos principais projetos que desenvolvi, demonstrando minhas habilidades em diferentes tecnologias e áreas de desenvolvimento.</p>
                 </div>
             </div>
         </div>
@@ -96,17 +193,17 @@
                         <h5 class="card-title">
                             <i class="bi bi-calendar-event me-2 text-primary"></i>SGE
                         </h5>
-                        <p class="card-text text-muted flex-grow-1">
+                        <p class="card-text text-muted flex-grow-1" data-translate="sge-description">
                             Sistema de Gerenciamento de Eventos desenvolvido para o Centro Universitário UNIFIO. 
                             Aplicação web completa para modernizar e centralizar a gestão de eventos esportivos 
                             e acadêmicos na quadra poliesportiva da instituição.
                         </p>
                         <div class="mt-auto d-grid gap-2">
                             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalSGE">
-                                <i class="bi bi-code-square me-2"></i>Ver Código
+                                <i class="bi bi-code-square me-2"></i><span data-translate="btn-view-code">Ver Código</span>
                             </button>
                             <a href="https://github.com/rafaeldiasgarcia/SGE" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2"></i>Ver no GitHub
+                                <i class="bi bi-github me-2"></i><span data-translate="btn-view-github">Ver no GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -126,45 +223,17 @@
                         <h5 class="card-title">
                             <i class="bi bi-robot me-2 text-danger"></i>Classificador de Texto LLMOps
                         </h5>
-                        <p class="card-text text-muted flex-grow-1">
+                        <p class="card-text text-muted flex-grow-1" data-translate="llmops-description">
                             Sistema de classificação de feedbacks de clientes utilizando fine-tuning de modelos 
                             de linguagem (DistilBERT). Deploy via Docker com API FastAPI. Sistema preciso, 
                             rápido e econômico para análise de sentimentos.
                         </p>
                         <div class="mt-auto d-grid gap-2">
                             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalLLMOps">
-                                <i class="bi bi-code-square me-2"></i>Ver Código
+                                <i class="bi bi-code-square me-2"></i><span data-translate="btn-view-code">Ver Código</span>
                             </button>
                             <a href="https://github.com/rafaeldiasgarcia/classificador-texto-llmops" class="btn btn-danger" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2"></i>Ver no GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Portfólio -->
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-3">
-                            <span class="badge bg-primary mb-2">HTML</span>
-                            <span class="badge bg-success mb-2">CSS</span>
-                            <span class="badge bg-warning text-dark mb-2">JavaScript</span>
-                        </div>
-                        <h5 class="card-title">
-                            <i class="bi bi-person-badge me-2 text-info"></i>Portfólio Pessoal
-                        </h5>
-                        <p class="card-text text-muted flex-grow-1">
-                            Site pessoal hospedado no GitHub Pages, servindo como portfólio online. 
-                            Apresenta minhas habilidades, experiências, certificações e projetos desenvolvidos.
-                        </p>
-                        <div class="mt-auto d-grid gap-2">
-                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalPortfolio">
-                                <i class="bi bi-code-square me-2"></i>Ver Código
-                            </button>
-                            <a href="https://github.com/rafaeldiasgarcia/rafaeldiasgarcia.github.io" class="btn btn-info" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2"></i>Ver no GitHub
+                                <i class="bi bi-github me-2"></i><span data-translate="btn-view-github">Ver no GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -184,17 +253,17 @@
                         <h5 class="card-title">
                             <i class="bi bi-mortarboard me-2 text-success"></i>CS50x
                         </h5>
-                        <p class="card-text text-muted flex-grow-1">
+                        <p class="card-text text-muted flex-grow-1" data-translate="cs50x-description">
                             Soluções para o curso CS50x (Introduction to Computer Science) da Harvard. 
                             Inclui todos os problem sets, labs e o projeto final, demonstrando 
                             conhecimento em algoritmos, estruturas de dados e programação.
                         </p>
                         <div class="mt-auto d-grid gap-2">
                             <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalCS50x">
-                                <i class="bi bi-code-square me-2"></i>Ver Código
+                                <i class="bi bi-code-square me-2"></i><span data-translate="btn-view-code">Ver Código</span>
                             </button>
                             <a href="https://github.com/rafaeldiasgarcia/CS50x" class="btn btn-success" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2"></i>Ver no GitHub
+                                <i class="bi bi-github me-2"></i><span data-translate="btn-view-github">Ver no GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -213,17 +282,17 @@
                         <h5 class="card-title">
                             <i class="bi bi-book me-2 text-warning"></i>BookshelfAPI
                         </h5>
-                        <p class="card-text text-muted flex-grow-1">
+                        <p class="card-text text-muted flex-grow-1" data-translate="bookshelf-description">
                             API REST simples construída com Node.js e Express para gerenciar uma coleção de livros. 
                             Os dados são armazenados em um arquivo JSON local. Projeto focado em demonstrar 
                             conhecimento em desenvolvimento backend e arquitetura de APIs.
                         </p>
                         <div class="mt-auto d-grid gap-2">
                             <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalBookshelfAPI">
-                                <i class="bi bi-code-square me-2"></i>Ver Código
+                                <i class="bi bi-code-square me-2"></i><span data-translate="btn-view-code">Ver Código</span>
                             </button>
                             <a href="https://github.com/rafaeldiasgarcia/BookshelfAPI" class="btn btn-warning" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2"></i>Ver no GitHub
+                                <i class="bi bi-github me-2"></i><span data-translate="btn-view-github">Ver no GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -242,16 +311,16 @@
                         <h5 class="card-title">
                             <i class="bi bi-cloud-sun me-2 text-info"></i>WeatherNow
                         </h5>
-                        <p class="card-text text-muted flex-grow-1">
+                        <p class="card-text text-muted flex-grow-1" data-translate="weather-description">
                             Aplicação que fornece informações meteorológicas em tempo real para diferentes localidades. 
                             Utiliza APIs de terceiros para obter dados atualizados sobre condições climáticas.
                         </p>
                         <div class="mt-auto d-grid gap-2">
                             <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalWeatherNow">
-                                <i class="bi bi-code-square me-2"></i>Ver Código
+                                <i class="bi bi-code-square me-2"></i><span data-translate="btn-view-code">Ver Código</span>
                             </button>
                             <a href="https://github.com/rafaeldiasgarcia/WeatherNow" class="btn btn-info" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2"></i>Ver no GitHub
+                                <i class="bi bi-github me-2"></i><span data-translate="btn-view-github">Ver no GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -265,7 +334,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2025 Rafael Dias Garcia. Todos os direitos reservados.</p>
+                    <p class="mb-0" data-translate="footer-copyright">&copy; 2025 Rafael Dias Garcia. Todos os direitos reservados.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <a href="https://github.com/rafaeldiasgarcia" class="text-white me-3" target="_blank" rel="noopener noreferrer">
@@ -287,7 +356,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalSGELabel">
-                        <i class="bi bi-calendar-event me-2"></i>SGE - Código Fonte
+                        <i class="bi bi-calendar-event me-2"></i><span data-translate="modal-sge-title">SGE - Código Fonte</span>
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -295,11 +364,23 @@
                     <div class="accordion" id="accordionSGE">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sgeRoutes">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sgeReadme">
+                                    README.md
+                                </button>
+                            </h2>
+                            <div id="sgeReadme" class="accordion-collapse collapse show" data-bs-parent="#accordionSGE">
+                                <div class="accordion-body">
+                                    <div class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; line-height: 1.6;" data-translate="readme-sge"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sgeRoutes">
                                     src/routes.php
                                 </button>
                             </h2>
-                            <div id="sgeRoutes" class="accordion-collapse collapse show" data-bs-parent="#accordionSGE">
+                            <div id="sgeRoutes" class="accordion-collapse collapse" data-bs-parent="#accordionSGE">
                                 <div class="accordion-body">
                                     <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-info">// Rotas de Autenticação</span></span>
 <span class="line"><span class="text-success">Router</span>::<span class="text-warning">get</span>(<span class="text-danger">'/'</span>, <span class="text-danger">'HomeController@index'</span>);</span>
@@ -360,9 +441,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://github.com/rafaeldiasgarcia/SGE" class="btn btn-primary" target="_blank">
-                        <i class="bi bi-github me-2"></i>Clique aqui para ver o código completo
+                    <button type="button" class="btn btn-secondary modal-close-btn" data-bs-dismiss="modal" data-translate="modal-close">Fechar</button>
+                    <a href="https://github.com/rafaeldiasgarcia/SGE" class="btn btn-primary modal-github-btn" target="_blank">
+                        <i class="bi bi-github me-2"></i><span class="modal-code-text-full" data-translate="modal-see-full-code">Clique aqui para ver o código completo</span><span class="modal-code-text-short d-none" data-translate="modal-see-full-code">Código Completo</span>
                     </a>
                 </div>
             </div>
@@ -375,7 +456,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalBookshelfAPILabel">
-                        <i class="bi bi-book me-2"></i>BookshelfAPI - Código Fonte
+                        <i class="bi bi-book me-2"></i><span data-translate="modal-bookshelf-title">BookshelfAPI - Código Fonte</span>
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -383,11 +464,23 @@
                     <div class="accordion" id="accordionBookshelfAPI">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bookshelfServer">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bookshelfReadme">
+                                    README.md
+                                </button>
+                            </h2>
+                            <div id="bookshelfReadme" class="accordion-collapse collapse show" data-bs-parent="#accordionBookshelfAPI">
+                                <div class="accordion-body">
+                                    <div class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; line-height: 1.6;" data-translate="readme-bookshelf"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bookshelfServer">
                                     server.js
                                 </button>
                             </h2>
-                            <div id="bookshelfServer" class="accordion-collapse collapse show" data-bs-parent="#accordionBookshelfAPI">
+                            <div id="bookshelfServer" class="accordion-collapse collapse" data-bs-parent="#accordionBookshelfAPI">
                                 <div class="accordion-body">
                                     <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-primary">const</span> <span class="text-success">express</span> = <span class="text-warning">require</span>(<span class="text-danger">'express'</span>);</span>
 <span class="line"><span class="text-primary">const</span> <span class="text-success">app</span> = <span class="text-warning">express</span>();</span>
@@ -499,9 +592,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://github.com/rafaeldiasgarcia/BookshelfAPI" class="btn btn-warning" target="_blank">
-                        <i class="bi bi-github me-2"></i>Clique aqui para ver o código completo
+                    <button type="button" class="btn btn-secondary modal-close-btn" data-bs-dismiss="modal" data-translate="modal-close">Fechar</button>
+                    <a href="https://github.com/rafaeldiasgarcia/BookshelfAPI" class="btn btn-warning modal-github-btn" target="_blank">
+                        <i class="bi bi-github me-2"></i><span class="modal-code-text-full" data-translate="modal-see-full-code">Clique aqui para ver o código completo</span><span class="modal-code-text-short d-none" data-translate="modal-see-full-code">Código Completo</span>
                     </a>
                 </div>
             </div>
@@ -514,7 +607,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalWeatherNowLabel">
-                        <i class="bi bi-cloud-sun me-2"></i>WeatherNow - Código Fonte
+                        <i class="bi bi-cloud-sun me-2"></i><span data-translate="modal-weather-title">WeatherNow - Código Fonte</span>
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -522,11 +615,23 @@
                     <div class="accordion" id="accordionWeatherNow">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#weatherHTML">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#weatherReadme">
+                                    README.md
+                                </button>
+                            </h2>
+                            <div id="weatherReadme" class="accordion-collapse collapse show" data-bs-parent="#accordionWeatherNow">
+                                <div class="accordion-body">
+                                    <div class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; line-height: 1.6;" data-translate="readme-weather"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#weatherHTML">
                                     index.html
                                 </button>
                             </h2>
-                            <div id="weatherHTML" class="accordion-collapse collapse show" data-bs-parent="#accordionWeatherNow">
+                            <div id="weatherHTML" class="accordion-collapse collapse" data-bs-parent="#accordionWeatherNow">
                                 <div class="accordion-body">
                                     <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-info">&lt;!-- Estrutura principal --&gt;</span></span>
 <span class="line"><span class="text-primary">&lt;main</span> <span class="text-success">class</span>=<span class="text-danger">"container"</span><span class="text-primary">&gt;</span></span>
@@ -553,44 +658,44 @@
                             </h2>
                             <div id="weatherJS" class="accordion-collapse collapse" data-bs-parent="#accordionWeatherNow">
                                 <div class="accordion-body">
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="text-primary">const</span> <span class="text-success">apiKey</span> = <span class="text-danger">"004ee8a46e0233242d3a2e5ca849e797"</span>;
-
-<span class="text-info">// Buscar clima da cidade</span>
-<span class="text-primary">function</span> <span class="text-warning">getWeather</span>() {
-    <span class="text-primary">const</span> <span class="text-success">city</span> = <span class="text-success">cityInput</span>.<span class="text-success">value</span>.<span class="text-warning">trim</span>();
-    <span class="text-primary">const</span> <span class="text-success">url</span> = <span class="text-danger">`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`</span>;
-
-    <span class="text-warning">fetch</span>(<span class="text-success">url</span>)
-        .<span class="text-warning">then</span>(<span class="text-success">res</span> => <span class="text-success">res</span>.<span class="text-warning">json</span>())
-        .<span class="text-warning">then</span>(<span class="text-success">data</span> => {
-            <span class="text-success">weatherInfoDiv</span>.<span class="text-success">innerHTML</span> = <span class="text-danger">`
-                🌡️ ${data.main.temp.toFixed(1)}°C
-                💧 Umidade: ${data.main.humidity}%
-            `</span>;
-        });
-}
-
-<span class="text-info">// Alternar tema claro/escuro</span>
-<span class="text-primary">function</span> <span class="text-warning">toggleTheme</span>() {
-    <span class="text-success">document</span>.<span class="text-success">body</span>.<span class="text-success">classList</span>.<span class="text-warning">toggle</span>(<span class="text-danger">"dark"</span>);
-    <span class="text-success">localStorage</span>.<span class="text-warning">setItem</span>(<span class="text-danger">"theme"</span>, <span class="text-success">currentTheme</span>);
-}
-
-<span class="text-info">// Atualizar relógio em tempo real</span>
-<span class="text-primary">function</span> <span class="text-warning">atualizaRelogio</span>() {
-    <span class="text-primary">const</span> <span class="text-success">agora</span> = <span class="text-primary">new</span> <span class="text-success">Date</span>();
-    <span class="text-primary">const</span> <span class="text-success">horas</span> = <span class="text-success">agora</span>.<span class="text-warning">getHours</span>().<span class="text-warning">toString</span>().<span class="text-warning">padStart</span>(<span class="text-info">2</span>, <span class="text-danger">"0"</span>);
-    <span class="text-success">clockDiv</span>.<span class="text-success">innerHTML</span> = <span class="text-danger">`🕒 ${horas}:${minutos}:${segundos}`</span>;
-}</code></pre>
+                                    <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-primary">const</span> <span class="text-success">apiKey</span> = <span class="text-danger">"004ee8a46e0233242d3a2e5ca849e797"</span>;</span>
+<span class="line"></span>
+<span class="line"><span class="text-info">// Buscar clima da cidade</span></span>
+<span class="line"><span class="text-primary">function</span> <span class="text-warning">getWeather</span>() {</span>
+<span class="line">    <span class="text-primary">const</span> <span class="text-success">city</span> = <span class="text-success">cityInput</span>.<span class="text-success">value</span>.<span class="text-warning">trim</span>();</span>
+<span class="line">    <span class="text-primary">const</span> <span class="text-success">url</span> = <span class="text-danger">`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`</span>;</span>
+<span class="line"></span>
+<span class="line">    <span class="text-warning">fetch</span>(<span class="text-success">url</span>)</span>
+<span class="line">        .<span class="text-warning">then</span>(<span class="text-success">res</span> => <span class="text-success">res</span>.<span class="text-warning">json</span>())</span>
+<span class="line">        .<span class="text-warning">then</span>(<span class="text-success">data</span> => {</span>
+<span class="line">            <span class="text-success">weatherInfoDiv</span>.<span class="text-success">innerHTML</span> = <span class="text-danger">`</span></span>
+<span class="line">                🌡️ ${data.main.temp.toFixed(1)}°C</span>
+<span class="line">                💧 Umidade: ${data.main.humidity}%</span>
+<span class="line">            <span class="text-danger">`</span>;</span>
+<span class="line">        });</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="text-info">// Alternar tema claro/escuro</span></span>
+<span class="line"><span class="text-primary">function</span> <span class="text-warning">toggleTheme</span>() {</span>
+<span class="line">    <span class="text-success">document</span>.<span class="text-success">body</span>.<span class="text-success">classList</span>.<span class="text-warning">toggle</span>(<span class="text-danger">"dark"</span>);</span>
+<span class="line">    <span class="text-success">localStorage</span>.<span class="text-warning">setItem</span>(<span class="text-danger">"theme"</span>, <span class="text-success">currentTheme</span>);</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="text-info">// Atualizar relógio em tempo real</span></span>
+<span class="line"><span class="text-primary">function</span> <span class="text-warning">atualizaRelogio</span>() {</span>
+<span class="line">    <span class="text-primary">const</span> <span class="text-success">agora</span> = <span class="text-primary">new</span> <span class="text-success">Date</span>();</span>
+<span class="line">    <span class="text-primary">const</span> <span class="text-success">horas</span> = <span class="text-success">agora</span>.<span class="text-warning">getHours</span>().<span class="text-warning">toString</span>().<span class="text-warning">padStart</span>(<span class="text-info">2</span>, <span class="text-danger">"0"</span>);</span>
+<span class="line">    <span class="text-success">clockDiv</span>.<span class="text-success">innerHTML</span> = <span class="text-danger">`🕒 ${horas}:${minutos}:${segundos}`</span>;</span>
+<span class="line">}</span></code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://github.com/rafaeldiasgarcia/WeatherNow" class="btn btn-info" target="_blank">
-                        <i class="bi bi-github me-2"></i>Clique aqui para ver o código completo
+                    <button type="button" class="btn btn-secondary modal-close-btn" data-bs-dismiss="modal" data-translate="modal-close">Fechar</button>
+                    <a href="https://github.com/rafaeldiasgarcia/WeatherNow" class="btn btn-info modal-github-btn" target="_blank">
+                        <i class="bi bi-github me-2"></i><span class="modal-code-text-full" data-translate="modal-see-full-code">Clique aqui para ver o código completo</span><span class="modal-code-text-short d-none" data-translate="modal-see-full-code">Código Completo</span>
                     </a>
                 </div>
             </div>
@@ -603,7 +708,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalLLMOpsLabel">
-                        <i class="bi bi-robot me-2"></i>Classificador de Texto LLMOps - Código Fonte
+                        <i class="bi bi-robot me-2"></i><span data-translate="modal-llmops-title">Classificador de Texto LLMOps - Código Fonte</span>
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -611,42 +716,54 @@
                     <div class="accordion" id="accordionLLMOps">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#llmopsAPI">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#llmopsReadme">
+                                    README.md
+                                </button>
+                            </h2>
+                            <div id="llmopsReadme" class="accordion-collapse collapse show" data-bs-parent="#accordionLLMOps">
+                                <div class="accordion-body">
+                                    <div class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; line-height: 1.6;" data-translate="readme-llmops"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#llmopsAPI">
                                     src/api.py
                                 </button>
                             </h2>
-                            <div id="llmopsAPI" class="accordion-collapse collapse show" data-bs-parent="#accordionLLMOps">
+                            <div id="llmopsAPI" class="accordion-collapse collapse" data-bs-parent="#accordionLLMOps">
                                 <div class="accordion-body">
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="text-primary">from</span> <span class="text-success">fastapi</span> <span class="text-primary">import</span> <span class="text-success">FastAPI</span>, <span class="text-success">HTTPException</span>
-<span class="text-primary">from</span> <span class="text-success">transformers</span> <span class="text-primary">import</span> <span class="text-success">DistilBertTokenizer</span>, <span class="text-success">DistilBertForSequenceClassification</span>
-
-<span class="text-info"># Configurações</span>
-<span class="text-success">MODEL_PATH</span> = <span class="text-danger">"./models/classifier"</span>
-<span class="text-success">DEVICE</span> = <span class="text-danger">"cuda"</span> <span class="text-primary">if</span> <span class="text-success">torch</span>.<span class="text-success">cuda</span>.<span class="text-warning">is_available</span>() <span class="text-primary">else</span> <span class="text-danger">"cpu"</span>
-
-<span class="text-success">app</span> = <span class="text-success">FastAPI</span>(<span class="text-success">title</span>=<span class="text-danger">"Classificador de Feedback"</span>)
-
-<span class="text-info"># Carregar modelo</span>
-<span class="text-primary">def</span> <span class="text-warning">load_model</span>():
-    <span class="text-success">tokenizer</span> = <span class="text-success">DistilBertTokenizer</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_PATH</span>)
-    <span class="text-success">model</span> = <span class="text-success">DistilBertForSequenceClassification</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_PATH</span>)
-    <span class="text-success">model</span>.<span class="text-warning">to</span>(<span class="text-success">DEVICE</span>)
-
-<span class="text-info"># Endpoint de classificação</span>
-<span class="text-success">@app</span>.<span class="text-warning">post</span>(<span class="text-danger">"/classify"</span>)
-<span class="text-primary">async def</span> <span class="text-warning">classify_text</span>(<span class="text-success">input_data</span>: <span class="text-success">TextInput</span>):
-    <span class="text-info"># Tokenizar texto</span>
-    <span class="text-success">encoding</span> = <span class="text-success">tokenizer</span>(<span class="text-success">input_data</span>.<span class="text-success">text</span>, <span class="text-success">return_tensors</span>=<span class="text-danger">'pt'</span>)
-    
-    <span class="text-info"># Fazer predição</span>
-    <span class="text-primary">with</span> <span class="text-success">torch</span>.<span class="text-warning">no_grad</span>():
-        <span class="text-success">outputs</span> = <span class="text-success">model</span>(<span class="text-success">input_ids</span>=<span class="text-success">encoding</span>[<span class="text-danger">'input_ids'</span>])
-        <span class="text-success">probabilities</span> = <span class="text-success">torch</span>.<span class="text-success">nn</span>.<span class="text-success">functional</span>.<span class="text-warning">softmax</span>(<span class="text-success">outputs</span>.<span class="text-success">logits</span>)
-    
-    <span class="text-primary">return</span> {
-        <span class="text-danger">"predicted_category"</span>: <span class="text-success">predicted_category</span>,
-        <span class="text-danger">"confidence"</span>: <span class="text-success">confidence</span>
-    }</code></pre>
+                                    <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-primary">from</span> <span class="text-success">fastapi</span> <span class="text-primary">import</span> <span class="text-success">FastAPI</span>, <span class="text-success">HTTPException</span></span>
+<span class="line"><span class="text-primary">from</span> <span class="text-success">transformers</span> <span class="text-primary">import</span> <span class="text-success">DistilBertTokenizer</span>, <span class="text-success">DistilBertForSequenceClassification</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Configurações</span></span>
+<span class="line"><span class="text-success">MODEL_PATH</span> = <span class="text-danger">"./models/classifier"</span></span>
+<span class="line"><span class="text-success">DEVICE</span> = <span class="text-danger">"cuda"</span> <span class="text-primary">if</span> <span class="text-success">torch</span>.<span class="text-success">cuda</span>.<span class="text-warning">is_available</span>() <span class="text-primary">else</span> <span class="text-danger">"cpu"</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-success">app</span> = <span class="text-success">FastAPI</span>(<span class="text-success">title</span>=<span class="text-danger">"Classificador de Feedback"</span>)</span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Carregar modelo</span></span>
+<span class="line"><span class="text-primary">def</span> <span class="text-warning">load_model</span>():</span>
+<span class="line">    <span class="text-success">tokenizer</span> = <span class="text-success">DistilBertTokenizer</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_PATH</span>)</span>
+<span class="line">    <span class="text-success">model</span> = <span class="text-success">DistilBertForSequenceClassification</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_PATH</span>)</span>
+<span class="line">    <span class="text-success">model</span>.<span class="text-warning">to</span>(<span class="text-success">DEVICE</span>)</span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Endpoint de classificação</span></span>
+<span class="line"><span class="text-success">@app</span>.<span class="text-warning">post</span>(<span class="text-danger">"/classify"</span>)</span>
+<span class="line"><span class="text-primary">async def</span> <span class="text-warning">classify_text</span>(<span class="text-success">input_data</span>: <span class="text-success">TextInput</span>):</span>
+<span class="line">    <span class="text-info"># Tokenizar texto</span></span>
+<span class="line">    <span class="text-success">encoding</span> = <span class="text-success">tokenizer</span>(<span class="text-success">input_data</span>.<span class="text-success">text</span>, <span class="text-success">return_tensors</span>=<span class="text-danger">'pt'</span>)</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-info"># Fazer predição</span></span>
+<span class="line">    <span class="text-primary">with</span> <span class="text-success">torch</span>.<span class="text-warning">no_grad</span>():</span>
+<span class="line">        <span class="text-success">outputs</span> = <span class="text-success">model</span>(<span class="text-success">input_ids</span>=<span class="text-success">encoding</span>[<span class="text-danger">'input_ids'</span>])</span>
+<span class="line">        <span class="text-success">probabilities</span> = <span class="text-success">torch</span>.<span class="text-success">nn</span>.<span class="text-success">functional</span>.<span class="text-warning">softmax</span>(<span class="text-success">outputs</span>.<span class="text-success">logits</span>)</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-primary">return</span> {</span>
+<span class="line">        <span class="text-danger">"predicted_category"</span>: <span class="text-success">predicted_category</span>,</span>
+<span class="line">        <span class="text-danger">"confidence"</span>: <span class="text-success">confidence</span></span>
+<span class="line">    }</span></code></pre>
                                 </div>
                             </div>
                         </div>
@@ -658,45 +775,45 @@
                             </h2>
                             <div id="llmopsTrain" class="accordion-collapse collapse" data-bs-parent="#accordionLLMOps">
                                 <div class="accordion-body">
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="text-primary">from</span> <span class="text-success">transformers</span> <span class="text-primary">import</span> <span class="text-success">DistilBertTokenizer</span>, <span class="text-success">DistilBertForSequenceClassification</span>, <span class="text-success">Trainer</span>
-
-<span class="text-info"># Configurações de treinamento</span>
-<span class="text-success">MODEL_NAME</span> = <span class="text-danger">"distilbert-base-uncased"</span>
-<span class="text-success">BATCH_SIZE</span> = <span class="text-info">16</span>
-<span class="text-success">LEARNING_RATE</span> = <span class="text-info">2e-5</span>
-<span class="text-success">NUM_EPOCHS</span> = <span class="text-info">3</span>
-
-<span class="text-info"># Carregar dados de treinamento</span>
-<span class="text-primary">def</span> <span class="text-warning">load_data</span>(<span class="text-success">data_path</span>):
-    <span class="text-primary">with</span> <span class="text-warning">open</span>(<span class="text-success">data_path</span>, <span class="text-danger">'r'</span>) <span class="text-primary">as</span> <span class="text-success">f</span>:
-        <span class="text-success">data</span> = <span class="text-success">json</span>.<span class="text-warning">load</span>(<span class="text-success">f</span>)
-    <span class="text-success">texts</span> = [<span class="text-success">item</span>[<span class="text-danger">'text'</span>] <span class="text-primary">for</span> <span class="text-success">item</span> <span class="text-primary">in</span> <span class="text-success">data</span>]
-    <span class="text-success">labels</span> = [<span class="text-success">item</span>[<span class="text-danger">'label'</span>] <span class="text-primary">for</span> <span class="text-success">item</span> <span class="text-primary">in</span> <span class="text-success">data</span>]
-    <span class="text-primary">return</span> <span class="text-success">texts</span>, <span class="text-success">labels</span>
-
-<span class="text-info"># Treinar modelo</span>
-<span class="text-primary">def</span> <span class="text-warning">train_model</span>():
-    <span class="text-success">tokenizer</span> = <span class="text-success">DistilBertTokenizer</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_NAME</span>)
-    <span class="text-success">model</span> = <span class="text-success">DistilBertForSequenceClassification</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_NAME</span>)
-    
-    <span class="text-success">training_args</span> = <span class="text-success">TrainingArguments</span>(
-        <span class="text-success">output_dir</span>=<span class="text-danger">"./models/classifier"</span>,
-        <span class="text-success">num_train_epochs</span>=<span class="text-success">NUM_EPOCHS</span>,
-        <span class="text-success">learning_rate</span>=<span class="text-success">LEARNING_RATE</span>
-    )
-    
-    <span class="text-success">trainer</span> = <span class="text-success">Trainer</span>(<span class="text-success">model</span>=<span class="text-success">model</span>, <span class="text-success">args</span>=<span class="text-success">training_args</span>)
-    <span class="text-success">trainer</span>.<span class="text-warning">train</span>()
-    <span class="text-success">trainer</span>.<span class="text-warning">save_model</span>()</code></pre>
+                                    <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-primary">from</span> <span class="text-success">transformers</span> <span class="text-primary">import</span> <span class="text-success">DistilBertTokenizer</span>, <span class="text-success">DistilBertForSequenceClassification</span>, <span class="text-success">Trainer</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Configurações de treinamento</span></span>
+<span class="line"><span class="text-success">MODEL_NAME</span> = <span class="text-danger">"distilbert-base-uncased"</span></span>
+<span class="line"><span class="text-success">BATCH_SIZE</span> = <span class="text-info">16</span></span>
+<span class="line"><span class="text-success">LEARNING_RATE</span> = <span class="text-info">2e-5</span></span>
+<span class="line"><span class="text-success">NUM_EPOCHS</span> = <span class="text-info">3</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Carregar dados de treinamento</span></span>
+<span class="line"><span class="text-primary">def</span> <span class="text-warning">load_data</span>(<span class="text-success">data_path</span>):</span>
+<span class="line">    <span class="text-primary">with</span> <span class="text-warning">open</span>(<span class="text-success">data_path</span>, <span class="text-danger">'r'</span>) <span class="text-primary">as</span> <span class="text-success">f</span>:</span>
+<span class="line">        <span class="text-success">data</span> = <span class="text-success">json</span>.<span class="text-warning">load</span>(<span class="text-success">f</span>)</span>
+<span class="line">    <span class="text-success">texts</span> = [<span class="text-success">item</span>[<span class="text-danger">'text'</span>] <span class="text-primary">for</span> <span class="text-success">item</span> <span class="text-primary">in</span> <span class="text-success">data</span>]</span>
+<span class="line">    <span class="text-success">labels</span> = [<span class="text-success">item</span>[<span class="text-danger">'label'</span>] <span class="text-primary">for</span> <span class="text-success">item</span> <span class="text-primary">in</span> <span class="text-success">data</span>]</span>
+<span class="line">    <span class="text-primary">return</span> <span class="text-success">texts</span>, <span class="text-success">labels</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Treinar modelo</span></span>
+<span class="line"><span class="text-primary">def</span> <span class="text-warning">train_model</span>():</span>
+<span class="line">    <span class="text-success">tokenizer</span> = <span class="text-success">DistilBertTokenizer</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_NAME</span>)</span>
+<span class="line">    <span class="text-success">model</span> = <span class="text-success">DistilBertForSequenceClassification</span>.<span class="text-warning">from_pretrained</span>(<span class="text-success">MODEL_NAME</span>)</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-success">training_args</span> = <span class="text-success">TrainingArguments</span>(</span>
+<span class="line">        <span class="text-success">output_dir</span>=<span class="text-danger">"./models/classifier"</span>,</span>
+<span class="line">        <span class="text-success">num_train_epochs</span>=<span class="text-success">NUM_EPOCHS</span>,</span>
+<span class="line">        <span class="text-success">learning_rate</span>=<span class="text-success">LEARNING_RATE</span></span>
+<span class="line">    )</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-success">trainer</span> = <span class="text-success">Trainer</span>(<span class="text-success">model</span>=<span class="text-success">model</span>, <span class="text-success">args</span>=<span class="text-success">training_args</span>)</span>
+<span class="line">    <span class="text-success">trainer</span>.<span class="text-warning">train</span>()</span>
+<span class="line">    <span class="text-success">trainer</span>.<span class="text-warning">save_model</span>()</span></code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://github.com/rafaeldiasgarcia/classificador-texto-llmops" class="btn btn-danger" target="_blank">
-                        <i class="bi bi-github me-2"></i>Clique aqui para ver o código completo
+                    <button type="button" class="btn btn-secondary modal-close-btn" data-bs-dismiss="modal" data-translate="modal-close">Fechar</button>
+                    <a href="https://github.com/rafaeldiasgarcia/classificador-texto-llmops" class="btn btn-danger modal-github-btn" target="_blank">
+                        <i class="bi bi-github me-2"></i><span class="modal-code-text-full" data-translate="modal-see-full-code">Clique aqui para ver o código completo</span><span class="modal-code-text-short d-none" data-translate="modal-see-full-code">Código Completo</span>
                     </a>
                 </div>
             </div>
@@ -709,48 +826,60 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalCS50xLabel">
-                        <i class="bi bi-mortarboard me-2"></i>CS50x - Código Fonte
+                        <i class="bi bi-mortarboard me-2"></i><span data-translate="modal-cs50x-title">CS50x - Código Fonte</span>
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="alert alert-success mb-4">
                         <i class="bi bi-trophy me-2"></i>
-                        <strong>Projeto Final CS50x:</strong> Termo Clone - Jogo de palavras em português brasileiro (clone do Wordle)
+                        <span data-translate="cs50x-alert"><strong>Projeto Final CS50x:</strong> Termo Clone - Jogo de palavras em português brasileiro (clone do Wordle)</span>
                     </div>
                     <div class="accordion" id="accordionCS50x">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cs50App">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cs50Readme">
+                                    README.md
+                                </button>
+                            </h2>
+                            <div id="cs50Readme" class="accordion-collapse collapse show" data-bs-parent="#accordionCS50x">
+                                <div class="accordion-body">
+                                    <div class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; line-height: 1.6;" data-translate="readme-cs50x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cs50App">
                                     pset10/project/app.py
                                 </button>
                             </h2>
-                            <div id="cs50App" class="accordion-collapse collapse show" data-bs-parent="#accordionCS50x">
+                            <div id="cs50App" class="accordion-collapse collapse" data-bs-parent="#accordionCS50x">
                                 <div class="accordion-body">
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="text-primary">from</span> <span class="text-success">flask</span> <span class="text-primary">import</span> <span class="text-success">Flask</span>, <span class="text-success">render_template</span>
-<span class="text-primary">import</span> <span class="text-success">random</span>
-
-<span class="text-success">app</span> = <span class="text-success">Flask</span>(<span class="text-success">__name__</span>)
-
-<span class="text-info"># Carregar palavras do arquivo</span>
-<span class="text-primary">def</span> <span class="text-warning">carregar_palavras</span>(<span class="text-success">caminho_arquivo</span>):
-    <span class="text-primary">with</span> <span class="text-warning">open</span>(<span class="text-success">caminho_arquivo</span>, <span class="text-danger">'r'</span>, <span class="text-success">encoding</span>=<span class="text-danger">'utf-8'</span>) <span class="text-primary">as</span> <span class="text-success">f</span>:
-        <span class="text-success">palavras</span> = [<span class="text-success">linha</span>.<span class="text-warning">strip</span>().<span class="text-warning">upper</span>() 
-                   <span class="text-primary">for</span> <span class="text-success">linha</span> <span class="text-primary">in</span> <span class="text-success">f</span> <span class="text-primary">if</span> <span class="text-success">linha</span>.<span class="text-warning">strip</span>()]
-    <span class="text-primary">return</span> [<span class="text-success">p</span> <span class="text-primary">for</span> <span class="text-success">p</span> <span class="text-primary">in</span> <span class="text-success">palavras</span> 
-            <span class="text-primary">if</span> <span class="text-warning">len</span>(<span class="text-success">p</span>) == <span class="text-info">5</span> <span class="text-primary">and</span> <span class="text-success">p</span>.<span class="text-warning">isalpha</span>()]
-
-<span class="text-success">lista_de_palavras_validas</span> = <span class="text-warning">carregar_palavras</span>(<span class="text-danger">'static/data/words.txt'</span>)
-
-<span class="text-info"># Rota principal</span>
-<span class="text-success">@app</span>.<span class="text-warning">route</span>(<span class="text-danger">"/"</span>)
-<span class="text-primary">def</span> <span class="text-warning">index</span>():
-    <span class="text-success">palavra_secreta</span> = <span class="text-success">random</span>.<span class="text-warning">choice</span>(<span class="text-success">lista_de_palavras_validas</span>)
-    <span class="text-primary">return</span> <span class="text-success">render_template</span>(
-        <span class="text-danger">"index.html"</span>,
-        <span class="text-success">palavra_secreta</span>=<span class="text-success">palavra_secreta</span>,
-        <span class="text-success">palavras_validas</span>=<span class="text-success">lista_de_palavras_validas</span>
-    )</code></pre>
+                                    <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-primary">from</span> <span class="text-success">flask</span> <span class="text-primary">import</span> <span class="text-success">Flask</span>, <span class="text-success">render_template</span></span>
+<span class="line"><span class="text-primary">import</span> <span class="text-success">random</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-success">app</span> = <span class="text-success">Flask</span>(<span class="text-success">__name__</span>)</span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Carregar palavras do arquivo</span></span>
+<span class="line"><span class="text-primary">def</span> <span class="text-warning">carregar_palavras</span>(<span class="text-success">caminho_arquivo</span>):</span>
+<span class="line">    <span class="text-primary">with</span> <span class="text-warning">open</span>(<span class="text-success">caminho_arquivo</span>, <span class="text-danger">'r'</span>, <span class="text-success">encoding</span>=<span class="text-danger">'utf-8'</span>) <span class="text-primary">as</span> <span class="text-success">f</span>:</span>
+<span class="line">        <span class="text-success">palavras</span> = [<span class="text-success">linha</span>.<span class="text-warning">strip</span>().<span class="text-warning">upper</span>() </span>
+<span class="line">                   <span class="text-primary">for</span> <span class="text-success">linha</span> <span class="text-primary">in</span> <span class="text-success">f</span> <span class="text-primary">if</span> <span class="text-success">linha</span>.<span class="text-warning">strip</span>()]</span>
+<span class="line">    <span class="text-primary">return</span> [<span class="text-success">p</span> <span class="text-primary">for</span> <span class="text-success">p</span> <span class="text-primary">in</span> <span class="text-success">palavras</span> </span>
+<span class="line">            <span class="text-primary">if</span> <span class="text-warning">len</span>(<span class="text-success">p</span>) == <span class="text-info">5</span> <span class="text-primary">and</span> <span class="text-success">p</span>.<span class="text-warning">isalpha</span>()]</span>
+<span class="line"></span>
+<span class="line"><span class="text-success">lista_de_palavras_validas</span> = <span class="text-warning">carregar_palavras</span>(<span class="text-danger">'static/data/words.txt'</span>)</span>
+<span class="line"></span>
+<span class="line"><span class="text-info"># Rota principal</span></span>
+<span class="line"><span class="text-success">@app</span>.<span class="text-warning">route</span>(<span class="text-danger">"/"</span>)</span>
+<span class="line"><span class="text-primary">def</span> <span class="text-warning">index</span>():</span>
+<span class="line">    <span class="text-success">palavra_secreta</span> = <span class="text-success">random</span>.<span class="text-warning">choice</span>(<span class="text-success">lista_de_palavras_validas</span>)</span>
+<span class="line">    <span class="text-primary">return</span> <span class="text-success">render_template</span>(</span>
+<span class="line">        <span class="text-danger">"index.html"</span>,</span>
+<span class="line">        <span class="text-success">palavra_secreta</span>=<span class="text-success">palavra_secreta</span>,</span>
+<span class="line">        <span class="text-success">palavras_validas</span>=<span class="text-success">lista_de_palavras_validas</span></span>
+<span class="line">    )</span></code></pre>
                                 </div>
                             </div>
                         </div>
@@ -762,68 +891,68 @@
                             </h2>
                             <div id="cs50JS" class="accordion-collapse collapse" data-bs-parent="#accordionCS50x">
                                 <div class="accordion-body">
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="text-info">// Configurações do jogo</span>
-<span class="text-primary">const</span> <span class="text-success">TAMANHO_PALAVRA</span> = <span class="text-info">5</span>;
-<span class="text-primary">const</span> <span class="text-success">MAX_TENTATIVAS</span> = <span class="text-info">6</span>;
-<span class="text-primary">let</span> <span class="text-success">linhaAtual</span> = <span class="text-info">0</span>;
-<span class="text-primary">let</span> <span class="text-success">colunaAtual</span> = <span class="text-info">0</span>;
-
-<span class="text-info">// Processar tentativa do jogador</span>
-<span class="text-primary">function</span> <span class="text-warning">processarTentativa</span>(<span class="text-success">tentativa</span>) {
-    <span class="text-primary">let</span> <span class="text-success">contagemLetrasSecretas</span> = {};
-    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">letra</span> <span class="text-primary">of</span> <span class="text-success">palavraSecreta</span>) {
-        <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">letra</span>] = (<span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">letra</span>] || <span class="text-info">0</span>) + <span class="text-info">1</span>;
-    }
-
-    <span class="text-info">// Primeiro: marcar letras corretas (verde)</span>
-    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">i</span> = <span class="text-info">0</span>; <span class="text-success">i</span> < <span class="text-success">TAMANHO_PALAVRA</span>; <span class="text-success">i</span>++) {
-        <span class="text-primary">if</span> (<span class="text-success">tentativa</span>[<span class="text-success">i</span>] === <span class="text-success">palavraSecreta</span>[<span class="text-success">i</span>]) {
-            <span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] = <span class="text-danger">'correta'</span>;
-            <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">tentativa</span>[<span class="text-success">i</span>]]--;
-        }
-    }
-
-    <span class="text-info">// Depois: marcar letras presentes (amarelo) e ausentes (cinza)</span>
-    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">i</span> = <span class="text-info">0</span>; <span class="text-success">i</span> < <span class="text-success">TAMANHO_PALAVRA</span>; <span class="text-success">i</span>++) {
-        <span class="text-primary">if</span> (<span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] === <span class="text-danger">'correta'</span>) <span class="text-primary">continue</span>;
-        
-        <span class="text-primary">if</span> (<span class="text-success">palavraSecreta</span>.<span class="text-warning">includes</span>(<span class="text-success">tentativa</span>[<span class="text-success">i</span>]) && 
-            <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">tentativa</span>[<span class="text-success">i</span>]] > <span class="text-info">0</span>) {
-            <span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] = <span class="text-danger">'presente'</span>;
-            <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">tentativa</span>[<span class="text-success">i</span>]]--;
-        } <span class="text-primary">else</span> {
-            <span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] = <span class="text-danger">'ausente'</span>;
-        }
-    }
-
-    <span class="text-info">// Aplicar animação flip e cores</span>
-    <span class="text-success">celula</span>.<span class="text-success">classList</span>.<span class="text-warning">add</span>(<span class="text-danger">'flip'</span>);
-    <span class="text-primary">setTimeout</span>(() => {
-        <span class="text-success">celula</span>.<span class="text-success">classList</span>.<span class="text-warning">add</span>(<span class="text-success">statusFinalLetra</span>);
-        <span class="text-warning">atualizarCorTecla</span>(<span class="text-success">letra</span>, <span class="text-success">statusFinalLetra</span>);
-    }, <span class="text-success">i</span> * <span class="text-info">250</span>);
-}
-
-<span class="text-info">// Submeter tentativa</span>
-<span class="text-primary">function</span> <span class="text-warning">submeterTentativa</span>() {
-    <span class="text-primary">if</span> (<span class="text-success">colunaAtual</span> !== <span class="text-success">TAMANHO_PALAVRA</span>) {
-        <span class="text-warning">mostrarMensagem</span>(<span class="text-danger">"Palavra incompleta!"</span>);
-        <span class="text-warning">agitarLinhaAtual</span>();
-        <span class="text-primary">return</span>;
-    }
-    
-    <span class="text-primary">let</span> <span class="text-success">tentativaAtual</span> = <span class="text-danger">""</span>;
-    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">i</span> = <span class="text-info">0</span>; <span class="text-success">i</span> < <span class="text-success">TAMANHO_PALAVRA</span>; <span class="text-success">i</span>++) {
-        <span class="text-success">tentativaAtual</span> += <span class="text-success">grade</span>[<span class="text-success">linhaAtual</span>][<span class="text-success">i</span>].<span class="text-success">textContent</span>;
-    }
-    
-    <span class="text-warning">processarTentativa</span>(<span class="text-success">tentativaAtual</span>);
-    
-    <span class="text-primary">if</span> (<span class="text-success">tentativaAtual</span>.<span class="text-warning">toUpperCase</span>() === <span class="text-success">palavraSecreta</span>.<span class="text-warning">toUpperCase</span>()) {
-        <span class="text-warning">mostrarMensagem</span>(<span class="text-danger">"Parabéns, você acertou!"</span>, <span class="text-primary">true</span>);
-        <span class="text-warning">animarVitoria</span>();
-    }
-}</code></pre>
+                                    <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-info">// Configurações do jogo</span></span>
+<span class="line"><span class="text-primary">const</span> <span class="text-success">TAMANHO_PALAVRA</span> = <span class="text-info">5</span>;</span>
+<span class="line"><span class="text-primary">const</span> <span class="text-success">MAX_TENTATIVAS</span> = <span class="text-info">6</span>;</span>
+<span class="line"><span class="text-primary">let</span> <span class="text-success">linhaAtual</span> = <span class="text-info">0</span>;</span>
+<span class="line"><span class="text-primary">let</span> <span class="text-success">colunaAtual</span> = <span class="text-info">0</span>;</span>
+<span class="line"></span>
+<span class="line"><span class="text-info">// Processar tentativa do jogador</span></span>
+<span class="line"><span class="text-primary">function</span> <span class="text-warning">processarTentativa</span>(<span class="text-success">tentativa</span>) {</span>
+<span class="line">    <span class="text-primary">let</span> <span class="text-success">contagemLetrasSecretas</span> = {};</span>
+<span class="line">    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">letra</span> <span class="text-primary">of</span> <span class="text-success">palavraSecreta</span>) {</span>
+<span class="line">        <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">letra</span>] = (<span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">letra</span>] || <span class="text-info">0</span>) + <span class="text-info">1</span>;</span>
+<span class="line">    }</span>
+<span class="line"></span>
+<span class="line">    <span class="text-info">// Primeiro: marcar letras corretas (verde)</span></span>
+<span class="line">    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">i</span> = <span class="text-info">0</span>; <span class="text-success">i</span> < <span class="text-success">TAMANHO_PALAVRA</span>; <span class="text-success">i</span>++) {</span>
+<span class="line">        <span class="text-primary">if</span> (<span class="text-success">tentativa</span>[<span class="text-success">i</span>] === <span class="text-success">palavraSecreta</span>[<span class="text-success">i</span>]) {</span>
+<span class="line">            <span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] = <span class="text-danger">'correta'</span>;</span>
+<span class="line">            <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">tentativa</span>[<span class="text-success">i</span>]]--;</span>
+<span class="line">        }</span>
+<span class="line">    }</span>
+<span class="line"></span>
+<span class="line">    <span class="text-info">// Depois: marcar letras presentes (amarelo) e ausentes (cinza)</span></span>
+<span class="line">    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">i</span> = <span class="text-info">0</span>; <span class="text-success">i</span> < <span class="text-success">TAMANHO_PALAVRA</span>; <span class="text-success">i</span>++) {</span>
+<span class="line">        <span class="text-primary">if</span> (<span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] === <span class="text-danger">'correta'</span>) <span class="text-primary">continue</span>;</span>
+<span class="line">        </span>
+<span class="line">        <span class="text-primary">if</span> (<span class="text-success">palavraSecreta</span>.<span class="text-warning">includes</span>(<span class="text-success">tentativa</span>[<span class="text-success">i</span>]) && </span>
+<span class="line">            <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">tentativa</span>[<span class="text-success">i</span>]] > <span class="text-info">0</span>) {</span>
+<span class="line">            <span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] = <span class="text-danger">'presente'</span>;</span>
+<span class="line">            <span class="text-success">contagemLetrasSecretas</span>[<span class="text-success">tentativa</span>[<span class="text-success">i</span>]]--;</span>
+<span class="line">        } <span class="text-primary">else</span> {</span>
+<span class="line">            <span class="text-success">statusTentativa</span>[<span class="text-success">i</span>] = <span class="text-danger">'ausente'</span>;</span>
+<span class="line">        }</span>
+<span class="line">    }</span>
+<span class="line"></span>
+<span class="line">    <span class="text-info">// Aplicar animação flip e cores</span></span>
+<span class="line">    <span class="text-success">celula</span>.<span class="text-success">classList</span>.<span class="text-warning">add</span>(<span class="text-danger">'flip'</span>);</span>
+<span class="line">    <span class="text-primary">setTimeout</span>(() => {</span>
+<span class="line">        <span class="text-success">celula</span>.<span class="text-success">classList</span>.<span class="text-warning">add</span>(<span class="text-success">statusFinalLetra</span>);</span>
+<span class="line">        <span class="text-warning">atualizarCorTecla</span>(<span class="text-success">letra</span>, <span class="text-success">statusFinalLetra</span>);</span>
+<span class="line">    }, <span class="text-success">i</span> * <span class="text-info">250</span>);</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="text-info">// Submeter tentativa</span></span>
+<span class="line"><span class="text-primary">function</span> <span class="text-warning">submeterTentativa</span>() {</span>
+<span class="line">    <span class="text-primary">if</span> (<span class="text-success">colunaAtual</span> !== <span class="text-success">TAMANHO_PALAVRA</span>) {</span>
+<span class="line">        <span class="text-warning">mostrarMensagem</span>(<span class="text-danger">"Palavra incompleta!"</span>);</span>
+<span class="line">        <span class="text-warning">agitarLinhaAtual</span>();</span>
+<span class="line">        <span class="text-primary">return</span>;</span>
+<span class="line">    }</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-primary">let</span> <span class="text-success">tentativaAtual</span> = <span class="text-danger">""</span>;</span>
+<span class="line">    <span class="text-primary">for</span> (<span class="text-primary">let</span> <span class="text-success">i</span> = <span class="text-info">0</span>; <span class="text-success">i</span> < <span class="text-success">TAMANHO_PALAVRA</span>; <span class="text-success">i</span>++) {</span>
+<span class="line">        <span class="text-success">tentativaAtual</span> += <span class="text-success">grade</span>[<span class="text-success">linhaAtual</span>][<span class="text-success">i</span>].<span class="text-success">textContent</span>;</span>
+<span class="line">    }</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-warning">processarTentativa</span>(<span class="text-success">tentativaAtual</span>);</span>
+<span class="line">    </span>
+<span class="line">    <span class="text-primary">if</span> (<span class="text-success">tentativaAtual</span>.<span class="text-warning">toUpperCase</span>() === <span class="text-success">palavraSecreta</span>.<span class="text-warning">toUpperCase</span>()) {</span>
+<span class="line">        <span class="text-warning">mostrarMensagem</span>(<span class="text-danger">"Parabéns, você acertou!"</span>, <span class="text-primary">true</span>);</span>
+<span class="line">        <span class="text-warning">animarVitoria</span>();</span>
+<span class="line">    }</span>
+<span class="line">}</span></code></pre>
                                 </div>
                             </div>
                         </div>
@@ -835,66 +964,39 @@
                             </h2>
                             <div id="cs50HTML" class="accordion-collapse collapse" data-bs-parent="#accordionCS50x">
                                 <div class="accordion-body">
-                                    <pre class="bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="text-info">&lt;!-- Estrutura do jogo Termo --&gt;</span>
-<span class="text-primary">&lt;header&gt;</span>
-    <span class="text-primary">&lt;h1&gt;</span>Termo Clone<span class="text-primary">&lt;/h1&gt;</span>
-<span class="text-primary">&lt;/header&gt;</span>
-
-<span class="text-primary">&lt;main&gt;</span>
-    <span class="text-primary">&lt;div</span> <span class="text-success">id</span>=<span class="text-danger">"mensagens-container"</span><span class="text-primary">&gt;&lt;/div&gt;</span>
-    
-    <span class="text-info">&lt;!-- Grade 6x5 para as tentativas --&gt;</span>
-    <span class="text-primary">&lt;div</span> <span class="text-success">id</span>=<span class="text-danger">"grade-container"</span><span class="text-primary">&gt;&lt;/div&gt;</span>
-    
-    <span class="text-info">&lt;!-- Teclado virtual --&gt;</span>
-    <span class="text-primary">&lt;div</span> <span class="text-success">id</span>=<span class="text-danger">"teclado-container"</span><span class="text-primary">&gt;&lt;/div&gt;</span>
-    
-    <span class="text-primary">&lt;button</span> <span class="text-success">id</span>=<span class="text-danger">"btn-jogar-novamente"</span><span class="text-primary">&gt;</span>
-        Jogar Novamente
-    <span class="text-primary">&lt;/button&gt;</span>
-<span class="text-primary">&lt;/main&gt;</span>
-
-<span class="text-info">&lt;!-- Dados do servidor Flask --&gt;</span>
-<span class="text-primary">&lt;script&gt;</span>
-    <span class="text-primary">const</span> <span class="text-success">PALAVRA_SECRETA_SERVIDOR</span> = <span class="text-danger">'{{ palavra_secreta | e }}'</span>;
-    <span class="text-primary">const</span> <span class="text-success">LISTA_PALAVRAS_VALIDAS_SERVIDOR</span> = {{ <span class="text-success">palavras_validas</span> | <span class="text-warning">tojson</span> | <span class="text-warning">safe</span> }};
-<span class="text-primary">&lt;/script&gt;</span></code></pre>
+                                    <pre class="code-block bg-dark text-light p-3 rounded" style="font-size: 0.9rem;"><code><span class="line"><span class="text-info">&lt;!-- Estrutura do jogo Termo --&gt;</span></span>
+<span class="line"><span class="text-primary">&lt;header&gt;</span></span>
+<span class="line">    <span class="text-primary">&lt;h1&gt;</span>Termo Clone<span class="text-primary">&lt;/h1&gt;</span></span>
+<span class="line"><span class="text-primary">&lt;/header&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-primary">&lt;main&gt;</span></span>
+<span class="line">    <span class="text-primary">&lt;div</span> <span class="text-success">id</span>=<span class="text-danger">"mensagens-container"</span><span class="text-primary">&gt;&lt;/div&gt;</span></span>
+<span class="line">    </span>
+<span class="line">    <span class="text-info">&lt;!-- Grade 6x5 para as tentativas --&gt;</span></span>
+<span class="line">    <span class="text-primary">&lt;div</span> <span class="text-success">id</span>=<span class="text-danger">"grade-container"</span><span class="text-primary">&gt;&lt;/div&gt;</span></span>
+<span class="line">    </span>
+<span class="line">    <span class="text-info">&lt;!-- Teclado virtual --&gt;</span></span>
+<span class="line">    <span class="text-primary">&lt;div</span> <span class="text-success">id</span>=<span class="text-danger">"teclado-container"</span><span class="text-primary">&gt;&lt;/div&gt;</span></span>
+<span class="line">    </span>
+<span class="line">    <span class="text-primary">&lt;button</span> <span class="text-success">id</span>=<span class="text-danger">"btn-jogar-novamente"</span><span class="text-primary">&gt;</span></span>
+<span class="line">        Jogar Novamente</span>
+<span class="line">    <span class="text-primary">&lt;/button&gt;</span></span>
+<span class="line"><span class="text-primary">&lt;/main&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span class="text-info">&lt;!-- Dados do servidor Flask --&gt;</span></span>
+<span class="line"><span class="text-primary">&lt;script&gt;</span></span>
+<span class="line">    <span class="text-primary">const</span> <span class="text-success">PALAVRA_SECRETA_SERVIDOR</span> = <span class="text-danger">'{{ palavra_secreta | e }}'</span>;</span>
+<span class="line">    <span class="text-primary">const</span> <span class="text-success">LISTA_PALAVRAS_VALIDAS_SERVIDOR</span> = {{ <span class="text-success">palavras_validas</span> | <span class="text-warning">tojson</span> | <span class="text-warning">safe</span> }};</span>
+<span class="line"><span class="text-primary">&lt;/script&gt;</span></span></code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://github.com/rafaeldiasgarcia/CS50x" class="btn btn-success" target="_blank">
-                        <i class="bi bi-github me-2"></i>Clique aqui para ver o código completo
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Portfólio -->
-    <div class="modal fade" id="modalPortfolio" tabindex="-1" aria-labelledby="modalPortfolioLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalPortfolioLabel">
-                        <i class="bi bi-person-badge me-2"></i>Portfólio Pessoal - Código Fonte
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="alert alert-info">
-                        <i class="bi bi-info-circle me-2"></i>
-                        Este é o código-fonte do próprio portfólio. Você está visualizando-o agora! 
-                        Para ver todos os arquivos, visite o repositório no GitHub.
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://github.com/rafaeldiasgarcia/rafaeldiasgarcia.github.io" class="btn btn-info" target="_blank">
-                        <i class="bi bi-github me-2"></i>Clique aqui para ver o código completo
+                    <button type="button" class="btn btn-secondary modal-close-btn" data-bs-dismiss="modal" data-translate="modal-close">Fechar</button>
+                    <a href="https://github.com/rafaeldiasgarcia/CS50x" class="btn btn-success modal-github-btn" target="_blank">
+                        <i class="bi bi-github me-2"></i><span class="modal-code-text-full" data-translate="modal-see-full-code">Clique aqui para ver o código completo</span><span class="modal-code-text-short d-none" data-translate="modal-see-full-code">Código Completo</span>
                     </a>
                 </div>
             </div>
@@ -903,6 +1005,10 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Language Menu JS -->
+    <script src="src/js/projects-language-menu.js"></script>
+    <!-- Modal Accessibility Fix -->
+    <script src="src/js/modal-accessibility.js"></script>
 </body>
 </html>
 

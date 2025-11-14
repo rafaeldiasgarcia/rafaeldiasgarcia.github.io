@@ -2,6 +2,13 @@
 class LanguageMenu {
     constructor() {
         this.currentLanguage = 'pt-BR';
+        this.languageFlags = {
+            'pt-BR': '🇧🇷',
+            'en-US': '🇺🇸',
+            'es-ES': '🇪🇸',
+            'de-DE': '🇩🇪',
+            'ja-JP': '🇯🇵'
+        };
         this.translations = {
             'pt-BR': {
                 'technologies': 'Tecnologias',
@@ -123,12 +130,12 @@ class LanguageMenu {
         const topBar = document.querySelector('.top-bar');
         if (!topBar) return;
         
+        const currentFlag = this.languageFlags[this.currentLanguage] || '🇧🇷';
+        
         const menuHTML = `
             <div class="language-menu">
                 <button class="menu-toggle" aria-label="Language Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="flag-icon">${currentFlag}</span>
                 </button>
                 <div class="language-dropdown">
                     <button class="language-option active" data-lang="pt-BR">🇧🇷 Português</button>
@@ -197,8 +204,16 @@ class LanguageMenu {
         
         this.currentLanguage = lang;
         this.updateActiveOption(lang);
+        this.updateFlagIcon(lang);
         this.translateContent(lang);
         this.saveLanguage(lang);
+    }
+    
+    updateFlagIcon(lang) {
+        const flagIcon = document.querySelector('.menu-toggle .flag-icon');
+        if (flagIcon && this.languageFlags[lang]) {
+            flagIcon.textContent = this.languageFlags[lang];
+        }
     }
     
     updateActiveOption(lang) {
@@ -250,7 +265,11 @@ class LanguageMenu {
     loadSavedLanguage() {
         const savedLang = localStorage.getItem('preferred-language');
         if (savedLang && this.translations[savedLang]) {
+            this.currentLanguage = savedLang;
             this.changeLanguage(savedLang);
+        } else {
+            // Update flag icon with default language
+            this.updateFlagIcon(this.currentLanguage);
         }
     }
 }
