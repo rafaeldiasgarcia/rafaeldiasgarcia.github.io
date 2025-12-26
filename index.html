@@ -2,141 +2,645 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=0.25, maximum-scale=5.0, user-scalable=yes">
-    <title>Rafael Dias Garcia - Curriculo</title>
-    <link rel="icon" type="image/svg+xml" href="src/img/favicon.svg">
-    
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    
-    
-    <link rel="stylesheet" href="src/css/variables.css">
-    <link rel="stylesheet" href="src/css/base.css">
-    <link rel="stylesheet" href="src/css/layout.css">
-    <link rel="stylesheet" href="src/css/components.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
-    <link rel="stylesheet" href="src/css/language-menu.css">
-    
-    <script src="src/js/viewport-zoom.js"></script>
-    <script src="src/js/side-bar.js"></script>
-    <script src="src/js/language-menu.js"></script>
-    <script src="src/js/certifications-menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Dias Garcia | Engenharia de Software</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Local File) -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<div class="rela-block page">
-    <div class="rela-block top-bar">
-        <div class="caps name"><div class="abs-center">Rafael Dias Garcia</div></div>
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
+
+<!-- Navbar -->
+<nav id="navbar-main" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">R<span class="text-primary">D</span>G</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center gap-2">
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#techs">Tecnologias</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+                <li class="nav-item ms-lg-2">
+                    <button class="btn btn-primary px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#contactModal">Contato</button>
+                </li>
+                <li class="nav-item ms-lg-2 d-flex gap-2">
+                    <a href="https://github.com/rafaeldiasgarcia" target="_blank" class="nav-link text-dark"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" class="nav-link text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="side-bar">
-        <div class="mugshot">
-            <div class="logo">
-                <div class="photo-container">
-                    <img src="src/img/foto.jpg" alt="Rafael Dias Garcia" class="profile-photo">
-                    <svg viewbox="0 0 80 80" class="rela-block logo-svg">
-                        <defs>
-                            <mask id="hexagon-mask">
-                                <rect width="100%" height="100%" fill="white"/>
-                                <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" fill="black"/>
-                            </mask>
-                        </defs>
-                        <rect width="100%" height="100%" fill="#F7E0C1" mask="url(#hexagon-mask)"/>
-                        <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" stroke-width="1" fill="none" stroke="black"/>
-                    </svg>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="cwi-badge">
+                    <i class="fas fa-rocket"></i> CWI Crescer Level 2
+                </div>
+                <h1 class="display-3 mb-3">Rafael Dias Garcia</h1>
+                <p class="lead text-secondary mb-4 fs-4">Engenharia de Software | Full Stack Developer</p>
+
+                <p class="mb-5 text-muted mx-auto" style="max-width: 600px;">
+                    Desenvolvedor apaixonado por criar soluções robustas com Java e Angular.
+                    Músico clássico trazendo harmonia e lógica para o código.
+                </p>
+
+                <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
+                    <a href="#projetos" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 px-sm-5 btn-sm-lg">Ver Projetos</a>
+                    <a href="#contato" class="btn btn-outline-secondary btn-lg rounded-pill px-5 px-sm-5 btn-sm-lg">Entrar em Contato</a>
                 </div>
             </div>
         </div>
-        <p>Rua Cândido Corrêa de Araújo,</p>
-        <p>res. Matioli, 27</p>
-        <p>Ourinhos, São Paulo, 19901-750</p>
-        <a href="https://wa.me/5514997021605" class="rela-block social whatsapp" target="_blank">+55 14 99702-1605</a>
-        <a href="mailto:rafdgar@tuta.io" class="rela-block social email" target="_blank">rafdgar@tuta.io</a><br>
-        <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" class="rela-block social linked-in" target="_blank">/rafaeldiasgarcia</a>
-        <a href="https://github.com/rafaeldiasgarcia" class="rela-block social github" target="_blank">/rafaeldiasgarcia</a>
-        <a href="projects.html" class="rela-block social portfolio" target="_blank">Meus Projetos</a>
-        <p class="rela-block caps side-header" data-translate="technologies">Tecnologias</p>
-        <div class="rela-block technologies-container">
-            <div class="rela-block technologies-column">
-                <p class="rela-block list-thing">Java</p>
-                <p class="rela-block list-thing">PHP</p>
-                <p class="rela-block list-thing">JavaScript</p>
-                <p class="rela-block list-thing">HTML/CSS</p>
-            </div>
-            <div class="rela-block technologies-column">
-                <p class="rela-block list-thing">SQL</p>
-                <p class="rela-block list-thing">Python</p>
-                <p class="rela-block list-thing">Git</p>
-                <p class="rela-block list-thing">Docker</p>
-            </div>
-        </div>
-
-        <p class="rela-block caps side-header" data-translate="certifications">Certificações</p>
-        <div class="rela-block certifications-menu">
-            <button class="list-thing certifications-toggle" aria-label="Harvard CS50 Certificados">
-                Harvard | CS50
-            </button>
-            <div class="certifications-dropdown">
-                <a href="https://certificates.cs50.io/3ec00f83-94ab-4dc7-bfb2-6f5a4646b76a.pdf?size=letter" target="_blank" class="certification-option">CS50 Certificate (PDF)</a>
-                <a href="https://courses.edx.org/certificates/1c49f499b0bf4b90ba41f1408938b342" target="_blank" class="certification-option">edX Verified Certificate</a>
-                <a href="https://www.credly.com/badges/ea280ac4-0a33-4016-9bc1-78fc6f161a4d/public_url" target="_blank" class="certification-option">Credly Badge</a>
-            </div>
-        </div>
-        <div class="rela-block certifications-menu">
-            <button class="list-thing certifications-toggle" aria-label="Cisco JavaScript Certificados">
-                Cisco | JavaScript Essencials
-            </button>
-            <div class="certifications-dropdown">
-                <a href="https://www.credly.com/badges/0df91bd6-2ab3-4399-bebc-ab713252ea84/public_url" target="_blank" class="certification-option">Credly Badge</a>
-                <a href="src/doc/certificados/cisco-unifio-js.pdf" target="_blank" class="certification-option">Cisco UNIFIO Certificate (PDF)</a>
-                <a href="src/doc/certificados/cisco-js-badge.pdf" target="_blank" class="certification-option">Cisco JS Badge (PDF)</a>
-            </div>
-        </div>
-        <a href="src/doc/certificados/uninter-ingles-avancado.pdf" target="_blank" class="rela-block list-thing certifications-toggle" style="text-decoration: none; color: inherit;">U-BEST | Advanced English</a>
-        <div class="rela-block certifications-menu">
-            <button class="list-thing certifications-toggle underline" aria-label="Outras Certificações">
-                Outros
-            </button>
-            <div class="certifications-dropdown">
-                <a href="https://cursos.alura.com.br/degree/certificate/93b0bb99-02cc-462d-adda-73ba08a93c4f?lang=en" target="_blank" class="certification-option">From Scratch: HTML and CSS for Web Projects</a>
-                <a href="https://cursos.alura.com.br/degree/certificate/9c14158a-105c-4c18-bb40-c80ccd19dcf3?lang=en" target="_blank" class="certification-option">JavaScript for backend</a>
-                <a href="https://cursos.alura.com.br/degree/certificate/6c85fab8-c718-439c-933a-bea9574b5656?lang=en" target="_blank" class="certification-option">Learn Java with Object Oriented Programming</a>
-                <a href="https://cursos.alura.com.br/degree/certificate/f84c8f5b-34e5-4871-8c7f-47b809bf6f4c?lang=en" target="_blank" class="certification-option">C# and object orientation</a>
-                <a href="https://cursos.alura.com.br/degree/certificate/a5ac9b79-d05a-4d2f-bdb4-976eefd33ae2?lang=en" target="_blank" class="certification-option">Learn to program in Python with Object Orientation</a>
-                <a href="src/doc/certificados/huawei-talent-online.pdf" target="_blank" class="certification-option">Huawei Talent Online</a>
-            </div>
-        </div>
-
-
     </div>
-    <div class="rela-block content-container">
-        <h2 class="rela-block caps title" data-translate="title">Engenharia de Software</h2>
-        <div class="rela-block separator"></div>
-        <div class="rela-block caps greyed" data-translate="profile">Perfil</div>
-        <p class="long-margin justified" data-translate="profile-text">Atualmente, estou no segundo termo da graduação em Engenharia de Software, desenvolvendo minha base em lógica de programação, estrutura de dados e desenvolvimento de sistemas. Sou curioso, gosto de aprender novas tecnologias e estou sempre em busca de desafios que me permitam crescer como desenvolvedor.<br><br>Tenho interesse especial em desenvolvimento backend, arquitetura de software e otimização de código, mas também exploro outras áreas da tecnologia para me tornar um profissional completo. Além disso, tenho um forte apreço por lógica e criatividade, habilidades que também desenvolvi ao estudar violão clássico no Conservatório de Tatuí.</p>
-        <div class="rela-block caps greyed" data-translate="experience">Experiência</div>
+</section>
 
-        <h3 data-translate="sge-title">SGE - Sistema de Gerenciamento de Eventos</h3>
-        <p class="light" data-translate="sge-company">UNIFIO - Centro Universitário das Faculdades Integradas de Ourinhos - Em Desenvolvimento</p>
-        <p class="justified" data-translate="sge-description">Sistema web completo para gerenciamento de agendamentos de quadras poliesportivas, administração de atléticas universitárias e organização de eventos. Desenvolvido com arquitetura MVC moderna, Repository Pattern, autenticação multi-nível e calendário interativo.</p>
-        <p class="justified" data-translate="sge-features"><strong>Funcionalidades Principais:</strong> Sistema de agendamento com validação de conflitos, gestão de atléticas, cursos e modalidades esportivas, autenticação com níveis de acesso (User/Admin/SuperAdmin), relatórios detalhados e calendário interativo.</p>
-        <p class="justified" data-translate="sge-tech"><strong>Stack Técnico:</strong> PHP 8.2, MySQL, JavaScript, Docker Compose, Composer com autoloading PSR-4, AJAX para interações assíncronas.</p>
-        <p class="justified" data-translate="sge-impact"><strong>Impacto:</strong> Otimizando gestão de eventos para toda a comunidade acadêmica.</p>
-        <p class="light"><a href="https://github.com/rafaeldiasgarcia/sge" target="_blank" style="color: #666; text-decoration: none;" data-translate="github-repo">🔗 Repositório GitHub</a></p>
-        <div class="rela-block caps greyed" data-translate="education">Formação</div>
-        <h3 data-translate="education-title">Unifio, Ourinhos — Bacharelado em Engenharia de Software</h3>
-        <p class="light">JAN 2025 - DEC 2028</p>
-        <p class="justified" data-translate="education-description">Curso preparatório para atuação profissional em todas as etapas do desenvolvimento de software, desde projeto e levantamento de requisitos até construção, testes, deployment e manutenção. Utiliza metodologias ágeis, frameworks modernos e ferramentas do mercado atual. Inclui Projetos Integradores com foco em extensão, pesquisa acadêmica e empreendedorismo, proporcionando vivência prática e interação multidisciplinar.</p>
+<!-- Sobre Mim -->
+<section id="sobre" class="py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">Sobre Mim</h2>
+                <p class="text-secondary mb-4">
+                    Atualmente cursando o segundo termo de Engenharia de Software, minha trajetória é marcada pela disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei anos ao estudo do violão clássico em conservatórios renomados, o que me ensinou a importância da prática deliberada, atenção aos detalhes e trabalho em equipe.
+                </p>
+                <p class="text-secondary">
+                    Como estagiário Level 2 no <strong>CWI Crescer</strong>, estou aplicando esses conceitos em um ambiente corporativo de alta performance, desenvolvendo softwares escaláveis e aprendendo as melhores práticas de mercado.
+                </p>
+
+                <div class="row mt-4 g-3">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+                            <i class="fas fa-graduation-cap text-primary fs-3"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Unifio</h6>
+                                <small class="text-muted">Eng. Software (2028)</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- Card Interativo de Certificados -->
+                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded cursor-pointer hover-shadow" data-bs-toggle="modal" data-bs-target="#certsModal">
+                            <i class="fas fa-award text-warning fs-3"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Certificados & Cursos</h6>
+                                <small class="text-primary text-decoration-underline">Ver Lista Completa</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Ilustração abstrata com CSS/Bootstrap -->
+                <div class="position-relative p-5 bg-light rounded-4 border">
+                    <div class="row g-3">
+                        <div class="col-6 text-center">
+                            <h2 class="fw-bold text-primary display-4">C1</h2>
+                            <p class="text-muted small fw-bold">INGLÊS AVANÇADO</p>
+                        </div>
+                        <div class="col-6 text-center border-start">
+                            <h2 class="fw-bold text-success display-4">2º</h2>
+                            <p class="text-muted small fw-bold">ANO BACHARELADO ENG. SOFTWARE</p>
+                        </div>
+                        <div class="col-12 border-top pt-3 text-center">
+                            <p class="fst-italic text-muted">"Arquitetura de software é música congelada."</p>
+                            <p class="text-end small text-muted pe-4">— Adaptado de Goethe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <div class="download-button">
-        <a href="src/doc/curriculos/rafaeldiasgarcia_github_io.pdf" download="Rafael_Dias_Garcia_Curriculo.pdf" class="download-link" title="Baixar Currículo em PDF">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 15L8 11H10.5V3H13.5V11H16L12 15Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                <path d="M3 17H21V19H3V17Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-            </svg>
-        </a>
+<!-- Tech Stack Section -->
+<section id="techs" class="py-5">
+    <div class="container">
+        <!-- Stack Principal -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Stack Tecnológico</h2>
+            <p class="text-muted">Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.</p>
+        </div>
+
+        <div class="row g-3 justify-content-center mb-5">
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-java tech-icon text-warning"></i>
+                    <h6 class="tech-name">Java</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Linguagem robusta para sistemas backend corporativos.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-php tech-icon text-primary"></i>
+                    <h6 class="tech-name">PHP</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Desenvolvimento web dinâmico e veloz para servidores.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-js tech-icon text-warning"></i>
+                    <h6 class="tech-name">JavaScript</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Interatividade no frontend e lógica no backend.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-html5 tech-icon text-danger"></i>
+                    <h6 class="tech-name">HTML/CSS</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Estrutura semântica e estilização visual responsiva.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fas fa-database tech-icon text-secondary"></i>
+                    <h6 class="tech-name">SQL</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Modelagem e consulta eficiente de bancos de dados.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-python tech-icon text-info"></i>
+                    <h6 class="tech-name">Python</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Automação, processamento de dados e IA.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-git-alt tech-icon text-danger"></i>
+                    <h6 class="tech-name">Git</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Controle de versão e colaboração em equipe.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <div class="tech-card">
+                    <i class="fab fa-docker tech-icon text-primary"></i>
+                    <h6 class="tech-name">Docker</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Containerização para ambientes de deploy consistentes.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divisor -->
+        <div class="section-divider">
+            <span>Foco de Aprendizado (CWI Crescer)</span>
+        </div>
+
+        <!-- Aprendizados CWI (Apagados/Dimmed) -->
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tech-card tech-card-dimmed">
+                    <i class="fab fa-angular tech-icon text-danger"></i>
+                    <h6 class="tech-name">Angular</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Framework SPA do Google para aplicações web escaláveis.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tech-card tech-card-dimmed">
+                    <i class="fas fa-server tech-icon text-primary"></i>
+                    <h6 class="tech-name">DevOps</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Integração contínua (CI/CD) e infraestrutura ágil.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tech-card tech-card-dimmed">
+                    <i class="fas fa-shield-halved tech-icon text-success"></i>
+                    <h6 class="tech-name">Segurança</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Proteção de dados, vulnerabilidades e OWASP.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tech-card tech-card-dimmed">
+                    <i class="fas fa-brain tech-icon text-info"></i>
+                    <h6 class="tech-name">IA</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Integração com LLMs e ferramentas de GenAI.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="tech-card tech-card-dimmed">
+                    <i class="fas fa-users-gear tech-icon text-secondary"></i>
+                    <h6 class="tech-name">Agile</h6>
+                    <div class="tech-overlay">
+                        <span class="tech-desc">Metodologias ágeis (Scrum/Kanban) para projetos.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projeto Destaque SGE -->
+<section class="py-5">
+    <div class="container">
+        <div id="sge-feature" class="p-4 p-lg-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="badge bg-primary bg-opacity-25 text-primary-emphasis mb-3 border border-primary border-opacity-25">Projeto Destaque</div>
+                    <h2 class="fw-bold mb-3">SGE - Sistema de Gerenciamento de Eventos</h2>
+                    <p class="text-secondary-light opacity-75 mb-4">
+                        Sistema de Gerenciamento de Eventos desenvolvido para o Centro Universitário UNIFIO. Aplicação web completa para modernizar e centralizar a gestão de eventos esportivos e acadêmicos na quadra poliesportiva da instituição.
+                    </p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-2 align-items-center text-white opacity-75">
+                                <i class="fas fa-check-circle text-primary"></i> <span>PHP 8.2 & MySQL</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-2 align-items-center text-white opacity-75">
+                                <i class="fas fa-check-circle text-primary"></i> <span>Repository Pattern</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-2 align-items-center text-white opacity-75">
+                                <i class="fas fa-check-circle text-primary"></i> <span>Controle de Acesso (RBAC)</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex gap-2 align-items-center text-white opacity-75">
+                                <i class="fas fa-check-circle text-primary"></i> <span>Dockerized</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://github.com/rafaeldiasgarcia/SGE" target="_blank" class="btn btn-light fw-bold px-4">
+                        <i class="fab fa-github me-2"></i>Ver Código
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="code-window shadow-lg">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <small class="text-muted ms-2">EventService.php</small>
+                        </div>
+                        <div class="p-3">
+<pre class="m-0 text-white small"><code><span class="text-warning">public function</span> <span class="text-info">scheduleEvent</span>(CreateEventDTO $dto): Event
+{
+    <span class="text-success">return</span> DB::transaction(<span class="text-warning">function</span> () <span class="text-warning">use</span> ($dto) {
+        <span class="text-secondary">// Check availability for the time slot</span>
+        <span class="text-warning">if</span> (!$this->repo->isTimeSlotAvailable($dto->date, $dto->time)) {
+             <span class="text-warning">throw new</span> ConflictException(<span class="text-info">"Horário indisponível."</span>);
+        }
+
+        <span class="text-secondary">// Create event with RBAC protection</span>
+        $event = $this->repo->create($dto->toArray());
+
+        <span class="text-secondary">// Notify admins asynchronously</span>
+        $this->notificationService->notifyNewSchedule($event);
+
+        <span class="text-success">return</span> $event;
+    });
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Outros Projetos -->
+<section id="projetos" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">Outros Projetos</h2>
+
+        <div class="row g-4">
+            <!-- Classificador LLMOps -->
+            <div class="col-md-6 col-lg-4">
+                <div class="custom-card p-4 d-flex flex-column border-primary border-opacity-25" style="background: #fdfdff;">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3">
+                            <i class="fas fa-robot fa-2x"></i>
+                        </div>
+                        <a href="https://github.com/rafaeldiasgarcia/classificador-texto-llmops" target="_blank" class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
+                    </div>
+                    <h4 class="fw-bold">Classificador de Texto LLMOps</h4>
+                    <div class="mb-3">
+                        <span class="badge bg-dark text-white"><i class="fas fa-star text-warning me-1"></i>Gemini AI Powered</span>
+                    </div>
+                    <p class="text-muted small flex-grow-1">
+                        Sistema de classificação de feedbacks usando fine-tuning (DistilBERT) com deploy via Docker e API FastAPI.
+                        <br><em class="text-primary small">Feito inteiramente com Gemini AI para iFood GenAI.</em>
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-light text-dark border">Python</span>
+                        <span class="badge bg-light text-dark border">PyTorch</span>
+                        <span class="badge bg-light text-dark border">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WeatherNow -->
+            <div class="col-md-6 col-lg-4">
+                <div class="custom-card p-4 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3">
+                            <i class="fas fa-cloud-sun fa-2x"></i>
+                        </div>
+                        <div>
+                            <a href="https://weather-now-lyart.vercel.app/" target="_blank" class="text-secondary me-2"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/rafaeldiasgarcia/WeatherNow" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold">WeatherNow</h4>
+                    <p class="text-muted small flex-grow-1">Dashboard de clima consumindo API OpenWeatherMap. Features de tema dark/light e requisições assíncronas.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-light text-dark border">JS</span>
+                        <span class="badge bg-light text-dark border">API</span>
+                        <span class="badge bg-light text-dark border">CSS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Violão -->
+            <div class="col-md-6 col-lg-4">
+                <div class="custom-card p-4 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="bg-success bg-opacity-10 text-success p-3 rounded-3">
+                            <i class="fas fa-guitar fa-2x"></i>
+                        </div>
+                        <div>
+                            <a href="https://rafaeldiasgarcia.github.io/tecnicas-violao-classico/" target="_blank" class="text-secondary me-2"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/rafaeldiasgarcia/tecnicas-violao-classico" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="fw-bold">Violão Clássico</h4>
+                    <p class="text-muted small flex-grow-1">Guia interativo open-source para a comunidade de violonistas. Recurso educacional colaborativo.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-light text-dark border">HTML</span>
+                        <span class="badge bg-light text-dark border">Comunidade</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bookshelf API -->
+            <div class="col-md-6 col-lg-4">
+                <div class="custom-card p-4 d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3">
+                            <i class="fas fa-book fa-2x"></i>
+                        </div>
+                        <a href="https://github.com/rafaeldiasgarcia/BookshelfAPI" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h4 class="fw-bold">Bookshelf API</h4>
+                    <p class="text-muted small flex-grow-1">API RESTful com Node.js e Express. CRUD completo de livros com persistência local em JSON.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-light text-dark border">Node.js</span>
+                        <span class="badge bg-light text-dark border">Express</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experiência -->
+<section id="experiencia" class="py-5">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">Experiência Profissional</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <span class="badge bg-primary mb-2">Atual</span>
+                    <h5 class="fw-bold mb-1">CWI Software (Crescer)</h5>
+                    <p class="text-primary fw-medium mb-2">Estagiário - Level 2</p>
+                    <p class="text-muted small">
+                        Capacitação intensiva em desenvolvimento de software corporativo focando em Java e Angular.
+                        Práticas de DevOps, Segurança e Metodologias Ágeis em ambiente simulado de alta performance.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="timeline-item">
+                    <span class="badge bg-secondary mb-2">2024</span>
+                    <h5 class="fw-bold mb-1">Conservatório de Tatuí</h5>
+                    <p class="text-secondary fw-medium mb-2">Bolsista - Camerata de Violões</p>
+                    <p class="text-muted small">
+                        Atuação profissional como músico, desenvolvendo disciplina rigorosa, trabalho em equipe e gestão de tempo sob pressão de apresentações públicas.
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="timeline-item" style="border-left-color: transparent;">
+                    <span class="badge bg-secondary mb-2">2020 - 2021</span>
+                    <h5 class="fw-bold mb-1">Microtec Papelaria e Informática</h5>
+                    <p class="text-secondary fw-medium mb-2">Estagiário de TI</p>
+                    <p class="text-muted small">
+                        Suporte técnico (hardware/software), gestão de inventário e atendimento ao cliente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contato" class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold text-white mb-4">Vamos conversar?</h2>
+        <p class="mb-5 text-secondary">Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).</p>
+
+        <div class="d-flex justify-content-center flex-column flex-sm-row gap-3 mb-5">
+            <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#contactModal">
+                <i class="fas fa-envelope me-2"></i>Enviar Email
+            </button>
+            <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" class="btn btn-outline-light px-4">
+                <i class="fab fa-linkedin me-2"></i>LinkedIn
+            </a>
+        </div>
+
+        <hr class="border-secondary opacity-25">
+
+        <div class="row pt-3 text-secondary small">
+            <div class="col-md-6 text-md-start">
+                &copy; 2025 Rafael Dias Garcia.
+            </div>
+            <div class="col-md-6 text-md-end">
+                Feito com Bootstrap 5 & HTML5.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Certificados Modal -->
+<div class="modal fade" id="certsModal" tabindex="-1" aria-labelledby="certsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-gradient bg-primary text-white border-0">
+                <h5 class="modal-title fw-bold d-flex align-items-center" id="certsModalLabel">
+                    <i class="fas fa-certificate me-2"></i>Certificados & Cursos
+                    <span class="badge bg-light text-primary ms-2">4</span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="list-group list-group-flush">
+                    <!-- CS50 Harvard -->
+                    <div class="list-group-item list-group-item-action p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1 fw-bold">CS50: Introduction to Computer Science</h6>
+                                <small class="text-muted">Harvard University</small>
+                            </div>
+                            <a href="assets/certificates/cs50x.pdf" download="CS50x-Rafael-Dias-Garcia.pdf"
+                               class="btn btn-outline-primary btn-sm" title="Download Certificado">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cisco JavaScript -->
+                    <div class="list-group-item list-group-item-action p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1 fw-bold">JavaScript Essentials</h6>
+                                <small class="text-muted">Cisco Networking Academy</small>
+                            </div>
+                            <a href="assets/certificates/cisco-js-badge.pdf" download="Cisco-JS-Badge-Rafael-Dias-Garcia.pdf"
+                               class="btn btn-outline-primary btn-sm" title="Download Badge">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Huawei Python -->
+                    <div class="list-group-item list-group-item-action p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1 fw-bold">Python Advanced</h6>
+                                <small class="text-muted">Huawei Talent Online</small>
+                            </div>
+                            <a href="assets/certificates/huawei-talent-online.pdf" download="Huawei-Python-Advanced-Rafael-Dias-Garcia.pdf"
+                               class="btn btn-outline-primary btn-sm" title="Download Certificado">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- UNINTER English -->
+                    <div class="list-group-item list-group-item-action p-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="mb-1 fw-bold">Advanced English (C1)</h6>
+                                <small class="text-muted">UNINTER - U-BEST</small>
+                            </div>
+                            <a href="assets/certificates/uninter-ingles-avancado.pdf" download="UNINTER-English-Advanced-Rafael-Dias-Garcia.pdf"
+                               class="btn btn-outline-primary btn-sm" title="Download Certificado">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light border-0">
+                <span class="me-auto">
+                    <i class="fas fa-info-circle text-muted"
+                       data-bs-toggle="tooltip"
+                       data-bs-placement="top"
+                       data-bs-title="Clique no ícone para baixar o certificado"
+                       style="cursor: pointer;"></i>
+                </span>
+                <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0 bg-primary text-white">
+                <h5 class="modal-title fw-bold" id="contactModalLabel"><i class="fas fa-paper-plane me-2"></i>Enviar Mensagem</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+
+                <!-- Form -->
+                <form id="contactForm" action="https://formspree.io/f/xrbqbvyy" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold text-secondary">Seu Email</label>
+                        <input type="email" class="form-control form-control-lg bg-light" name="email" id="email" placeholder="nome@exemplo.com" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label fw-bold text-secondary">Mensagem</label>
+                        <textarea class="form-control form-control-lg bg-light" name="message" id="message" rows="4" placeholder="Como posso ajudar?" required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg fw-bold">Enviar Agora</button>
+                    </div>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="text-center py-5 d-none">
+                    <i class="fas fa-check-circle text-success fa-4x mb-3 animate__animated animate__bounceIn"></i>
+                    <h4 class="fw-bold text-success mb-2">Mensagem Enviada!</h4>
+                    <p class="text-muted">Obrigado pelo contato. Retornarei em breve.</p>
+                    <button type="button" class="btn btn-outline-success mt-3" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+                <!-- Error Message (Hidden by default) -->
+                <div id="errorMessage" class="text-center py-5 d-none">
+                    <i class="fas fa-exclamation-circle text-danger fa-4x mb-3"></i>
+                    <h4 class="fw-bold text-danger mb-2">Erro ao enviar</h4>
+                    <p class="text-muted">Houve um problema. Tente novamente ou use meu email direto.</p>
+                    <button type="button" class="btn btn-outline-secondary mt-3" onclick="resetForm()">Tentar Novamente</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS (Local File) -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
