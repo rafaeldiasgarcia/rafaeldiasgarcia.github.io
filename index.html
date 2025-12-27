@@ -33,10 +33,10 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="navbarNav">
             <ul class="navbar-nav align-items-center gap-3">
-                <li class="nav-item"><a class="nav-link px-3" href="#sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#techs">Tecnologias</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#projetos">Projetos</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="#experiencia">Experiência</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#sobre" data-i18n="nav.about">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#techs" data-i18n="nav.technologies">Tecnologias</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
                 <li class="nav-item">
                     <div class="navbar-divider"></div>
                 </li>
@@ -57,9 +57,41 @@
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="btn btn-primary px-4 py-2 rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <button class="btn btn-primary px-4 py-2 rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#contactModal" data-i18n="nav.contact">
                         Contato
                     </button>
+                </li>
+                <li class="nav-item position-relative">
+                    <button class="language-selector" id="languageSelectorBtn" aria-label="Selecionar idioma">
+                        🇧🇷 <i class="fas fa-chevron-down ms-1"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a class="language-dropdown-item" data-lang="pt-BR">
+                            <span class="flag">🇧🇷</span>
+                            <span class="lang-name">Português</span>
+                            <i class="fas fa-check check-icon"></i>
+                        </a>
+                        <a class="language-dropdown-item" data-lang="en">
+                            <span class="flag">🇺🇸</span>
+                            <span class="lang-name">English</span>
+                            <i class="fas fa-check check-icon"></i>
+                        </a>
+                        <a class="language-dropdown-item" data-lang="es">
+                            <span class="flag">🇪🇸</span>
+                            <span class="lang-name">Español</span>
+                            <i class="fas fa-check check-icon"></i>
+                        </a>
+                        <a class="language-dropdown-item" data-lang="zh">
+                            <span class="flag">🇨🇳</span>
+                            <span class="lang-name">中文</span>
+                            <i class="fas fa-check check-icon"></i>
+                        </a>
+                        <a class="language-dropdown-item" data-lang="de">
+                            <span class="flag">🇩🇪</span>
+                            <span class="lang-name">Deutsch</span>
+                            <i class="fas fa-check check-icon"></i>
+                        </a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -71,8 +103,8 @@
 <div class="mobile-menu-sidebar" id="mobileMenuSidebar">
     <div class="mobile-menu-header">
         <div>
-            <h5 class="fw-bold mb-0">Menu</h5>
-            <small class="text-muted">Navegação</small>
+            <h5 class="fw-bold mb-0" data-i18n="mobile.menu">Menu</h5>
+            <small class="text-muted" data-i18n="mobile.navigation">Navegação</small>
         </div>
         <button class="mobile-menu-close" id="mobileMenuClose">
             <i class="fas fa-times"></i>
@@ -81,16 +113,16 @@
     <div class="mobile-menu-body">
         <nav class="mobile-menu-nav">
             <a href="#sobre" class="mobile-menu-item">
-                <i class="fas fa-user me-2"></i>Sobre
+                <i class="fas fa-user me-2"></i><span data-i18n="nav.about">Sobre</span>
             </a>
             <a href="#techs" class="mobile-menu-item">
-                <i class="fas fa-code me-2"></i>Tecnologias
+                <i class="fas fa-code me-2"></i><span data-i18n="nav.technologies">Tecnologias</span>
             </a>
             <a href="#projetos" class="mobile-menu-item">
-                <i class="fas fa-folder-open me-2"></i>Projetos
+                <i class="fas fa-folder-open me-2"></i><span data-i18n="nav.projects">Projetos</span>
             </a>
             <a href="#experiencia" class="mobile-menu-item">
-                <i class="fas fa-briefcase me-2"></i>Experiência
+                <i class="fas fa-briefcase me-2"></i><span data-i18n="nav.experience">Experiência</span>
             </a>
         </nav>
         
@@ -112,9 +144,41 @@
                 <i class="fas fa-moon theme-icon moon"></i>
                 <i class="fas fa-sun theme-icon sun"></i>
             </button>
-            <button class="btn btn-primary flex-grow-1 rounded-pill py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#contactModal">
-                <i class="fas fa-paper-plane me-2"></i>Vamos conversar
+            <button class="btn btn-primary flex-grow-1 rounded-pill py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#contactModal">
+                <i class="fas fa-paper-plane me-2"></i><span data-i18n="nav.contact">Contato</span>
             </button>
+            <div class="mobile-language-selector-wrapper position-relative">
+                <button class="mobile-language-toggle-icon" id="mobileLanguageBtn">
+                    <span class="flag-emoji">🇧🇷</span>
+                </button>
+                <div class="mobile-language-dropdown" id="mobileLanguageDropdown">
+                    <a class="mobile-language-dropdown-item" data-lang="pt-BR">
+                        <span class="flag">🇧🇷</span>
+                        <span class="lang-name">Português</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </a>
+                    <a class="mobile-language-dropdown-item" data-lang="en">
+                        <span class="flag">🇺🇸</span>
+                        <span class="lang-name">English</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </a>
+                    <a class="mobile-language-dropdown-item" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-name">Español</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </a>
+                    <a class="mobile-language-dropdown-item" data-lang="zh">
+                        <span class="flag">🇨🇳</span>
+                        <span class="lang-name">中文</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </a>
+                    <a class="mobile-language-dropdown-item" data-lang="de">
+                        <span class="flag">🇩🇪</span>
+                        <span class="lang-name">Deutsch</span>
+                        <i class="fas fa-check check-icon"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -125,19 +189,19 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="cwi-badge">
-                    <i class="fas fa-rocket"></i> CWI Crescer Level 2
+                    <i class="fas fa-rocket"></i> <span data-i18n="hero.badge">CWI Crescer Level 2</span>
                 </div>
-                <h1 class="display-3 mb-3">Rafael Dias Garcia</h1>
-                <p class="lead text-secondary mb-4 fs-4">Engenharia de Software | Full Stack Developer</p>
+                <h1 class="display-3 mb-3" data-i18n="hero.name">Rafael Dias Garcia</h1>
+                <p class="lead text-secondary mb-4 fs-4" data-i18n="hero.title">Engenharia de Software | Full Stack Developer</p>
 
-                <p class="mb-5 text-muted mx-auto" style="max-width: 600px;">
+                <p class="mb-5 text-muted mx-auto" style="max-width: 600px;" data-i18n="hero.description">
                     Desenvolvedor apaixonado por criar soluções robustas com Java e Angular.
                     Músico clássico trazendo harmonia e lógica para o código.
                 </p>
 
                 <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
-                    <a href="#projetos" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 px-sm-5 btn-sm-lg">Ver Projetos</a>
-                    <a href="#contato" class="btn btn-outline-secondary btn-lg rounded-pill px-5 px-sm-5 btn-sm-lg">Entrar em Contato</a>
+                    <a href="#projetos" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 px-sm-5 btn-sm-lg" data-i18n="hero.viewProjects">Ver Projetos</a>
+                    <a href="#contato" class="btn btn-outline-secondary btn-lg rounded-pill px-5 px-sm-5 btn-sm-lg" data-i18n="hero.contact">Entrar em Contato</a>
                 </div>
             </div>
         </div>
@@ -149,11 +213,11 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Sobre Mim</h2>
-                <p class="text-secondary mb-4">
+                <h2 class="fw-bold mb-4" data-i18n="about.title">Sobre Mim</h2>
+                <p class="text-secondary mb-4" data-i18n="about.p1">
                     Atualmente cursando o terceiro termo de Engenharia de Software, minha trajetória é marcada pela disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei anos ao estudo do violão clássico em conservatórios renomados, o que me ensinou a importância da prática deliberada, atenção aos detalhes e trabalho em equipe.
                 </p>
-                <p class="text-secondary">
+                <p class="text-secondary" data-i18n="about.p2" data-i18n-html>
                     Como estagiário Level 2 no <strong>CWI Crescer</strong>, estou aplicando esses conceitos em um ambiente corporativo de alta performance, desenvolvendo softwares escaláveis e aprendendo as melhores práticas de mercado.
                 </p>
 
@@ -163,11 +227,12 @@
                              data-bs-toggle="tooltip" 
                              data-bs-placement="top" 
                              data-bs-title="Centro Universitário das Faculdades Integradas de Ourinhos"
+                             data-i18n-tooltip="tooltip.university"
                              style="cursor: pointer;">
                             <i class="fas fa-graduation-cap text-primary fs-3"></i>
                             <div>
-                                <h6 class="mb-0 fw-bold">Unifio</h6>
-                                <small class="text-muted">Eng. Software (2028)</small>
+                                <h6 class="mb-0 fw-bold" data-i18n="about.university">Unifio</h6>
+                                <small class="text-muted" data-i18n="about.universityDesc">Eng. Software (2028)</small>
                             </div>
                         </div>
                     </div>
@@ -176,8 +241,8 @@
                         <div class="info-card info-card-hover d-flex align-items-center gap-3 p-3 rounded cursor-pointer" data-bs-toggle="modal" data-bs-target="#certsModal">
                             <i class="fas fa-award text-warning fs-3"></i>
                             <div>
-                                <h6 class="mb-0 fw-bold">Certificados & Cursos</h6>
-                                <small class="text-primary text-decoration-underline">Ver Lista Completa</small>
+                                <h6 class="mb-0 fw-bold" data-i18n="about.certificates">Certificados & Cursos</h6>
+                                <small class="text-primary text-decoration-underline" data-i18n="about.viewCertificates">Ver Lista Completa</small>
                             </div>
                         </div>
                     </div>
@@ -192,20 +257,22 @@
                                 data-bs-toggle="tooltip" 
                                 data-bs-placement="top" 
                                 data-bs-title="Nível avançado de inglês segundo o Quadro Europeu Comum de Referência para Línguas"
+                                data-i18n-tooltip="tooltip.englishLevel"
                                 style="cursor: pointer;">C1</h2>
-                            <p class="text-muted small fw-bold">INGLÊS AVANÇADO</p>
+                            <p class="text-muted small fw-bold" data-i18n="about.englishLevel">INGLÊS AVANÇADO</p>
                         </div>
                         <div class="col-6 text-center highlight-divider ps-3">
                             <h2 class="fw-bold text-success display-4"
                                 data-bs-toggle="tooltip" 
                                 data-bs-placement="top" 
                                 data-bs-title="Cursando o 3º termo da faculdade de Engenharia de Software na UNIFIO"
+                                data-i18n-tooltip="tooltip.degree"
                                 style="cursor: pointer;">3º</h2>
-                            <p class="text-muted small fw-bold">BACHARELADO ENG. SOFTWARE</p>
+                            <p class="text-muted small fw-bold" data-i18n="about.degree">BACHARELADO ENG. SOFTWARE</p>
                         </div>
                         <div class="col-12 highlight-divider-top pt-2">
-                            <p class="fst-italic text-muted text-center mb-2">"Arquitetura de software é música congelada."</p>
-                            <p class="text-end small text-muted mb-0">— Adaptado de Goethe</p>
+                            <p class="fst-italic text-muted text-center mb-2" data-i18n="about.quote">"Arquitetura de software é música congelada."</p>
+                            <p class="text-end small text-muted mb-0" data-i18n="about.quoteAuthor">— Adaptado de Goethe</p>
                         </div>
                     </div>
                 </div>
@@ -219,8 +286,8 @@
     <div class="container">
         <!-- Stack Principal -->
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Stack Tecnológico</h2>
-            <p class="text-muted">Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.</p>
+            <h2 class="fw-bold" data-i18n="tech.title">Stack Tecnológico</h2>
+            <p class="text-muted" data-i18n="tech.subtitle">Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.</p>
         </div>
 
         <div class="row g-3 justify-content-center mb-5">
@@ -229,7 +296,7 @@
                     <i class="fab fa-java tech-icon text-warning"></i>
                     <h6 class="tech-name">Java</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Linguagem robusta para sistemas backend corporativos.</span>
+                        <span class="tech-desc" data-i18n="tech.java">Linguagem robusta para sistemas backend corporativos.</span>
                     </div>
                 </div>
             </div>
@@ -238,7 +305,7 @@
                     <i class="fab fa-php tech-icon text-primary"></i>
                     <h6 class="tech-name">PHP</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Desenvolvimento web dinâmico e veloz para servidores.</span>
+                        <span class="tech-desc" data-i18n="tech.php">Desenvolvimento web dinâmico e veloz para servidores.</span>
                     </div>
                 </div>
             </div>
@@ -247,7 +314,7 @@
                     <i class="fab fa-js tech-icon text-warning"></i>
                     <h6 class="tech-name">JavaScript</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Interatividade no frontend e lógica no backend.</span>
+                        <span class="tech-desc" data-i18n="tech.javascript">Interatividade no frontend e lógica no backend.</span>
                     </div>
                 </div>
             </div>
@@ -256,7 +323,7 @@
                     <i class="fab fa-html5 tech-icon text-danger"></i>
                     <h6 class="tech-name">HTML/CSS</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Estrutura semântica e estilização visual responsiva.</span>
+                        <span class="tech-desc" data-i18n="tech.html">Estrutura semântica e estilização visual responsiva.</span>
                     </div>
                 </div>
             </div>
@@ -265,7 +332,7 @@
                     <i class="fas fa-database tech-icon text-secondary"></i>
                     <h6 class="tech-name">SQL</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Modelagem e consulta eficiente de bancos de dados.</span>
+                        <span class="tech-desc" data-i18n="tech.sql">Modelagem e consulta eficiente de bancos de dados.</span>
                     </div>
                 </div>
             </div>
@@ -274,7 +341,7 @@
                     <i class="fab fa-python tech-icon text-info"></i>
                     <h6 class="tech-name">Python</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Automação, processamento de dados e IA.</span>
+                        <span class="tech-desc" data-i18n="tech.python">Automação, processamento de dados e IA.</span>
                     </div>
                 </div>
             </div>
@@ -283,7 +350,7 @@
                     <i class="fab fa-git-alt tech-icon text-danger"></i>
                     <h6 class="tech-name">Git</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Controle de versão e colaboração em equipe.</span>
+                        <span class="tech-desc" data-i18n="tech.git">Controle de versão e colaboração em equipe.</span>
                     </div>
                 </div>
             </div>
@@ -292,7 +359,7 @@
                     <i class="fab fa-docker tech-icon text-primary"></i>
                     <h6 class="tech-name">Docker</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Containerização para ambientes de deploy consistentes.</span>
+                        <span class="tech-desc" data-i18n="tech.docker">Containerização para ambientes de deploy consistentes.</span>
                     </div>
                 </div>
             </div>
@@ -300,7 +367,7 @@
 
         <!-- Divisor -->
         <div class="section-divider">
-            <span>Aprendendo Agora</span>
+            <span data-i18n="tech.divider">Aprendendo Agora</span>
         </div>
 
         <!-- Aprendizados CWI -->
@@ -310,7 +377,7 @@
                     <i class="fab fa-angular tech-icon text-danger"></i>
                     <h6 class="tech-name">Angular</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Framework SPA do Google para aplicações web escaláveis.</span>
+                        <span class="tech-desc" data-i18n="tech.angular">Framework SPA do Google para aplicações web escaláveis.</span>
                     </div>
                 </div>
             </div>
@@ -319,7 +386,7 @@
                     <i class="fas fa-server tech-icon text-primary"></i>
                     <h6 class="tech-name">DevOps</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Integração contínua (CI/CD) e infraestrutura ágil.</span>
+                        <span class="tech-desc" data-i18n="tech.devops">Integração contínua (CI/CD) e infraestrutura ágil.</span>
                     </div>
                 </div>
             </div>
@@ -328,7 +395,7 @@
                     <i class="fas fa-shield-halved tech-icon text-success"></i>
                     <h6 class="tech-name">Segurança</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Proteção de dados, vulnerabilidades e OWASP.</span>
+                        <span class="tech-desc" data-i18n="tech.security">Proteção de dados, vulnerabilidades e OWASP.</span>
                     </div>
                 </div>
             </div>
@@ -337,7 +404,7 @@
                     <i class="fas fa-brain tech-icon text-info"></i>
                     <h6 class="tech-name">IA</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Integração com LLMs e ferramentas de GenAI.</span>
+                        <span class="tech-desc" data-i18n="tech.ai">Integração com LLMs e ferramentas de GenAI.</span>
                     </div>
                 </div>
             </div>
@@ -346,7 +413,7 @@
                     <i class="fas fa-users-gear tech-icon text-secondary"></i>
                     <h6 class="tech-name">Agile</h6>
                     <div class="tech-overlay">
-                        <span class="tech-desc">Metodologias ágeis (Scrum/Kanban) para projetos.</span>
+                        <span class="tech-desc" data-i18n="tech.agile">Metodologias ágeis (Scrum/Kanban) para projetos.</span>
                     </div>
                 </div>
             </div>
@@ -360,37 +427,37 @@
         <div id="sge-feature" class="p-4 p-lg-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <div class="badge bg-primary bg-opacity-25 text-primary-emphasis mb-3 border border-primary border-opacity-25">Projeto Destaque</div>
-                    <h2 class="fw-bold mb-3">SGE - Sistema de Gerenciamento de Eventos</h2>
-                    <p class="text-secondary-light opacity-75 mb-4">
+                    <div class="badge bg-primary bg-opacity-25 text-primary-emphasis mb-3 border border-primary border-opacity-25" data-i18n="sge.badge">Projeto Destaque</div>
+                    <h2 class="fw-bold mb-3" data-i18n="sge.title">SGE - Sistema de Gerenciamento de Eventos</h2>
+                    <p class="text-secondary-light opacity-75 mb-4" data-i18n="sge.description">
                         Sistema de Gerenciamento de Eventos desenvolvido para o Centro Universitário UNIFIO. Aplicação web completa para modernizar e centralizar a gestão de eventos esportivos e acadêmicos na quadra poliesportiva da instituição.
                     </p>
 
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex gap-2 align-items-center text-white opacity-75">
-                                <i class="fas fa-check-circle text-primary"></i> <span>PHP 8.2 & MySQL</span>
+                                <i class="fas fa-check-circle text-primary"></i> <span data-i18n="sge.feature1">PHP 8.2 & MySQL</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex gap-2 align-items-center text-white opacity-75">
-                                <i class="fas fa-check-circle text-primary"></i> <span>Repository Pattern</span>
+                                <i class="fas fa-check-circle text-primary"></i> <span data-i18n="sge.feature2">Repository Pattern</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex gap-2 align-items-center text-white opacity-75">
-                                <i class="fas fa-check-circle text-primary"></i> <span>Controle de Acesso (RBAC)</span>
+                                <i class="fas fa-check-circle text-primary"></i> <span data-i18n="sge.feature3">Controle de Acesso (RBAC)</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex gap-2 align-items-center text-white opacity-75">
-                                <i class="fas fa-check-circle text-primary"></i> <span>Dockerized</span>
+                                <i class="fas fa-check-circle text-primary"></i> <span data-i18n="sge.feature4">Dockerizado</span>
                             </div>
                         </div>
                     </div>
 
                     <a href="https://github.com/rafaeldiasgarcia/SGE" target="_blank" class="btn btn-light fw-bold px-4">
-                        <i class="fab fa-github me-2"></i>Ver Código
+                        <i class="fab fa-github me-2"></i><span data-i18n="sge.viewCode">Ver Código</span>
                     </a>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
@@ -442,7 +509,7 @@
 <!-- Outros Projetos -->
 <section id="projetos" class="py-5 bg-white">
     <div class="container">
-        <h2 class="fw-bold text-center mb-5">Outros Projetos</h2>
+        <h2 class="fw-bold text-center mb-5" data-i18n="projects.title">Outros Projetos</h2>
 
         <div class="row g-4">
             <!-- Classificador LLMOps -->
@@ -454,14 +521,14 @@
                         </div>
                         <a href="https://github.com/rafaeldiasgarcia/classificador-texto-llmops" target="_blank" class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
                     </div>
-                    <h4 class="fw-bold">Classificador de Texto LLMOps</h4>
+                    <h4 class="fw-bold" data-i18n="projects.llm.title">Classificador de Texto LLMOps</h4>
                     <div class="mb-3">
-                        <span class="badge bg-dark text-white"><i class="fas fa-star text-warning me-1"></i>Gemini AI Powered</span>
+                        <span class="badge bg-dark text-white"><i class="fas fa-star text-warning me-1"></i><span data-i18n="projects.llm.badge">Gemini AI Powered</span></span>
                     </div>
-                    <p class="text-muted small flex-grow-1">
+                    <p class="text-muted small flex-grow-1" data-i18n="projects.llm.description">
                         Sistema de classificação de feedbacks usando fine-tuning (DistilBERT) com deploy via Docker e API FastAPI.
-                        <br><em class="text-primary small">Feito inteiramente com Gemini AI para iFood GenAI.</em>
                     </p>
+                    <p class="text-muted small"><em class="text-primary small" data-i18n="projects.llm.note">Feito inteiramente com Gemini AI para iFood GenAI.</em></p>
                     <div class="mt-3">
                         <span class="badge bg-light text-dark border">Python</span>
                         <span class="badge bg-light text-dark border">PyTorch</span>
@@ -482,8 +549,8 @@
                             <a href="https://github.com/rafaeldiasgarcia/WeatherNow" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <h4 class="fw-bold">WeatherNow</h4>
-                    <p class="text-muted small flex-grow-1">Dashboard de clima consumindo API OpenWeatherMap. Features de tema dark/light e requisições assíncronas.</p>
+                    <h4 class="fw-bold" data-i18n="projects.weather.title">WeatherNow</h4>
+                    <p class="text-muted small flex-grow-1" data-i18n="projects.weather.description">Dashboard de clima consumindo API OpenWeatherMap. Features de tema dark/light e requisições assíncronas.</p>
                     <div class="mt-3">
                         <span class="badge bg-light text-dark border">JS</span>
                         <span class="badge bg-light text-dark border">API</span>
@@ -504,8 +571,8 @@
                             <a href="https://github.com/rafaeldiasgarcia/tecnicas-violao-classico" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <h4 class="fw-bold">Violão Clássico</h4>
-                    <p class="text-muted small flex-grow-1">Guia interativo open-source para a comunidade de violonistas. Recurso educacional colaborativo.</p>
+                    <h4 class="fw-bold" data-i18n="projects.guitar.title">Violão Clássico</h4>
+                    <p class="text-muted small flex-grow-1" data-i18n="projects.guitar.description">Guia interativo open-source para a comunidade de violonistas. Recurso educacional colaborativo.</p>
                     <div class="mt-3">
                         <span class="badge bg-light text-dark border">HTML</span>
                         <span class="badge bg-light text-dark border">Comunidade</span>
@@ -522,8 +589,8 @@
                         </div>
                         <a href="https://github.com/rafaeldiasgarcia/BookshelfAPI" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
                     </div>
-                    <h4 class="fw-bold">Bookshelf API</h4>
-                    <p class="text-muted small flex-grow-1">API RESTful com Node.js e Express. CRUD completo de livros com persistência local em JSON.</p>
+                    <h4 class="fw-bold" data-i18n="projects.bookshelf.title">Bookshelf API</h4>
+                    <p class="text-muted small flex-grow-1" data-i18n="projects.bookshelf.description">API RESTful com Node.js e Express. CRUD completo de livros com persistência local em JSON.</p>
                     <div class="mt-3">
                         <span class="badge bg-light text-dark border">Node.js</span>
                         <span class="badge bg-light text-dark border">Express</span>
@@ -537,16 +604,16 @@
 <!-- Experiência -->
 <section id="experiencia" class="py-5">
     <div class="container">
-        <h2 class="fw-bold text-center mb-5">Experiência Profissional</h2>
+        <h2 class="fw-bold text-center mb-5" data-i18n="experience.title">Experiência Profissional</h2>
 
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <!-- Item 1 -->
                 <div class="timeline-item">
-                    <span class="badge bg-primary mb-2">Atual</span>
-                    <h5 class="fw-bold mb-1">CWI Software (Crescer)</h5>
-                    <p class="text-primary fw-medium mb-2">Estagiário - Level 2</p>
-                    <p class="text-muted small">
+                    <span class="badge bg-primary mb-2" data-i18n="experience.current">Atual</span>
+                    <h5 class="fw-bold mb-1" data-i18n="experience.cwi.company">CWI Software (Crescer)</h5>
+                    <p class="text-primary fw-medium mb-2" data-i18n="experience.cwi.position">Estagiário - Level 2</p>
+                    <p class="text-muted small" data-i18n="experience.cwi.description">
                         Capacitação intensiva em desenvolvimento de software corporativo focando em Java e Angular.
                         Práticas de DevOps, Segurança e Metodologias Ágeis em ambiente simulado de alta performance.
                     </p>
@@ -555,9 +622,9 @@
                 <!-- Item 2 -->
                 <div class="timeline-item">
                     <span class="badge bg-secondary mb-2">2024</span>
-                    <h5 class="fw-bold mb-1">Conservatório de Tatuí</h5>
-                    <p class="text-secondary fw-medium mb-2">Bolsista - Camerata de Violões</p>
-                    <p class="text-muted small">
+                    <h5 class="fw-bold mb-1" data-i18n="experience.conservatory.company">Conservatório de Tatuí</h5>
+                    <p class="text-secondary fw-medium mb-2" data-i18n="experience.conservatory.position">Bolsista - Camerata de Violões</p>
+                    <p class="text-muted small" data-i18n="experience.conservatory.description">
                         Atuação profissional como músico, desenvolvendo disciplina rigorosa, trabalho em equipe e gestão de tempo sob pressão de apresentações públicas.
                     </p>
                 </div>
@@ -565,9 +632,9 @@
                 <!-- Item 3 -->
                 <div class="timeline-item" style="border-left-color: transparent;">
                     <span class="badge bg-secondary mb-2">2020 - 2021</span>
-                    <h5 class="fw-bold mb-1">Microtec Papelaria e Informática</h5>
-                    <p class="text-secondary fw-medium mb-2">Estagiário de TI</p>
-                    <p class="text-muted small">
+                    <h5 class="fw-bold mb-1" data-i18n="experience.microtec.company">Microtec Papelaria e Informática</h5>
+                    <p class="text-secondary fw-medium mb-2" data-i18n="experience.microtec.position">Estagiário de TI</p>
+                    <p class="text-muted small" data-i18n="experience.microtec.description">
                         Suporte técnico (hardware/software), gestão de inventário e atendimento ao cliente.
                     </p>
                 </div>
@@ -579,22 +646,22 @@
 <!-- Footer -->
 <footer id="contato" class="py-5 text-center">
     <div class="container">
-        <h2 class="fw-bold text-white mb-4">Vamos conversar?</h2>
-        <p class="mb-5 text-secondary">Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).</p>
+        <h2 class="fw-bold text-white mb-4" data-i18n="footer.title">Vamos conversar?</h2>
+        <p class="mb-5 text-secondary" data-i18n="footer.description">Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).</p>
 
         <div class="d-flex justify-content-center flex-column flex-sm-row gap-3 mb-5">
             <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#contactModal">
-                <i class="fas fa-envelope me-2"></i>Enviar Email
+                <i class="fas fa-envelope me-2"></i><span data-i18n="footer.sendEmail">Enviar Email</span>
             </button>
             <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" class="btn btn-outline-light px-4">
-                <i class="fab fa-linkedin me-2"></i>LinkedIn
+                <i class="fab fa-linkedin me-2"></i><span data-i18n="footer.linkedin">LinkedIn</span>
             </a>
         </div>
 
         <hr class="border-secondary opacity-25">
 
         <div class="row pt-3 text-secondary small">
-            <div class="col-md-6 text-md-start">
+            <div class="col-md-6 text-md-start" data-i18n="footer.copyright">
                 &copy; 2025 Rafael Dias Garcia.
             </div>
         </div>
@@ -607,7 +674,7 @@
         <div class="modal-content border-0 shadow-lg">
             <div class="modal-header bg-gradient bg-primary text-white border-0">
                 <h5 class="modal-title fw-bold d-flex align-items-center" id="certsModalLabel">
-                    <i class="fas fa-certificate me-2"></i>Certificados & Cursos
+                    <i class="fas fa-certificate me-2"></i><span data-i18n="certs.title">Certificados & Cursos</span>
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -617,8 +684,8 @@
                     <div class="list-group-item list-group-item-action p-3">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="mb-1 fw-bold">CS50: Introduction to Computer Science</h6>
-                                <small class="text-muted">Harvard University</small>
+                                <h6 class="mb-1 fw-bold" data-i18n="certs.cs50">CS50: Introduction to Computer Science</h6>
+                                <small class="text-muted" data-i18n="certs.cs50.org">Harvard University</small>
                             </div>
                             <button onclick="openPdfViewer('assets/certificates/cs50x.pdf', 'CS50: Introduction to Computer Science')"
                                class="btn btn-outline-primary btn-sm" title="Visualizar Certificado">
@@ -631,8 +698,8 @@
                     <div class="list-group-item list-group-item-action p-3">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="mb-1 fw-bold">JavaScript Essentials</h6>
-                                <small class="text-muted">Cisco Networking Academy</small>
+                                <h6 class="mb-1 fw-bold" data-i18n="certs.cisco">JavaScript Essentials</h6>
+                                <small class="text-muted" data-i18n="certs.cisco.org">Cisco Networking Academy</small>
                             </div>
                             <button onclick="openPdfViewer('assets/certificates/cisco-js.pdf', 'JavaScript Essentials')"
                                class="btn btn-outline-primary btn-sm" title="Visualizar Badge">
@@ -645,8 +712,8 @@
                     <div class="list-group-item list-group-item-action p-3">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="mb-1 fw-bold">Python Advanced</h6>
-                                <small class="text-muted">Huawei Talent Online</small>
+                                <h6 class="mb-1 fw-bold" data-i18n="certs.huawei">Python Advanced</h6>
+                                <small class="text-muted" data-i18n="certs.huawei.org">Huawei Talent Online</small>
                             </div>
                             <button onclick="openPdfViewer('assets/certificates/huawei-talent-online.pdf', 'Python Advanced')"
                                class="btn btn-outline-primary btn-sm" title="Visualizar Certificado">
@@ -659,8 +726,8 @@
                     <div class="list-group-item list-group-item-action p-3">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="mb-1 fw-bold">Advanced English (C1)</h6>
-                                <small class="text-muted">UNINTER - U-BEST</small>
+                                <h6 class="mb-1 fw-bold" data-i18n="certs.english">Advanced English (C1)</h6>
+                                <small class="text-muted" data-i18n="certs.english.org">UNINTER - U-BEST</small>
                             </div>
                             <button onclick="openPdfViewer('assets/certificates/uninter-ingles-avancado.pdf', 'Advanced English (C1)')"
                                class="btn btn-outline-primary btn-sm" title="Visualizar Certificado">
@@ -676,9 +743,10 @@
                        data-bs-toggle="tooltip"
                        data-bs-placement="top"
                        data-bs-title="Clique no ícone para visualizar o certificado"
+                       data-i18n-tooltip="tooltip.viewCertificate"
                        style="cursor: pointer;"></i>
                 </span>
-                <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal" data-i18n="contact.close">Fechar</button>
             </div>
         </div>
     </div>
@@ -707,7 +775,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg">
             <div class="modal-header border-0 bg-primary text-white">
-                <h5 class="modal-title fw-bold" id="contactModalLabel"><i class="fas fa-paper-plane me-2"></i>Enviar Mensagem</h5>
+                <h5 class="modal-title fw-bold" id="contactModalLabel"><i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.title">Enviar Mensagem</span></h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4">
@@ -715,32 +783,32 @@
                 <!-- Form -->
                 <form id="contactForm" action="https://formspree.io/f/xrbqbvyy" method="POST">
                     <div class="mb-3">
-                        <label for="email" class="form-label fw-bold text-secondary">Seu Email</label>
-                        <input type="email" class="form-control form-control-lg bg-light" name="email" id="email" placeholder="nome@exemplo.com" required>
+                        <label for="email" class="form-label fw-bold text-secondary" data-i18n="contact.emailLabel">Seu Email</label>
+                        <input type="email" class="form-control form-control-lg" name="email" id="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="nome@exemplo.com" required>
                     </div>
                     <div class="mb-4">
-                        <label for="message" class="form-label fw-bold text-secondary">Mensagem</label>
-                        <textarea class="form-control form-control-lg bg-light" name="message" id="message" rows="4" placeholder="Como posso ajudar?" required></textarea>
+                        <label for="message" class="form-label fw-bold text-secondary" data-i18n="contact.messageLabel">Mensagem</label>
+                        <textarea class="form-control form-control-lg" name="message" id="message" rows="4" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Como posso ajudar?" required></textarea>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg fw-bold">Enviar Agora</button>
+                        <button type="submit" class="btn btn-primary btn-lg fw-bold" data-i18n="contact.sendButton">Enviar Agora</button>
                     </div>
                 </form>
 
                 <!-- Success Message (Hidden by default) -->
                 <div id="successMessage" class="text-center py-5 d-none">
                     <i class="fas fa-check-circle text-success fa-4x mb-3 animate__animated animate__bounceIn"></i>
-                    <h4 class="fw-bold text-success mb-2">Mensagem Enviada!</h4>
-                    <p class="text-muted">Obrigado pelo contato. Retornarei em breve.</p>
-                    <button type="button" class="btn btn-outline-success mt-3" data-bs-dismiss="modal">Fechar</button>
+                    <h4 class="fw-bold text-success mb-2" data-i18n="contact.successTitle">Mensagem Enviada!</h4>
+                    <p class="text-muted" data-i18n="contact.successMessage">Obrigado pelo contato. Retornarei em breve.</p>
+                    <button type="button" class="btn btn-outline-success mt-3" data-bs-dismiss="modal" data-i18n="contact.close">Fechar</button>
                 </div>
 
                 <!-- Error Message (Hidden by default) -->
                 <div id="errorMessage" class="text-center py-5 d-none">
                     <i class="fas fa-exclamation-circle text-danger fa-4x mb-3"></i>
-                    <h4 class="fw-bold text-danger mb-2">Erro ao enviar</h4>
-                    <p class="text-muted">Houve um problema. Tente novamente ou use meu email direto.</p>
-                    <button type="button" class="btn btn-outline-secondary mt-3" onclick="resetForm()">Tentar Novamente</button>
+                    <h4 class="fw-bold text-danger mb-2" data-i18n="contact.errorTitle">Erro ao enviar</h4>
+                    <p class="text-muted" data-i18n="contact.errorMessage">Houve um problema. Tente novamente ou use meu email direto.</p>
+                    <button type="button" class="btn btn-outline-secondary mt-3" onclick="resetForm()" data-i18n="contact.tryAgain">Tentar Novamente</button>
                 </div>
 
             </div>
@@ -753,5 +821,8 @@
 
 <!-- Custom JS (Local File) -->
 <script src="assets/js/script.js"></script>
+
+<!-- i18n JS (Local File) - Load after main script to ensure tooltips are initialized -->
+<script src="assets/js/i18n.js"></script>
 </body>
 </html>

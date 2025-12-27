@@ -76,6 +76,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Language Selector (Desktop)
+    const languageSelectorBtn = document.getElementById('languageSelectorBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
+    
+    if (languageSelectorBtn && languageDropdown) {
+        languageSelectorBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('show');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageSelectorBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageDropdown.classList.remove('show');
+            }
+        });
+    }
+    
+    // Language Selector (Mobile)
+    const mobileLanguageBtn = document.getElementById('mobileLanguageBtn');
+    const mobileLanguageDropdown = document.getElementById('mobileLanguageDropdown');
+    
+    if (mobileLanguageBtn && mobileLanguageDropdown) {
+        mobileLanguageBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileLanguageDropdown.classList.toggle('show');
+        });
+    }
+
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
