@@ -190,4 +190,76 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Projects Expandable Drawer (Mobile)
+    const showMoreBtn = document.getElementById('showMoreProjectsBtn');
+    const moreProjectsItems = document.querySelectorAll('.more-projects-item');
+    const projectPeekContainer = document.querySelector('.project-peek-container');
+
+    if (showMoreBtn && moreProjectsItems.length > 0) {
+        showMoreBtn.addEventListener('click', function() {
+            const isExpanded = showMoreBtn.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapse
+                moreProjectsItems.forEach(item => {
+                    item.classList.remove('visible');
+                });
+                showMoreBtn.classList.remove('expanded');
+                
+                // Update button text
+                const btnText = showMoreBtn.querySelector('[data-i18n]');
+                if (btnText) {
+                    // Use i18n if available
+                    if (window.i18n && window.i18n.translate) {
+                        btnText.textContent = window.i18n.translate('projects.showMore');
+                    } else {
+                        btnText.textContent = 'Ver Mais Projetos';
+                    }
+                }
+                
+                // Show peek card again
+                if (projectPeekContainer) {
+                    projectPeekContainer.classList.remove('hidden');
+                }
+                
+                // Scroll back to projects section
+                setTimeout(() => {
+                    const projectsSection = document.getElementById('projetos');
+                    if (projectsSection) {
+                        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            } else {
+                // Expand
+                moreProjectsItems.forEach(item => {
+                    item.classList.add('visible');
+                });
+                showMoreBtn.classList.add('expanded');
+                
+                // Update button text
+                const btnText = showMoreBtn.querySelector('[data-i18n]');
+                if (btnText) {
+                    // Use i18n if available
+                    if (window.i18n && window.i18n.translate) {
+                        btnText.textContent = window.i18n.translate('projects.showLess');
+                    } else {
+                        btnText.textContent = 'Ver Menos';
+                    }
+                }
+                
+                // Hide peek card
+                if (projectPeekContainer) {
+                    projectPeekContainer.classList.add('hidden');
+                }
+            }
+        });
+
+        // Optional: Click on peek card to expand
+        if (projectPeekContainer) {
+            projectPeekContainer.addEventListener('click', function() {
+                showMoreBtn.click();
+            });
+        }
+    }
 });
