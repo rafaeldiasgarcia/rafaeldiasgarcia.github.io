@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js for Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
@@ -53,12 +56,163 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .post-content pre {
-            background: #1e293b;
-            color: #f8fafc;
-            padding: 20px;
+            background: #f8fafc; /* Fundo claro por padrão */
+            color: #334155;
+            padding: 45px 0 15px 0;
             border-radius: 12px;
             overflow-x: auto;
             margin: 30px 0;
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+            font-family: 'Fira Code', 'Cascadia Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Tema Escuro para o Bloco de Código */
+        [data-theme="dark"] .post-content pre {
+            background: #0b0f1a;
+            color: #e2e8f0;
+            border-color: rgba(255,255,255,0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Barra de título da janela de código */
+        .post-content pre::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 35px;
+            background: rgba(0,0,0,0.02);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            z-index: 2;
+        }
+
+        [data-theme="dark"] .post-content pre::before {
+            background: rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Botões da janela */
+        .post-content pre::after {
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: 15px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5f56;
+            box-shadow: 15px 0 0 #ffbd2e, 30px 0 0 #27c93f;
+            z-index: 3;
+            opacity: 0.5;
+        }
+
+        [data-theme="dark"] .post-content pre::after {
+            opacity: 1;
+        }
+
+        .post-content pre code {
+            display: block;
+            padding: 10px 0;
+            z-index: 1;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: transparent !important;
+        }
+
+        /* Ajustes de cores para o highlight.js - Tema Claro (Melhor Contraste) */
+        .hljs-keyword, .hljs-selector-tag { color: #d73a49; font-weight: 600; }
+        .hljs-string { color: #032f62; font-weight: 500; }
+        .hljs-comment { color: #57606a; font-style: italic; }
+        .hljs-title, .hljs-section { color: #6f42c1; font-weight: 600; }
+        .hljs-variable, .hljs-template-variable { color: #24292f; }
+        .hljs-attr { color: #005cc5; }
+        .hljs-number { color: #0550ae; }
+        .hljs-type { color: #6f42c1; font-weight: 600; }
+        .hljs-params { color: #24292f; }
+        .hljs-punctuation, .hljs-operator { color: #24292f; }
+        .code-text { color: #24292f; } /* Cor padrão do texto do código no tema claro */
+
+        /* Ajustes de cores para o highlight.js - Tema Escuro */
+        [data-theme="dark"] .hljs-keyword, [data-theme="dark"] .hljs-selector-tag { color: #ff79c6; font-weight: 600; }
+        [data-theme="dark"] .hljs-string { color: #f1fa8c; }
+        [data-theme="dark"] .hljs-comment { color: #6272a4; font-style: italic; }
+        [data-theme="dark"] .hljs-title, [data-theme="dark"] .hljs-section { color: #50fa7b; font-weight: 600; }
+        [data-theme="dark"] .hljs-variable, [data-theme="dark"] .hljs-template-variable { color: #f8f8f2; }
+        [data-theme="dark"] .hljs-attr { color: #8be9fd; }
+        [data-theme="dark"] .hljs-number { color: #bd93f9; }
+        [data-theme="dark"] .hljs-type { color: #8be9fd; font-weight: 600; }
+        [data-theme="dark"] .hljs-params { color: #f8f8f2; }
+        [data-theme="dark"] .hljs-punctuation, [data-theme="dark"] .hljs-operator { color: #f8f8f2; }
+        [data-theme="dark"] .code-text { color: #e2e8f0; }
+
+        .code-text {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        /* Linha de código individual */
+        .code-line {
+            display: flex;
+            padding-right: 20px;
+            min-width: 100%;
+        }
+
+        /* Coluna dos números de linha */
+        .line-number {
+            display: inline-block;
+            width: 3.5rem;
+            min-width: 3.5rem;
+            text-align: right;
+            color: rgba(0,0,0,0.4); /* Aumentado contraste */
+            user-select: none;
+            padding-right: 1.2rem;
+            margin-right: 1rem;
+            border-right: 1px solid rgba(0,0,0,0.1); /* Aumentado contraste */
+            background: rgba(0,0,0,0.02);
+            font-size: 0.8rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        [data-theme="dark"] .line-number {
+            color: rgba(255,255,255,0.2);
+            border-right-color: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* Efeito de listra na calha */
+        .line-number::after {
+            content: '';
+            position: absolute;
+            top: 35px;
+            bottom: 0;
+            left: 3.4rem;
+            width: 2px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.03) 2px,
+                rgba(0,0,0,0.03) 4px
+            );
+            pointer-events: none;
+        }
+
+        [data-theme="dark"] .line-number::after {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.05) 2px,
+                rgba(255,255,255,0.05) 4px
+            );
         }
         .post-content blockquote {
             border-left: 5px solid var(--primary-color);
@@ -73,8 +227,24 @@
             margin-bottom: 10px;
             display: block;
         }
-        .hover-primary:hover {
-            color: var(--primary-color) !important;
+        /* Ajuste para o botão do github no post */
+        .post-content .btn-outline-dark {
+            border-width: 2px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .post-content .btn-outline-dark {
+            color: #f8fafc;
+            border-color: #f8fafc;
+        }
+
+        .post-content .btn-outline-dark:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white !important;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
         }
         .transition-all {
             transition: all 0.3s ease;
@@ -360,10 +530,39 @@
             // 3. Render
             document.title = `${postMetadata.title} | Rafael Dias Garcia`;
             document.getElementById('post-title').textContent = postMetadata.title;
-            document.getElementById('post-date').innerHTML = `<i class="far fa-calendar-alt me-2"></i> ${new Date(postMetadata.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}`;
+            
+            // Parse date manually to avoid timezone shifts (treating as local date)
+            const [y, m, d] = postMetadata.date.split('-').map(Number);
+            const dateObj = new Date(y, m - 1, d);
+            
+            document.getElementById('post-date').innerHTML = `<i class="far fa-calendar-alt me-2"></i> ${dateObj.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}`;
+            
+            // Configurar marked para não escapar HTML se houver blocos de código
             document.getElementById('post-content').innerHTML = marked.parse(markdown);
 
-            // 4. Show content
+            // 4. Adicionar números de linha e realce de sintaxe
+            document.querySelectorAll('pre code').forEach(block => {
+                // 4.1 Aplicar realce de sintaxe
+                hljs.highlightElement(block);
+
+                // 4.2 Pegar o HTML gerado pelo highlight.js e dividir em linhas
+                const content = block.innerHTML;
+                const lines = content.split('\n');
+                
+                // Remove a última linha se estiver vazia
+                if (lines.length > 0 && lines[lines.length - 1].trim() === '') {
+                    lines.pop();
+                }
+
+                const numberedLines = lines.map((line, index) => {
+                    // Aqui não escapamos o HTML porque o highlight.js já gerou as tags de cor
+                    return `<div class="code-line"><span class="line-number">${index + 1}</span><span class="code-text">${line || ' '}</span></div>`;
+                }).join('');
+                
+                block.innerHTML = numberedLines;
+            });
+
+            // 5. Show content
             document.getElementById('loading').style.display = 'none';
             document.getElementById('post-article').style.display = 'block';
 

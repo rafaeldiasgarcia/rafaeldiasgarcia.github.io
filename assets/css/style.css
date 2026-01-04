@@ -59,8 +59,7 @@ p {
 
 /* Prevenir scroll horizontal */
 .row {
-    margin-left: 0;
-    margin-right: 0;
+    /* Removido margin fixed para permitir o alinhamento padrão do Bootstrap */
 }
 
 img, video, iframe {
@@ -98,8 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .container {
     position: relative;
     overflow: visible !important;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
 }
 
 .navbar-nav {

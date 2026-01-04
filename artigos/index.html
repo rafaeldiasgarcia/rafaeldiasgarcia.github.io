@@ -318,8 +318,10 @@
             let currentUl = null;
 
             posts.forEach(post => {
-                const date = new Date(post.date);
-                // Get Month and Year separately
+                // Parse date manually to avoid timezone shifts (treating as local date)
+                const [y, m, d] = post.date.split('-').map(Number);
+                const date = new Date(y, m - 1, d);
+                
                 const year = date.getFullYear();
                 const month = date.toLocaleDateString('pt-BR', { month: 'long' });
                 const formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);

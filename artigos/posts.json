@@ -1,5 +1,12 @@
 [
     {
+        "id": "roadmap-java-2026",
+        "title": "Roadmap Java Backend 2026: Minha Jornada",
+        "date": "2026-01-04",
+        "excerpt": "Compartilhando minha rotina de estudos, o prompt que utilizo para aprender com IA e a prática de código baseada no roadmap de mercado.",
+        "file": "roadmap-java.md"
+    },
+    {
         "id": "post-teste",
         "title": "Post de Teste",
         "date": "2025-12-15",
