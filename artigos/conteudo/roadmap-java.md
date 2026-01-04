@@ -1,4 +1,4 @@
-# Java Backend 2026: O Guia Definitivo para a Maestria
+# Java Backend : O Guia Definitivo para a Maestria
 
 Muitos desenvolvedores iniciantes cometem o erro estratégico de pular direto para frameworks complexos como o Spring Boot sem entender os fundamentos que sustentam toda a arquitetura. Minha jornada técnica para 2026 é desenhada na contramão dessa tendência: **foco obsessivo nos fundamentos antes das ferramentas.**
 
@@ -29,6 +29,14 @@ O caminho para o sucesso no backend é dividido em fases lógicas, onde cada uma
 ### 1. O Alicerce Invisível (Java Core)
 Esta é a fase mais importante. Aqui você domina a **Orientação a Objetos "raiz"**, Tipos Primitivos vs Wrappers, e Coleções. Sem isso, você será apenas um "programador de anotações", incapaz de resolver bugs complexos quando o framework falha.
 
+**O que estudar aqui:**
+- **Setup:** JDK 21+ e IntelliJ IDEA.
+- **Básico:** Tipos Primitivos e Wrappers.
+- **Controle de Fluxo:** `if/else`, `switch` e loops.
+- **Orientação a Objetos Real:** Classes, Objetos e Encapsulamento.
+- **Essencial para Entrevistas:** Collections, Strings e Java Moderno.
+- **Profissionalismo:** Exceções, Debugging e JVM.
+
 **Exemplo Prático: O Poder da Orientação a Objetos**
 Veja como estruturamos um modelo básico de personagem com controle de estado global:
 
@@ -57,23 +65,34 @@ public class Personagem {
 ### 2. O Padrão de Mercado (Ecossistema Spring)
 Aqui o foco muda para produtividade. Dominar o **Spring Boot**, Injeção de Dependência, Spring Data JPA e Spring Security é o que as empresas buscam no dia a dia. É onde você transforma lógica pura em aplicações web reais.
 
+**Principais tópicos:**
+- **Spring Boot Core:** Injeção de Dependência e Container.
+- **Configuração:** application.properties e Profiles.
+- **Spring Web:** Criação de APIs RESTful.
+- **Spring Data JPA:** Repositories e Entidades.
+- **Validação:** Bean Validation.
+- **Segurança:** Spring Security Básico.
+
 ### 3. Backend Profissional (APIs & Qualidade)
 Fazer o código funcionar é o básico. O nível profissional exige:
-- Tratamento Global de Erros (`@ControllerAdvice`)
-- Documentação com Swagger/OpenAPI
-- Design de APIs RESTful (Verbos, Status Codes, Versionamento)
+- **Design de API:** Verbos HTTP, Status Codes e Versionamento.
+- **Qualidade:** Tratamento Global de Erros (@ControllerAdvice).
+- **Comunicação:** Consumo de APIs externas.
+- **Documentação:** Swagger/OpenAPI.
 
 ### 4. Engenharia de Dados (O Coração do Sistema)
 Todo sistema sério vive ou morre pelo banco de dados. Você precisa entender o que acontece "por baixo dos panos" do Hibernate/JPA:
-- SQL Avançado e Joins
-- Migrations com **Flyway** ou Liquibase
-- Performance e o temido problema de "N+1 queries"
+- **SQL:** Consultas complexas e Joins.
+- **Performance:** Índices e N+1 Problem.
+- **Transações:** ACID e Controle de Concorrência.
+- **Migrações:** Flyway ou Liquibase.
 
 ### 5. Arquitetura e Carreira (O Próximo Nível)
 O que separa o Júnior do Sênior é a visão sistêmica:
-- **Clean Architecture** e princípios SOLID
-- Testes Automatizados (JUnit 5 + Mockito)
-- Docker e fundamentos de Cloud
+- **Arquitetura:** Camadas, Clean Architecture e Hexagonal.
+- **Qualidade de Código:** Princípios SOLID e Clean Code.
+- **Testes:** Unitários (JUnit 5 + Mockito) e Integração.
+- **Carreira:** Git Flow, Docker e Inglês Técnico.
 
 ---
 
