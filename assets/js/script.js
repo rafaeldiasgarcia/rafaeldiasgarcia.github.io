@@ -259,4 +259,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Techs Expandable Drawer
+    const showMoreTechsBtn = document.getElementById('showMoreTechsBtn');
+    const techsWrapper = document.getElementById('techsWrapper');
+
+    if (showMoreTechsBtn && techsWrapper) {
+        showMoreTechsBtn.addEventListener('click', function() {
+            const isExpanded = techsWrapper.classList.contains('expanded');
+            
+            if (!isExpanded) {
+                // Expanding
+                const fullHeight = techsWrapper.scrollHeight;
+                techsWrapper.style.maxHeight = fullHeight + 'px';
+                techsWrapper.classList.add('expanded');
+            } else {
+                // Collapsing
+                techsWrapper.style.maxHeight = '';
+                techsWrapper.classList.remove('expanded');
+            }
+            
+            const btnText = showMoreTechsBtn.querySelector('[data-i18n]');
+            if (btnText) {
+                if (window.i18n && window.i18n.translate) {
+                    btnText.textContent = !isExpanded ? 
+                        window.i18n.translate('tech.showLess') : 
+                        window.i18n.translate('tech.showMore');
+                } else {
+                    btnText.textContent = !isExpanded ? 'Ver Menos' : 'Ver Mais Tecnologias';
+                }
+            }
+            
+            const icon = showMoreTechsBtn.querySelector('i');
+            if (icon) {
+                icon.className = !isExpanded ? 'fas fa-chevron-up ms-2' : 'fas fa-chevron-down ms-2';
+            }
+        });
+    }
 });

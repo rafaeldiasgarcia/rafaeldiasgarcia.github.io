@@ -1,0 +1,10 @@
+[
+    {
+        "id": "post-teste",
+        "title": "Post de Teste",
+        "date": "2025-12-15",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "file": "teste.md"
+    }
+]
+

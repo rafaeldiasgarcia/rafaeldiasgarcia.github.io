@@ -9,6 +9,7 @@ const translations = {
         'nav.technologies': 'Tecnologias',
         'nav.projects': 'Projetos',
         'nav.experience': 'Experiência',
+        'nav.blog': 'Artigos',
         'nav.contact': 'Contato',
         
         // Hero Section
@@ -34,6 +35,8 @@ const translations = {
         // Tech Stack Section
         'tech.title': 'Stack Tecnológico',
         'tech.subtitle': 'Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.',
+        'tech.showMore': 'Ver Mais Tecnologias',
+        'tech.showLess': 'Ver Menos',
         'tech.divider': 'Aprendendo Agora',
         'tech.java': 'Linguagem robusta para sistemas backend corporativos.',
         'tech.php': 'Desenvolvimento web dinâmico e veloz para servidores.',
@@ -146,6 +149,7 @@ const translations = {
         'nav.technologies': 'Technologies',
         'nav.projects': 'Projects',
         'nav.experience': 'Experience',
+        'nav.blog': 'Articles',
         'nav.contact': 'Contact',
         
         // Hero Section
@@ -171,6 +175,8 @@ const translations = {
         // Tech Stack Section
         'tech.title': 'Tech Stack',
         'tech.subtitle': 'Tools I use on a daily basis. Hover to learn more.',
+        'tech.showMore': 'Show More Technologies',
+        'tech.showLess': 'Show Less',
         'tech.divider': 'Currently Learning',
         'tech.java': 'Robust language for corporate backend systems.',
         'tech.php': 'Dynamic and fast web development for servers.',
@@ -283,6 +289,7 @@ const translations = {
         'nav.technologies': 'Tecnologías',
         'nav.projects': 'Proyectos',
         'nav.experience': 'Experiencia',
+        'nav.blog': 'Artículos',
         'nav.contact': 'Contacto',
         
         // Hero Section
@@ -308,6 +315,8 @@ const translations = {
         // Tech Stack Section
         'tech.title': 'Stack Tecnológico',
         'tech.subtitle': 'Herramientas que uso a diario. Pasa el cursor para saber más.',
+        'tech.showMore': 'Ver Más Tecnologías',
+        'tech.showLess': 'Ver Menos',
         'tech.divider': 'Aprendiendo Ahora',
         'tech.java': 'Lenguaje robusto para sistemas backend corporativos.',
         'tech.php': 'Desarrollo web dinámico y rápido para servidores.',
@@ -418,6 +427,7 @@ const translations = {
         'nav.technologies': '技术',
         'nav.projects': '项目',
         'nav.experience': '经验',
+        'nav.blog': '文章',
         'nav.contact': '联系',
         
         // Hero Section
@@ -443,6 +453,8 @@ const translations = {
         // Tech Stack Section
         'tech.title': '技术栈',
         'tech.subtitle': '我日常使用的工具。悬停以了解更多。',
+        'tech.showMore': '查看更多技术',
+        'tech.showLess': '收起',
         'tech.divider': '正在学习',
         'tech.java': '用于企业后端系统的强大语言。',
         'tech.php': '为服务器提供动态快速的 Web 开发。',
@@ -553,6 +565,7 @@ const translations = {
         'nav.technologies': 'Technologien',
         'nav.projects': 'Projekte',
         'nav.experience': 'Erfahrung',
+        'nav.blog': 'Artikel',
         'nav.contact': 'Kontakt',
         
         // Hero Section
@@ -578,6 +591,8 @@ const translations = {
         // Tech Stack Section
         'tech.title': 'Tech-Stack',
         'tech.subtitle': 'Tools, die ich täglich verwende. Fahren Sie mit der Maus darüber, um mehr zu erfahren.',
+        'tech.showMore': 'Mehr Technologien anzeigen',
+        'tech.showLess': 'Weniger anzeigen',
         'tech.divider': 'Derzeit lerne ich',
         'tech.java': 'Robuste Sprache für Unternehmens-Backend-Systeme.',
         'tech.php': 'Dynamische und schnelle Webentwicklung für Server.',

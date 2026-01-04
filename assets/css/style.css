@@ -372,13 +372,14 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
     width: 85%;
     max-width: 320px;
-    height: 100%;
+    height: 100vh; /* Ocupa exatamente a altura da tela */
     background: var(--bg-secondary);
     z-index: 1050;
     transition: left 0.3s ease, background 0.3s ease;
     display: flex;
     flex-direction: column;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Garante que nada saia ou role na sidebar */
 }
 
 .mobile-menu-sidebar.active {
@@ -408,20 +409,24 @@ h1, h2, h3, h4, h5, h6 {
     animation-delay: 0.25s;
 }
 
-.mobile-menu-sidebar.active .mobile-social-link:nth-child(1) {
+.mobile-menu-sidebar.active .mobile-menu-item:nth-child(5) {
     animation-delay: 0.3s;
 }
 
-.mobile-menu-sidebar.active .mobile-social-link:nth-child(2) {
+.mobile-menu-sidebar.active .mobile-social-link:nth-child(1) {
     animation-delay: 0.35s;
 }
 
-.mobile-menu-sidebar.active .mobile-theme-toggle-icon {
+.mobile-menu-sidebar.active .mobile-social-link:nth-child(2) {
     animation-delay: 0.4s;
 }
 
+.mobile-menu-sidebar.active .mobile-theme-toggle-icon {
+    animation-delay: 0.45s;
+}
+
 .mobile-menu-sidebar.active .mobile-menu-footer .btn-primary {
-    animation-delay: 0.4s;
+    animation-delay: 0.45s;
 }
 
 @keyframes fadeInLeft {
@@ -480,7 +485,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: hidden; /* Trava o scroll vertical dentro do menu */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.mobile-menu-body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 
 .mobile-menu-nav {
@@ -1534,11 +1545,12 @@ footer a:not(.btn):hover {
 }
 
 /* ========================================
-   Expandable Drawers (Projects & Experience)
+   Expandable Drawers (Projects, Experience & Techs)
    ======================================== */
 
 .projects-expandable-wrapper,
-.experience-expandable-wrapper {
+.experience-expandable-wrapper,
+.techs-expandable-wrapper {
     position: relative;
     overflow: hidden;
     transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1548,7 +1560,7 @@ footer a:not(.btn):hover {
 
 /* Projects heights */
 .projects-expandable-wrapper {
-    max-height: 980px; /* Mobile: shows 2 cards + peek of 3rd */
+    max-height: 480px; /* Mobile: shows 1 card + peek of 2nd */
 }
 
 @media (min-width: 768px) {
@@ -1562,21 +1574,28 @@ footer a:not(.btn):hover {
     max-height: 280px; /* Shows 1st item + peek of 2nd */
 }
 
+/* Techs heights */
+.techs-expandable-wrapper {
+    max-height: 180px; /* Shows 1st row of tech cards */
+}
+
 /* Note: we'll handle the expanded max-height via JS for precision */
 .projects-expandable-wrapper.expanded,
-.experience-expandable-wrapper.expanded {
+.experience-expandable-wrapper.expanded,
+.techs-expandable-wrapper.expanded {
     /* Height set via inline style in JS */
 }
 
 /* Enhanced smooth mask */
 .projects-expandable-wrapper::after,
-.experience-expandable-wrapper::after {
+.experience-expandable-wrapper::after,
+.techs-expandable-wrapper::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 150px;
+    height: 100px; /* Reduzido levemente para itens menores */
     background: linear-gradient(to bottom, 
         transparent 0%, 
         var(--bg-primary) 100%
@@ -1592,23 +1611,27 @@ footer a:not(.btn):hover {
 }
 
 [data-theme="dark"] .projects-expandable-wrapper::after,
-[data-theme="dark"] .experience-expandable-wrapper::after {
+[data-theme="dark"] .experience-expandable-wrapper::after,
+[data-theme="dark"] .techs-expandable-wrapper::after {
     background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%);
 }
 
 .projects-expandable-wrapper.expanded::after,
-.experience-expandable-wrapper.expanded::after {
+.experience-expandable-wrapper.expanded::after,
+.techs-expandable-wrapper.expanded::after {
     opacity: 0;
 }
 
 /* Apply a subtle scale/fade effect to the items that are "under" the mask */
 .projects-expandable-wrapper .project-card,
-.experience-expandable-wrapper .timeline-item {
+.experience-expandable-wrapper .timeline-item,
+.techs-expandable-wrapper .tech-card {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Show More Button Hover Interaction */
 #showMoreProjectsBtn,
-#showMoreExperienceBtn {
+#showMoreExperienceBtn,
+#showMoreTechsBtn {
     z-index: 10;
 }

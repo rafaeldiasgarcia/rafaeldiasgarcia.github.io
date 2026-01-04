@@ -37,6 +37,7 @@
                 <li class="nav-item"><a class="nav-link px-3" href="#techs" data-i18n="nav.technologies">Tecnologias</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="#projetos" data-i18n="nav.projects">Projetos</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="artigos/index.html" data-i18n="nav.blog">Artigos</a></li>
                 <li class="nav-item">
                     <div class="navbar-divider"></div>
                 </li>
@@ -123,6 +124,9 @@
             </a>
             <a href="#experiencia" class="mobile-menu-item">
                 <i class="fas fa-briefcase me-2"></i><span data-i18n="nav.experience">Experiência</span>
+            </a>
+            <a href="artigos/index.html" class="mobile-menu-item">
+                <i class="fas fa-newspaper me-2"></i><span data-i18n="nav.blog">Artigos</span>
             </a>
         </nav>
         
@@ -290,133 +294,143 @@
             <p class="text-muted" data-i18n="tech.subtitle">Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.</p>
         </div>
 
-        <div class="row g-3 justify-content-center mb-5">
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-java tech-icon text-warning"></i>
-                    <h6 class="tech-name">Java</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.java">Linguagem robusta para sistemas backend corporativos.</span>
+        <div class="techs-expandable-wrapper" id="techsWrapper">
+            <div class="row g-3 justify-content-center mb-5">
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-java tech-icon text-warning"></i>
+                        <h6 class="tech-name">Java</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.java">Linguagem robusta para sistemas backend corporativos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-php tech-icon text-primary"></i>
+                        <h6 class="tech-name">PHP</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.php">Desenvolvimento web dinâmico e veloz para servidores.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-js tech-icon text-warning"></i>
+                        <h6 class="tech-name">JavaScript</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.javascript">Interatividade no frontend e lógica no backend.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-html5 tech-icon text-danger"></i>
+                        <h6 class="tech-name">HTML/CSS</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.html">Estrutura semântica e estilização visual responsiva.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fas fa-database tech-icon text-secondary"></i>
+                        <h6 class="tech-name">SQL</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.sql">Modelagem e consulta eficiente de bancos de dados.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-python tech-icon text-info"></i>
+                        <h6 class="tech-name">Python</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.python">Automação, processamento de dados e IA.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-git-alt tech-icon text-danger"></i>
+                        <h6 class="tech-name">Git</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.git">Controle de versão e colaboração em equipe.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-docker tech-icon text-primary"></i>
+                        <h6 class="tech-name">Docker</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.docker">Containerização para ambientes de deploy consistentes.</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-php tech-icon text-primary"></i>
-                    <h6 class="tech-name">PHP</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.php">Desenvolvimento web dinâmico e veloz para servidores.</span>
+
+            <!-- Divisor -->
+            <div class="section-divider">
+                <span data-i18n="tech.divider">Aprendendo Agora</span>
+            </div>
+
+            <!-- Aprendizados CWI -->
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fab fa-angular tech-icon text-danger"></i>
+                        <h6 class="tech-name">Angular</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.angular">Framework SPA do Google para aplicações web escaláveis.</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-js tech-icon text-warning"></i>
-                    <h6 class="tech-name">JavaScript</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.javascript">Interatividade no frontend e lógica no backend.</span>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fas fa-server tech-icon text-primary"></i>
+                        <h6 class="tech-name">DevOps</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.devops">Integração contínua (CI/CD) e infraestrutura ágil.</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-html5 tech-icon text-danger"></i>
-                    <h6 class="tech-name">HTML/CSS</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.html">Estrutura semântica e estilização visual responsiva.</span>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fas fa-shield-halved tech-icon text-success"></i>
+                        <h6 class="tech-name">Segurança</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.security">Proteção de dados, vulnerabilidades e OWASP.</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fas fa-database tech-icon text-secondary"></i>
-                    <h6 class="tech-name">SQL</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.sql">Modelagem e consulta eficiente de bancos de dados.</span>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fas fa-brain tech-icon text-info"></i>
+                        <h6 class="tech-name">IA</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.ai">Integração com LLMs e ferramentas de GenAI.</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-python tech-icon text-info"></i>
-                    <h6 class="tech-name">Python</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.python">Automação, processamento de dados e IA.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-git-alt tech-icon text-danger"></i>
-                    <h6 class="tech-name">Git</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.git">Controle de versão e colaboração em equipe.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-docker tech-icon text-primary"></i>
-                    <h6 class="tech-name">Docker</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.docker">Containerização para ambientes de deploy consistentes.</span>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="tech-card">
+                        <i class="fas fa-users-gear tech-icon text-secondary"></i>
+                        <h6 class="tech-name">Agile</h6>
+                        <div class="tech-overlay">
+                            <span class="tech-desc" data-i18n="tech.agile">Metodologias ágeis (Scrum/Kanban) para projetos.</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Divisor -->
-        <div class="section-divider">
-            <span data-i18n="tech.divider">Aprendendo Agora</span>
-        </div>
-
-        <!-- Aprendizados CWI -->
-        <div class="row g-3 justify-content-center">
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="tech-card">
-                    <i class="fab fa-angular tech-icon text-danger"></i>
-                    <h6 class="tech-name">Angular</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.angular">Framework SPA do Google para aplicações web escaláveis.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="tech-card">
-                    <i class="fas fa-server tech-icon text-primary"></i>
-                    <h6 class="tech-name">DevOps</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.devops">Integração contínua (CI/CD) e infraestrutura ágil.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="tech-card">
-                    <i class="fas fa-shield-halved tech-icon text-success"></i>
-                    <h6 class="tech-name">Segurança</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.security">Proteção de dados, vulnerabilidades e OWASP.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="tech-card">
-                    <i class="fas fa-brain tech-icon text-info"></i>
-                    <h6 class="tech-name">IA</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.ai">Integração com LLMs e ferramentas de GenAI.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="tech-card">
-                    <i class="fas fa-users-gear tech-icon text-secondary"></i>
-                    <h6 class="tech-name">Agile</h6>
-                    <div class="tech-overlay">
-                        <span class="tech-desc" data-i18n="tech.agile">Metodologias ágeis (Scrum/Kanban) para projetos.</span>
-                    </div>
-                </div>
-            </div>
+        <!-- Show More Button -->
+        <div class="text-center mt-5">
+            <button id="showMoreTechsBtn" class="btn btn-outline-primary rounded-pill px-5" type="button">
+                <span data-i18n="tech.showMore">Ver Mais Tecnologias</span>
+                <i class="fas fa-chevron-down ms-2"></i>
+            </button>
         </div>
     </div>
 </section>
