@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function openMobileMenu() {
         mobileMenuSidebar.classList.add('active');
         mobileMenuOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('menu-open');
     }
 
     function closeMobileMenu() {
         mobileMenuSidebar.classList.remove('active');
         mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
+        document.body.classList.remove('menu-open');
     }
 
     if (mobileMenuToggle) {
@@ -219,6 +219,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     btnText.textContent = !isExpanded ? 'Ver Menos' : 'Ver Mais Projetos';
                 }
+            }
+
+            const icon = showMoreProjectsBtn.querySelector('i');
+            if (icon) {
+                icon.className = !isExpanded ? 'fas fa-chevron-up ms-2' : 'fas fa-chevron-down ms-2';
             }
         });
     }
