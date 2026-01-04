@@ -60,7 +60,7 @@ const translations = {
         'sge.viewCode': 'Ver Código',
         
         // Other Projects
-        'projects.title': 'Outros Projetos',
+        'projects.title': 'Projetos',
         'projects.showMore': 'Ver Mais Projetos',
         'projects.showLess': 'Ver Menos',
         'projects.llm.title': 'Classificador de Texto LLMOps',
@@ -197,7 +197,7 @@ const translations = {
         'sge.viewCode': 'View Code',
         
         // Other Projects
-        'projects.title': 'Other Projects',
+        'projects.title': 'Projects',
         'projects.showMore': 'Show More Projects',
         'projects.showLess': 'Show Less',
         'projects.llm.title': 'LLMOps Text Classifier',
@@ -334,7 +334,7 @@ const translations = {
         'sge.viewCode': 'Ver Código',
         
         // Other Projects
-        'projects.title': 'Otros Proyectos',
+        'projects.title': 'Proyectos',
         'projects.showMore': 'Ver Más Proyectos',
         'projects.showLess': 'Ver Menos',
         'projects.llm.title': 'Clasificador de Texto LLMOps',
@@ -469,7 +469,7 @@ const translations = {
         'sge.viewCode': '查看代码',
         
         // Other Projects
-        'projects.title': '其他项目',
+        'projects.title': '项目',
         'projects.showMore': '查看更多项目',
         'projects.showLess': '收起',
         'projects.llm.title': 'LLMOps 文本分类器',
@@ -604,7 +604,7 @@ const translations = {
         'sge.viewCode': 'Code ansehen',
         
         // Other Projects
-        'projects.title': 'Andere Projekte',
+        'projects.title': 'Projekte',
         'projects.showMore': 'Mehr Projekte anzeigen',
         'projects.showLess': 'Weniger anzeigen',
         'projects.llm.title': 'LLMOps-Textklassifikator',

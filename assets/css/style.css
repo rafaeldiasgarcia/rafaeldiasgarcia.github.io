@@ -801,6 +801,8 @@ h1, h2, h3, h4, h5, h6 {
 .custom-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
 }
 
 .custom-card h4 {
@@ -973,84 +975,193 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8px 16px;
 }
 
-.code-window {
-    background: #0f172a;
-    border-radius: 8px;
-    border: 1px solid #334155;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 0;
-    overflow: hidden;
-}
+/* ========================================
+   SGE Project - Premium Showcase
+   ======================================== */
 
-.code-window > div:last-child {
-    max-height: 300px;
-    overflow-y: auto;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #475569 #1e293b;
+#sge-feature {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
 }
 
-.code-window > div:last-child pre {
-    min-width: calc(100% + 1px);
-    width: max-content;
-    padding-right: 1px;
+#sge-feature::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(13, 110, 253, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
 }
 
-.code-window > div:last-child::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background: #1e293b;
+#sge-feature h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
 }
 
-.code-window > div:last-child::-webkit-scrollbar:horizontal {
-    height: 8px;
-    background: #1e293b;
+#sge-feature .sge-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 2rem;
 }
 
-.code-window > div:last-child::-webkit-scrollbar-track {
-    background: #1e293b !important;
-    border-radius: 4px;
+.sge-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
-.code-window > div:last-child::-webkit-scrollbar-track:horizontal {
-    background: #1e293b !important;
+.sge-tag i {
+    color: var(--primary-color);
 }
 
-.code-window > div:last-child::-webkit-scrollbar-thumb {
-    background: #475569 !important;
-    border-radius: 4px;
+.sge-tag:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+    border-color: rgba(13, 110, 253, 0.3);
 }
 
-.code-window > div:last-child::-webkit-scrollbar-thumb:horizontal {
-    background: #475569 !important;
-    border-radius: 4px;
+/* Browser Mockup Refinement */
+.code-window {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transition: transform 0.5s ease;
+    height: 100%;
 }
 
-.code-window > div:last-child::-webkit-scrollbar-thumb:hover {
-    background: #64748b !important;
-}
-
-.code-window > div:last-child::-webkit-scrollbar-thumb:horizontal:hover {
-    background: #64748b !important;
-}
-
-.code-window > div:last-child::-webkit-scrollbar-corner {
-    background: #1e293b !important;
+#sge-feature:hover .code-window {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
 }
 
 .code-header {
-    background: #1e293b;
-    padding: 8px 12px;
-    border-bottom: 1px solid #334155;
+    background: #f1f5f9;
+    padding: 12px 20px;
+}
+
+.browser-address {
+    background: #ffffff;
+    color: #94a3b8;
+    border-radius: 6px;
+    flex: 1;
+    height: 24px;
+    font-size: 11px;
     display: flex;
-    gap: 6px;
+    align-items: center;
+    padding: 0 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mockup-sidebar {
+    width: 60px;
+    background: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    gap: 20px;
+}
+
+.mockup-sidebar i {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.2rem;
+}
+
+.mockup-sidebar i.active {
+    color: var(--primary-color);
+}
+
+.mockup-main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mockup-header-ui {
+    height: 12px;
+    width: 100px;
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.mockup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.mockup-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.mockup-card .line {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.mockup-card .line.short { width: 60%; }
+.mockup-card .line.btn-ui { 
+    width: 40%; 
+    background: var(--primary-color); 
+    opacity: 0.7; 
+    margin-top: 12px;
+}
+
+.mockup-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #10b981;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
 }
 
 .dot { width: 10px; height: 10px; border-radius: 50%; }
-.red { background: #ef4444; }
-.yellow { background: #eab308; }
-.green { background: #22c55e; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    #sge-feature h2 {
+        font-size: 2rem;
+    }
+    .code-window {
+        transform: none !important;
+        margin-top: 2rem;
+    }
+}
 
 /* Timeline Experience */
 .timeline-item {
@@ -1077,6 +1188,8 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    height: 100%; /* Garante altura igual se estiverem em uma linha flex */
+    min-height: 85px; /* Altura mínima para evitar saltos se o texto quebrar */
 }
 
 .info-card h6,
@@ -1150,7 +1263,7 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:not(.btn):hover {
     color: white;
 }
 
@@ -1186,7 +1299,7 @@ footer a {
     color: var(--text-secondary) !important;
 }
 
-footer a:hover {
+footer a:not(.btn):hover {
     color: var(--text-primary) !important;
 }
 
@@ -1294,44 +1407,49 @@ footer a:hover {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-/* Garantir que o modal fullscreen respeite o viewport */
-.modal-fullscreen {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.modal-fullscreen .modal-dialog {
-    max-width: 100%;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
+    background: #525659; /* Cor padrão de visualizadores de PDF */
 }
 
 .modal-fullscreen .modal-content {
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-    border-radius: 0;
+    background: #1e293b;
     border: none;
 }
 
 .modal-fullscreen .modal-header {
-    flex-shrink: 0;
-    padding: 1rem 2rem;
-    min-height: 60px;
+    background: #0f172a !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
 }
 
-.modal-fullscreen .modal-header .btn-close {
-    margin-right: 0.5rem;
+/* Custom list group for certificates */
+.certs-list .list-group-item {
+    border: 1px solid var(--border-color);
+    margin-bottom: 10px;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+    background: var(--bg-primary);
 }
 
-.modal-fullscreen .modal-body {
-    flex: 1;
-    overflow: hidden;
-    height: calc(100vh - 60px);
-    padding: 0;
+.certs-list .list-group-item:hover {
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+    background: var(--bg-secondary);
+}
+
+.certs-list .btn-view {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.certs-list .btn-view:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
 }
 
 /* Code window já tem fundo escuro, mantém */
@@ -1391,6 +1509,8 @@ footer a:hover {
     position: relative;
     overflow: hidden;
     transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 15px; /* Espaço para o card subir no hover */
+    margin-top: -15px; /* Compensa o padding para manter o alinhamento */
 }
 
 /* Projects heights */
