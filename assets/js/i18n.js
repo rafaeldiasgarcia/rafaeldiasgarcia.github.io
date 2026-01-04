@@ -20,8 +20,8 @@ const translations = {
         
         // About Section
         'about.title': 'Sobre Mim',
-        'about.p1': 'Atualmente cursando o terceiro termo de Engenharia de Software, minha trajetória é marcada pela disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei anos ao estudo do violão clássico em conservatórios renomados, o que me ensinou a importância da prática deliberada, atenção aos detalhes e trabalho em equipe.',
-        'about.p2': 'Como estagiário Level 2 no <strong>CWI Crescer</strong>, estou aplicando esses conceitos em um ambiente corporativo de alta performance, desenvolvendo softwares escaláveis e aprendendo as melhores práticas de mercado.',
+        'about.p1': 'Atualmente cursando o terceiro termo de Engenharia de Software, minha trajetória é marcada pela disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei 4 anos ao estudo do violão clássico no Conservatório de Tatuí, o que me ensinou a importância da prática deliberada, atenção aos detalhes e trabalho em equipe.',
+        'about.p2': 'Como estagiário no <strong>CWI Crescer</strong>, estou aplicando esses conceitos em um ambiente corporativo de alta performance, desenvolvendo softwares escaláveis e aprendendo as melhores práticas de mercado.',
         'about.university': 'Unifio',
         'about.universityDesc': 'Eng. Software (2028)',
         'about.certificates': 'Certificados & Cursos',
@@ -85,7 +85,7 @@ const translations = {
         'experience.showMore': 'Ver Mais Experiências',
         'experience.showLess': 'Ver Menos',
         'experience.cwi.company': 'CWI Software (Crescer)',
-        'experience.cwi.position': 'Estagiário - Level 2',
+        'experience.cwi.position': 'Estagiário',
         'experience.cwi.description': 'Capacitação intensiva em desenvolvimento de software corporativo focando em Java e Angular. Práticas de DevOps, Segurança e Metodologias Ágeis em ambiente simulado de alta performance.',
         'experience.conservatory.company': 'Conservatório de Tatuí',
         'experience.conservatory.position': 'Bolsista - Camerata de Violões',
@@ -149,7 +149,6 @@ const translations = {
         'nav.contact': 'Contact',
         
         // Hero Section
-        'hero.badge': 'CWI Crescer Level 2',
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Software Engineering | Full Stack Developer',
         'hero.description': 'Developer passionate about creating robust solutions with Java and Angular. Classical musician bringing harmony and logic to code.',
@@ -158,8 +157,8 @@ const translations = {
         
         // About Section
         'about.title': 'About Me',
-        'about.p1': 'Currently in my third term of Software Engineering, my journey is marked by discipline and the constant pursuit of excellence. Before diving into code, I dedicated years to studying classical guitar at renowned conservatories, which taught me the importance of deliberate practice, attention to detail, and teamwork.',
-        'about.p2': 'As a Level 2 intern at <strong>CWI Crescer</strong>, I am applying these concepts in a high-performance corporate environment, developing scalable software and learning industry best practices.',
+        'about.p1': 'Currently in my third term of Software Engineering, my journey is marked by discipline and the constant pursuit of excellence. Before diving into code, I dedicated 4 years to studying classical guitar at Tatuí Conservatory, which taught me the importance of deliberate practice, attention to detail, and teamwork.',
+        'about.p2': 'As an intern at <strong>CWI Crescer</strong>, I am applying these concepts in a high-performance corporate environment, developing scalable software and learning industry best practices.',
         'about.university': 'Unifio',
         'about.universityDesc': 'Software Eng. (2028)',
         'about.certificates': 'Certificates & Courses',
@@ -223,7 +222,7 @@ const translations = {
         'experience.showMore': 'Show More Experience',
         'experience.showLess': 'Show Less',
         'experience.cwi.company': 'CWI Software (Crescer)',
-        'experience.cwi.position': 'Intern - Level 2',
+        'experience.cwi.position': 'Intern',
         'experience.cwi.description': 'Intensive training in corporate software development focusing on Java and Angular. DevOps practices, Security, and Agile Methodologies in a simulated high-performance environment.',
         'experience.conservatory.company': 'Tatuí Conservatory',
         'experience.conservatory.position': 'Scholar - Guitar Chamber',
@@ -287,7 +286,6 @@ const translations = {
         'nav.contact': 'Contacto',
         
         // Hero Section
-        'hero.badge': 'CWI Crescer Level 2',
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Ingeniería de Software | Desarrollador Full Stack',
         'hero.description': 'Desarrollador apasionado por crear soluciones robustas con Java y Angular. Músico clásico que aporta armonía y lógica al código.',
@@ -296,8 +294,8 @@ const translations = {
         
         // About Section
         'about.title': 'Sobre Mí',
-        'about.p1': 'Actualmente cursando el tercer período de Ingeniería de Software, mi trayectoria está marcada por la disciplina y la búsqueda constante de excelencia. Antes de sumergirme en el código, dediqué años al estudio de la guitarra clásica en conservatorios de renombre, lo que me enseñó la importancia de la práctica deliberada, la atención al detalle y el trabajo en equipo.',
-        'about.p2': 'Como pasante de Nivel 2 en <strong>CWI Crescer</strong>, estoy aplicando estos conceptos en un entorno corporativo de alto rendimiento, desarrollando software escalable y aprendiendo las mejores prácticas del mercado.',
+        'about.p1': 'Actualmente cursando el tercer período de Ingeniería de Software, mi trayectoria está marcada por la disciplina y la búsqueda constante de excelencia. Antes de sumergirme en el código, dediqué 4 años al estudio de la guitarra clásica en el Conservatorio de Tatuí, lo que me enseñó la importancia de la práctica deliberada, la atención al detalle y el trabajo en equipo.',
+        'about.p2': 'Como pasante en <strong>CWI Crescer</strong>, estoy aplicando estos conceptos en un entorno corporativo de alto rendimiento, desarrollando software escalable y aprendiendo las mejores prácticas del mercado.',
         'about.university': 'Unifio',
         'about.universityDesc': 'Ing. Software (2028)',
         'about.certificates': 'Certificados y Cursos',
@@ -359,7 +357,7 @@ const translations = {
         'experience.title': 'Experiencia Profesional',
         'experience.current': 'Actual',
         'experience.cwi.company': 'CWI Software (Crescer)',
-        'experience.cwi.position': 'Pasante - Nivel 2',
+        'experience.cwi.position': 'Pasante',
         'experience.cwi.description': 'Capacitación intensiva en desarrollo de software corporativo enfocándose en Java y Angular. Prácticas de DevOps, Seguridad y Metodologías Ágiles en un entorno simulado de alto rendimiento.',
         'experience.conservatory.company': 'Conservatorio de Tatuí',
         'experience.conservatory.position': 'Becario - Camerata de Guitarras',
@@ -423,7 +421,6 @@ const translations = {
         'nav.contact': '联系',
         
         // Hero Section
-        'hero.badge': 'CWI Crescer Level 2',
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': '软件工程 | 全栈开发者',
         'hero.description': '热衷于使用 Java 和 Angular 创建强大解决方案的开发者。古典音乐家为代码带来和谐与逻辑。',
@@ -432,8 +429,8 @@ const translations = {
         
         // About Section
         'about.title': '关于我',
-        'about.p1': '目前正在攻读软件工程第三学期，我的旅程以纪律和对卓越的不断追求为特征。在深入代码之前，我在知名音乐学院学习古典吉他多年，这教会了我刻意练习、注重细节和团队合作的重要性。',
-        'about.p2': '作为 <strong>CWI Crescer</strong> 的 Level 2 实习生，我正在高性能企业环境中应用这些概念，开发可扩展的软件并学习行业最佳实践。',
+        'about.p1': '目前正在攻读软件工程第三学期，我的旅程以纪律和对卓越的不断追求为特征。在深入代码之前，我在 Tatuí 音乐学院学习了 4 年古典吉他，这教会了我刻意练习、注重细节和团队合作的重要性。',
+        'about.p2': '作为 <strong>CWI Crescer</strong> 的实习生，我正在高性能企业环境中应用这些概念，开发可扩展的软件并学习行业最佳实践。',
         'about.university': 'Unifio',
         'about.universityDesc': '软件工程 (2028)',
         'about.certificates': '证书与课程',
@@ -495,7 +492,7 @@ const translations = {
         'experience.title': '专业经验',
         'experience.current': '当前',
         'experience.cwi.company': 'CWI Software (Crescer)',
-        'experience.cwi.position': '实习生 - Level 2',
+        'experience.cwi.position': '实习生',
         'experience.cwi.description': '专注于 Java 和 Angular 的企业软件开发强化培训。在模拟的高性能环境中进行 DevOps 实践、安全性和敏捷方法论。',
         'experience.conservatory.company': 'Tatuí 音乐学院',
         'experience.conservatory.position': '学者 - 吉他室内乐',
@@ -559,7 +556,6 @@ const translations = {
         'nav.contact': 'Kontakt',
         
         // Hero Section
-        'hero.badge': 'CWI Crescer Level 2',
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Software-Engineering | Full-Stack-Entwickler',
         'hero.description': 'Entwickler mit Leidenschaft für robuste Lösungen mit Java und Angular. Klassischer Musiker, der Harmonie und Logik in den Code bringt.',
@@ -568,8 +564,8 @@ const translations = {
         
         // About Section
         'about.title': 'Über mich',
-        'about.p1': 'Ich befinde mich derzeit im dritten Semester des Software-Engineerings, und mein Weg ist geprägt von Disziplin und dem ständigen Streben nach Exzellenz. Bevor ich mich in den Code vertiefte, widmete ich Jahre dem Studium der klassischen Gitarre an renommierten Konservatorien, was mir die Bedeutung von gezieltem Üben, Liebe zum Detail und Teamarbeit lehrte.',
-        'about.p2': 'Als Level-2-Praktikant bei <strong>CWI Crescer</strong> wende ich diese Konzepte in einem leistungsstarken Unternehmensumfeld an, entwickle skalierbare Software und lerne Best Practices der Branche.',
+        'about.p1': 'Ich befinde mich derzeit im dritten Semester des Software-Engineerings, und mein Weg ist geprägt von Disziplin und dem ständigen Streben nach Exzellenz. Bevor ich mich in den Code vertiefte, widmete ich 4 Jahre dem Studium der klassischen Gitarre am Tatuí-Konservatorium, was mir die Bedeutung von gezieltem Üben, Liebe zum Detail und Teamarbeit lehrte.',
+        'about.p2': 'Als Praktikant bei <strong>CWI Crescer</strong> wende ich diese Konzepte in einem leistungsstarken Unternehmensumfeld an, entwickle skalierbare Software und lerne Best Practices der Branche.',
         'about.university': 'Unifio',
         'about.universityDesc': 'Software-Eng. (2028)',
         'about.certificates': 'Zertifikate & Kurse',
@@ -631,7 +627,7 @@ const translations = {
         'experience.title': 'Berufserfahrung',
         'experience.current': 'Aktuell',
         'experience.cwi.company': 'CWI Software (Crescer)',
-        'experience.cwi.position': 'Praktikant - Level 2',
+        'experience.cwi.position': 'Praktikant',
         'experience.cwi.description': 'Intensive Schulung in der Entwicklung von Unternehmenssoftware mit Schwerpunkt auf Java und Angular. DevOps-Praktiken, Sicherheit und agile Methoden in einer simulierten Hochleistungsumgebung.',
         'experience.conservatory.company': 'Tatuí-Konservatorium',
         'experience.conservatory.position': 'Stipendiat - Gitarrenkammer',
