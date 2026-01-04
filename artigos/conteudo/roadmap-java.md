@@ -1,4 +1,4 @@
-# Java Backend : O Guia Definitivo para a Maestria
+# Java Backend: O Guia Definitivo para a Maestria
 
 Muitos desenvolvedores iniciantes cometem o erro estratégico de pular direto para frameworks complexos como o Spring Boot sem entender os fundamentos que sustentam toda a arquitetura. Minha jornada técnica para 2026 é desenhada na contramão dessa tendência: **foco obsessivo nos fundamentos antes das ferramentas.**
 
