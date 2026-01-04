@@ -768,20 +768,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.cwi-badge {
-    background-color: #e0f7fa;
-    color: #006064;
-    border: 1px solid #b2ebf2;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-    animation: fadeInDown 1s ease;
-}
-
 /* Cards Gerais */
 .custom-card {
     background: var(--bg-secondary);
@@ -1292,13 +1278,6 @@ footer a:hover {
     --toggler-filter: invert(1);
 }
 
-/* CWI Badge dark mode */
-.cwi-badge {
-    background-color: rgba(13, 110, 253, 0.1);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
 /* PDF Viewer Modal */
 .pdf-viewer-iframe {
     width: 100%;
@@ -1393,213 +1372,79 @@ footer a:hover {
 }
 
 /* ========================================
-   Projects Expandable Drawer (All Screens)
+   Expandable Drawers (Projects & Experience)
    ======================================== */
 
-/* Peek Card - shows part of next project */
-.project-peek-container {
+.projects-expandable-wrapper,
+.experience-expandable-wrapper {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-    transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Mobile/Tablet peek - full width, shorter */
-.project-peek-container.d-lg-none {
-    height: 120px;
-    margin-top: 1rem;
+/* Projects heights */
+.projects-expandable-wrapper {
+    max-height: 980px; /* Mobile: shows 2 cards + peek of 3rd */
 }
 
-/* Desktop peek - same size as cards, taller */
-@media (min-width: 992px) {
-    .project-peek-container.d-none.d-lg-block {
-        height: 150px;
-        display: flex !important;
+@media (min-width: 768px) {
+    .projects-expandable-wrapper {
+        max-height: 520px; /* Desktop: shows row 1 + peek of row 2 */
     }
 }
 
-/* When hidden, remove from layout completely */
-.project-peek-container.hidden {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    overflow: hidden !important;
-    width: 0 !important;
-    flex: 0 0 0 !important;
-    max-width: 0 !important;
+/* Experience heights */
+.experience-expandable-wrapper {
+    max-height: 280px; /* Shows 1st item + peek of 2nd */
 }
 
-.project-peek-container:not(.hidden):hover {
-    transform: translateY(-2px);
+/* Note: we'll handle the expanded max-height via JS for precision */
+.projects-expandable-wrapper.expanded,
+.experience-expandable-wrapper.expanded {
+    /* Height set via inline style in JS */
 }
 
-.project-peek-card {
-    position: relative;
-    opacity: 0.6;
-    transform: scale(0.98);
-    transition: all 0.3s ease;
-    pointer-events: none;
-    height: 100%;
-}
-
-.project-peek-card::after {
+/* Enhanced smooth mask */
+.projects-expandable-wrapper::after,
+.experience-expandable-wrapper::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    background: linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 80%);
+    height: 150px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        var(--bg-primary) 100%
+    );
     pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 2;
 }
 
-[data-theme="dark"] .project-peek-card::after {
-    background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 80%);
+/* Adjust gradient for sections with secondary background */
+.bg-white .projects-expandable-wrapper::after {
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 100%);
 }
 
-.project-peek-container:hover .project-peek-card {
-    opacity: 0.8;
+[data-theme="dark"] .projects-expandable-wrapper::after,
+[data-theme="dark"] .experience-expandable-wrapper::after {
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 100%);
 }
 
-/* Hide peek break when expanded */
-.project-peek-break.hidden {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+.projects-expandable-wrapper.expanded::after,
+.experience-expandable-wrapper.expanded::after {
+    opacity: 0;
 }
 
-/* Show More Button */
-#showMoreProjectsBtn {
-    position: relative;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+/* Apply a subtle scale/fade effect to the items that are "under" the mask */
+.projects-expandable-wrapper .project-card,
+.experience-expandable-wrapper .timeline-item {
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-#showMoreProjectsBtn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-#showMoreProjectsBtn i {
-    transition: transform 0.3s ease;
-}
-
-#showMoreProjectsBtn.expanded i {
-    transform: rotate(180deg);
-}
-
-/* Mobile (< 768px): Show 2 projects initially */
-@media (max-width: 767px) {
-    /* Initially hide projects after the 2nd one */
-    .more-projects-item {
-        display: none;
-    }
-    
-    /* Show projects when expanded */
-    .more-projects-item.visible {
-        display: block;
-        animation: slideDown 0.4s ease-out;
-    }
-    
-    /* Hide projects when collapsing */
-    .more-projects-item.closing {
-        display: block;
-        animation: slideUp 0.3s ease-out;
-    }
-}
-
-/* Tablet (768px - 991px): Show 2 projects initially */
-@media (min-width: 768px) and (max-width: 991px) {
-    /* Initially hide projects after the 2nd one */
-    .more-projects-item {
-        display: none;
-    }
-    
-    /* Show projects when expanded */
-    .more-projects-item.visible {
-        display: block;
-        animation: slideDown 0.4s ease-out;
-    }
-    
-    /* Hide projects when collapsing */
-    .more-projects-item.closing {
-        display: block;
-        animation: slideUp 0.3s ease-out;
-    }
-}
-
-/* Desktop (>= 992px): Show 3 projects initially */
-@media (min-width: 992px) {
-    /* Show the 3rd project on desktop */
-    .more-projects-desktop {
-        display: block !important;
-    }
-    
-    /* Initially hide projects after the 3rd one */
-    .more-projects-item:not(.more-projects-desktop) {
-        display: none;
-    }
-    
-    /* Show projects when expanded */
-    .more-projects-item.visible {
-        display: block;
-        animation: slideDown 0.4s ease-out;
-    }
-    
-    /* Hide projects when collapsing */
-    .more-projects-item.closing {
-        display: block;
-        animation: slideUp 0.3s ease-out;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-}
-
-/* ========================================
-   Experience Expandable Drawer
-   ======================================== */
-
-/* Initially hide experience items after the 1st one */
-.more-experience-item {
-    display: none;
-}
-
-/* Show experience items when expanded */
-.more-experience-item.visible {
-    display: block;
-    animation: slideDown 0.4s ease-out;
-}
-
-/* Hide experience items when collapsing */
-.more-experience-item.closing {
-    display: block;
-    animation: slideUp 0.3s ease-out;
+/* Show More Button Hover Interaction */
+#showMoreProjectsBtn,
+#showMoreExperienceBtn {
+    z-index: 10;
 }

@@ -12,7 +12,6 @@ const translations = {
         'nav.contact': 'Contato',
         
         // Hero Section
-        'hero.badge': 'CWI Crescer Level 2',
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Engenharia de Software | Full Stack Developer',
         'hero.description': 'Desenvolvedor apaixonado por criar soluções robustas com Java e Angular. Músico clássico trazendo harmonia e lógica para o código.',
