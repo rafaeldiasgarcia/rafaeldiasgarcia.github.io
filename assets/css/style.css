@@ -1303,12 +1303,45 @@ footer a:not(.btn):hover {
     color: var(--text-primary) !important;
 }
 
-/* Modal dark mode */
+/* Form controls dark mode refinement */
+.form-control.shadow-sm {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .form-control.bg-light {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+}
+
+[data-theme="dark"] .form-control.bg-light:focus {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border-color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.form-control.shadow-sm:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.1) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Modal refinements */
 .modal-content {
     background: var(--bg-secondary);
     color: var(--text-primary);
     border-color: var(--border-color);
+    border-radius: 20px;
     transition: background 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .modal-content {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .modal-header {
@@ -1368,16 +1401,16 @@ footer a:not(.btn):hover {
     opacity: 0.6;
 }
 
-.form-label {
-    color: var(--text-secondary);
+[data-theme="dark"] .form-label {
+    color: #94a3b8 !important; /* Slate 400 */
+}
+
+[data-theme="dark"] .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 #contactModal .form-control {
-    background: var(--bg-primary) !important;
-}
-
-#contactModal .form-control.bg-light {
-    background: var(--bg-primary) !important;
+    /* Styles handled by general .form-control and .bg-light overrides */
 }
 
 /* Badge dark mode */

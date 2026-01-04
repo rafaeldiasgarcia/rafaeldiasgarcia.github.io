@@ -680,7 +680,7 @@
 
         <div class="row pt-3 text-secondary small">
             <div class="col-md-6 text-md-start" data-i18n="footer.copyright">
-                &copy; 2025 Rafael Dias Garcia.
+                &copy; 2025-2026 Rafael Dias Garcia - All Rights Reserved
             </div>
         </div>
     </div>
@@ -787,41 +787,46 @@
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg">
-            <div class="modal-header border-0 bg-primary text-white">
-                <h5 class="modal-title fw-bold" id="contactModalLabel"><i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.title">Enviar Mensagem</span></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold d-flex align-items-center text-primary" id="contactModalLabel">
+                    <i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.title">Enviar Mensagem</span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4">
-
                 <!-- Form -->
                 <form id="contactForm" action="https://formspree.io/f/xrbqbvyy" method="POST">
                     <div class="mb-3">
-                        <label for="email" class="form-label fw-bold text-secondary" data-i18n="contact.emailLabel">Seu Email</label>
-                        <input type="email" class="form-control form-control-lg" name="email" id="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="nome@exemplo.com" required>
+                        <label for="email" class="form-label fw-bold text-muted small mb-1" data-i18n="contact.emailLabel">Seu Email</label>
+                        <input type="email" class="form-control form-control-lg border-0 bg-light shadow-sm" name="email" id="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="nome@exemplo.com" required>
                     </div>
                     <div class="mb-4">
-                        <label for="message" class="form-label fw-bold text-secondary" data-i18n="contact.messageLabel">Mensagem</label>
-                        <textarea class="form-control form-control-lg" name="message" id="message" rows="4" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Como posso ajudar?" required></textarea>
+                        <label for="message" class="form-label fw-bold text-muted small mb-1" data-i18n="contact.messageLabel">Mensagem</label>
+                        <textarea class="form-control form-control-lg border-0 bg-light shadow-sm" name="message" id="message" rows="4" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Como posso ajudar?" required></textarea>
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg fw-bold" data-i18n="contact.sendButton">Enviar Agora</button>
+                        <button type="submit" class="btn btn-primary btn-lg fw-bold rounded-pill shadow-sm" data-i18n="contact.sendButton">Enviar Agora</button>
                     </div>
                 </form>
 
                 <!-- Success Message (Hidden by default) -->
-                <div id="successMessage" class="text-center py-5 d-none">
-                    <i class="fas fa-check-circle text-success fa-4x mb-3 animate__animated animate__bounceIn"></i>
+                <div id="successMessage" class="text-center py-4 d-none">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle text-success fa-4x animate__animated animate__bounceIn"></i>
+                    </div>
                     <h4 class="fw-bold text-success mb-2" data-i18n="contact.successTitle">Mensagem Enviada!</h4>
                     <p class="text-muted" data-i18n="contact.successMessage">Obrigado pelo contato. Retornarei em breve.</p>
-                    <button type="button" class="btn btn-outline-success mt-3" data-bs-dismiss="modal" data-i18n="contact.close">Fechar</button>
+                    <button type="button" class="btn btn-outline-success rounded-pill mt-3 px-5" data-bs-dismiss="modal" data-i18n="contact.close">Fechar</button>
                 </div>
 
                 <!-- Error Message (Hidden by default) -->
-                <div id="errorMessage" class="text-center py-5 d-none">
-                    <i class="fas fa-exclamation-circle text-danger fa-4x mb-3"></i>
+                <div id="errorMessage" class="text-center py-4 d-none">
+                    <div class="mb-4">
+                        <i class="fas fa-exclamation-circle text-danger fa-4x"></i>
+                    </div>
                     <h4 class="fw-bold text-danger mb-2" data-i18n="contact.errorTitle">Erro ao enviar</h4>
                     <p class="text-muted" data-i18n="contact.errorMessage">Houve um problema. Tente novamente ou use meu email direto.</p>
-                    <button type="button" class="btn btn-outline-secondary mt-3" onclick="resetForm()" data-i18n="contact.tryAgain">Tentar Novamente</button>
+                    <button type="button" class="btn btn-outline-secondary rounded-pill mt-3 px-5" onclick="resetForm()" data-i18n="contact.tryAgain">Tentar Novamente</button>
                 </div>
 
             </div>

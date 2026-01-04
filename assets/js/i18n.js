@@ -99,7 +99,7 @@ const translations = {
         'footer.description': 'Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).',
         'footer.sendEmail': 'Enviar Email',
         'footer.linkedin': 'LinkedIn',
-        'footer.copyright': '© 2025 Rafael Dias Garcia.',
+        'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
         'contact.title': 'Enviar Mensagem',
@@ -236,7 +236,7 @@ const translations = {
         'footer.description': 'I am open to opportunities in web development (Backend/Fullstack).',
         'footer.sendEmail': 'Send Email',
         'footer.linkedin': 'LinkedIn',
-        'footer.copyright': '© 2025 Rafael Dias Garcia.',
+        'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
         'contact.title': 'Send Message',
@@ -371,7 +371,7 @@ const translations = {
         'footer.description': 'Estoy abierto a oportunidades en desarrollo web (Backend/Fullstack).',
         'footer.sendEmail': 'Enviar Email',
         'footer.linkedin': 'LinkedIn',
-        'footer.copyright': '© 2025 Rafael Dias Garcia.',
+        'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
         'contact.title': 'Enviar Mensaje',
@@ -506,7 +506,7 @@ const translations = {
         'footer.description': '我愿意接受 Web 开发（后端/全栈）方面的机会。',
         'footer.sendEmail': '发送电子邮件',
         'footer.linkedin': 'LinkedIn',
-        'footer.copyright': '© 2025 Rafael Dias Garcia.',
+        'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
         'contact.title': '发送消息',
@@ -641,7 +641,7 @@ const translations = {
         'footer.description': 'Ich bin offen für Möglichkeiten in der Webentwicklung (Backend/Fullstack).',
         'footer.sendEmail': 'E-Mail senden',
         'footer.linkedin': 'LinkedIn',
-        'footer.copyright': '© 2025 Rafael Dias Garcia.',
+        'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
         'contact.title': 'Nachricht senden',
