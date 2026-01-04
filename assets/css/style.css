@@ -802,7 +802,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card .custom-card {
     flex: 1;
-    min-height: 340px;
+    min-height: 280px;
 }
 
 /* No mobile, remove altura mínima para melhor responsividade */
@@ -1393,16 +1393,51 @@ footer a:hover {
 }
 
 /* ========================================
-   Projects Expandable Drawer (Mobile)
+   Projects Expandable Drawer (All Screens)
    ======================================== */
 
-/* Peek card - shows half of the third project */
+/* Peek Card - shows part of next project */
 .project-peek-container {
     position: relative;
-    height: 140px;
     overflow: hidden;
-    margin-top: 1rem;
     cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile/Tablet peek - full width, shorter */
+.project-peek-container.d-lg-none {
+    height: 120px;
+    margin-top: 1rem;
+}
+
+/* Desktop peek - same size as cards, taller */
+@media (min-width: 992px) {
+    .project-peek-container.d-none.d-lg-block {
+        height: 150px;
+        display: flex !important;
+    }
+}
+
+/* When hidden, remove from layout completely */
+.project-peek-container.hidden {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+    width: 0 !important;
+    flex: 0 0 0 !important;
+    max-width: 0 !important;
+}
+
+.project-peek-container:not(.hidden):hover {
+    transform: translateY(-2px);
 }
 
 .project-peek-card {
@@ -1410,6 +1445,8 @@ footer a:hover {
     opacity: 0.6;
     transform: scale(0.98);
     transition: all 0.3s ease;
+    pointer-events: none;
+    height: 100%;
 }
 
 .project-peek-card::after {
@@ -1418,9 +1455,25 @@ footer a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 80px;
-    background: linear-gradient(to bottom, transparent, var(--bg-secondary));
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-secondary) 80%);
     pointer-events: none;
+}
+
+[data-theme="dark"] .project-peek-card::after {
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-primary) 80%);
+}
+
+.project-peek-container:hover .project-peek-card {
+    opacity: 0.8;
+}
+
+/* Hide peek break when expanded */
+.project-peek-break.hidden {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Show More Button */
@@ -1443,27 +1496,7 @@ footer a:hover {
     transform: rotate(180deg);
 }
 
-/* Hide peek card when expanded */
-.project-peek-container.hidden {
-    display: none !important;
-}
-
-/* Desktop: show all projects normally */
-@media (min-width: 768px) {
-    .project-peek-container {
-        display: none !important;
-    }
-    
-    #showMoreProjectsBtn {
-        display: none !important;
-    }
-    
-    .more-projects-item {
-        display: block !important;
-    }
-}
-
-/* Mobile: apply drawer effect */
+/* Mobile (< 768px): Show 2 projects initially */
 @media (max-width: 767px) {
     /* Initially hide projects after the 2nd one */
     .more-projects-item {
@@ -1476,9 +1509,55 @@ footer a:hover {
         animation: slideDown 0.4s ease-out;
     }
     
-    /* Show peek card only on mobile */
-    .project-peek-container {
+    /* Hide projects when collapsing */
+    .more-projects-item.closing {
         display: block;
+        animation: slideUp 0.3s ease-out;
+    }
+}
+
+/* Tablet (768px - 991px): Show 2 projects initially */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Initially hide projects after the 2nd one */
+    .more-projects-item {
+        display: none;
+    }
+    
+    /* Show projects when expanded */
+    .more-projects-item.visible {
+        display: block;
+        animation: slideDown 0.4s ease-out;
+    }
+    
+    /* Hide projects when collapsing */
+    .more-projects-item.closing {
+        display: block;
+        animation: slideUp 0.3s ease-out;
+    }
+}
+
+/* Desktop (>= 992px): Show 3 projects initially */
+@media (min-width: 992px) {
+    /* Show the 3rd project on desktop */
+    .more-projects-desktop {
+        display: block !important;
+    }
+    
+    /* Initially hide projects after the 3rd one */
+    .more-projects-item:not(.more-projects-desktop) {
+        display: none;
+    }
+    
+    /* Show projects when expanded */
+    .more-projects-item.visible {
+        display: block;
+        animation: slideDown 0.4s ease-out;
+    }
+    
+    /* Hide projects when collapsing */
+    .more-projects-item.closing {
+        display: block;
+        animation: slideUp 0.3s ease-out;
     }
 }
 
@@ -1491,4 +1570,36 @@ footer a:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* ========================================
+   Experience Expandable Drawer
+   ======================================== */
+
+/* Initially hide experience items after the 1st one */
+.more-experience-item {
+    display: none;
+}
+
+/* Show experience items when expanded */
+.more-experience-item.visible {
+    display: block;
+    animation: slideDown 0.4s ease-out;
+}
+
+/* Hide experience items when collapsing */
+.more-experience-item.closing {
+    display: block;
+    animation: slideUp 0.3s ease-out;
 }

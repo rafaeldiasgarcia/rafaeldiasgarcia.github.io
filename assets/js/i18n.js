@@ -77,10 +77,14 @@ const translations = {
         'projects.guitar.description': 'Guia interativo open-source para a comunidade de violonistas. Recurso educacional colaborativo.',
         'projects.bookshelf.title': 'Bookshelf API',
         'projects.bookshelf.description': 'API RESTful com Node.js e Express. CRUD completo de livros com persistência local em JSON.',
+        'projects.javaRoadmap.title': 'Roadmap Java Backend 2026',
+        'projects.javaRoadmap.description': 'Guia completo de estudos em Java Backend. Roadmap estruturado com cronograma, notas de teoria e projetos práticos aplicando desde fundamentos até arquitetura.',
         
         // Experience Section
         'experience.title': 'Experiência Profissional',
         'experience.current': 'Atual',
+        'experience.showMore': 'Ver Mais Experiências',
+        'experience.showLess': 'Ver Menos',
         'experience.cwi.company': 'CWI Software (Crescer)',
         'experience.cwi.position': 'Estagiário - Level 2',
         'experience.cwi.description': 'Capacitação intensiva em desenvolvimento de software corporativo focando em Java e Angular. Práticas de DevOps, Segurança e Metodologias Ágeis em ambiente simulado de alta performance.',
@@ -211,10 +215,14 @@ const translations = {
         'projects.guitar.description': 'Interactive open-source guide for the guitar community. Collaborative educational resource.',
         'projects.bookshelf.title': 'Bookshelf API',
         'projects.bookshelf.description': 'RESTful API with Node.js and Express. Complete CRUD for books with local JSON persistence.',
+        'projects.javaRoadmap.title': 'Java Backend Roadmap 2026',
+        'projects.javaRoadmap.description': 'Complete Java Backend study guide. Structured roadmap with timeline, theory notes, and practical projects from fundamentals to architecture.',
         
         // Experience Section
         'experience.title': 'Professional Experience',
         'experience.current': 'Current',
+        'experience.showMore': 'Show More Experience',
+        'experience.showLess': 'Show Less',
         'experience.cwi.company': 'CWI Software (Crescer)',
         'experience.cwi.position': 'Intern - Level 2',
         'experience.cwi.description': 'Intensive training in corporate software development focusing on Java and Angular. DevOps practices, Security, and Agile Methodologies in a simulated high-performance environment.',
@@ -345,6 +353,8 @@ const translations = {
         'projects.guitar.description': 'Guía interactiva de código abierto para la comunidad de guitarristas. Recurso educativo colaborativo.',
         'projects.bookshelf.title': 'Bookshelf API',
         'projects.bookshelf.description': 'API RESTful con Node.js y Express. CRUD completo de libros con persistencia local en JSON.',
+        'projects.javaRoadmap.title': 'Hoja de Ruta Java Backend 2026',
+        'projects.javaRoadmap.description': 'Guía completa de estudios en Java Backend. Hoja de ruta estructurada con cronograma, notas de teoría y proyectos prácticos desde fundamentos hasta arquitectura.',
         
         // Experience Section
         'experience.title': 'Experiencia Profesional',
@@ -479,6 +489,8 @@ const translations = {
         'projects.guitar.description': '为吉他社区提供的交互式开源指南。协作教育资源。',
         'projects.bookshelf.title': 'Bookshelf API',
         'projects.bookshelf.description': '使用 Node.js 和 Express 的 RESTful API。具有本地 JSON 持久性的完整书籍 CRUD。',
+        'projects.javaRoadmap.title': 'Java 后端路线图 2026',
+        'projects.javaRoadmap.description': '完整的 Java 后端学习指南。结构化路线图，包含时间表、理论笔记和从基础到架构的实践项目。',
         
         // Experience Section
         'experience.title': '专业经验',
@@ -613,6 +625,8 @@ const translations = {
         'projects.guitar.description': 'Interaktiver Open-Source-Leitfaden für die Gitarren-Community. Kollaborative Bildungsressource.',
         'projects.bookshelf.title': 'Bookshelf API',
         'projects.bookshelf.description': 'RESTful-API mit Node.js und Express. Vollständige CRUD für Bücher mit lokaler JSON-Persistenz.',
+        'projects.javaRoadmap.title': 'Java-Backend-Roadmap 2026',
+        'projects.javaRoadmap.description': 'Vollständiger Java-Backend-Studienführer. Strukturierte Roadmap mit Zeitplan, Theorienotizen und praktischen Projekten von Grundlagen bis Architektur.',
         
         // Experience Section
         'experience.title': 'Berufserfahrung',

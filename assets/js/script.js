@@ -191,21 +191,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Projects Expandable Drawer (Mobile)
+    // Projects Expandable Drawer (All Screens)
     const showMoreBtn = document.getElementById('showMoreProjectsBtn');
     const moreProjectsItems = document.querySelectorAll('.more-projects-item');
-    const projectPeekContainer = document.querySelector('.project-peek-container');
+    const allPeekCards = document.querySelectorAll('.project-peek-container');
+    const peekBreak = document.getElementById('peekBreak');
 
     if (showMoreBtn && moreProjectsItems.length > 0) {
         showMoreBtn.addEventListener('click', function() {
             const isExpanded = showMoreBtn.classList.contains('expanded');
             
             if (isExpanded) {
-                // Collapse
-                moreProjectsItems.forEach(item => {
-                    item.classList.remove('visible');
-                });
+                // Remove expanded state immediately to update button
                 showMoreBtn.classList.remove('expanded');
+                
+                // Collapse - animate items going UP before hiding
+                moreProjectsItems.forEach(item => {
+                    // Only animate items that have the 'visible' class
+                    if (item.classList.contains('visible')) {
+                        // Remove visible and add closing class for animation
+                        item.classList.remove('visible');
+                        item.classList.add('closing');
+                    }
+                });
+                
+                // Wait for animation to finish (300ms) then clean up and show peek cards
+                setTimeout(() => {
+                    moreProjectsItems.forEach(item => {
+                        if (item.classList.contains('closing')) {
+                            item.classList.remove('closing');
+                        }
+                    });
+                    
+                    // Show peek cards immediately after cleanup (no transition to avoid flicker)
+                    allPeekCards.forEach(peek => {
+                        peek.style.transition = 'none';
+                        peek.style.opacity = '0';
+                        peek.classList.remove('hidden');
+                        
+                        // Fade in smoothly with same duration as slideDown (0.4s)
+                        requestAnimationFrame(() => {
+                            peek.style.transition = 'opacity 0.4s ease-out';
+                            peek.style.opacity = '';
+                            
+                            // Clean up inline styles after transition
+                            setTimeout(() => {
+                                peek.style.transition = '';
+                                peek.style.opacity = '';
+                            }, 400);
+                        });
+                    });
+                    
+                    if (peekBreak) {
+                        peekBreak.classList.remove('hidden');
+                    }
+                }, 300);
                 
                 // Update button text
                 const btnText = showMoreBtn.querySelector('[data-i18n]');
@@ -217,23 +257,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         btnText.textContent = 'Ver Mais Projetos';
                     }
                 }
-                
-                // Show peek card again
-                if (projectPeekContainer) {
-                    projectPeekContainer.classList.remove('hidden');
-                }
-                
-                // Scroll back to projects section
-                setTimeout(() => {
-                    const projectsSection = document.getElementById('projetos');
-                    if (projectsSection) {
-                        projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }, 100);
             } else {
-                // Expand
+                // Expand - only animate items that are actually hidden
                 moreProjectsItems.forEach(item => {
-                    item.classList.add('visible');
+                    // Check if item is currently hidden (display: none)
+                    const isHidden = window.getComputedStyle(item).display === 'none';
+                    
+                    // Only add 'visible' class to items that are hidden
+                    if (isHidden) {
+                        item.classList.add('visible');
+                    }
                 });
                 showMoreBtn.classList.add('expanded');
                 
@@ -248,18 +281,91 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
                 
-                // Hide peek card
-                if (projectPeekContainer) {
-                    projectPeekContainer.classList.add('hidden');
+                // Hide all peek cards and break
+                allPeekCards.forEach(peek => {
+                    peek.classList.add('hidden');
+                });
+                if (peekBreak) {
+                    peekBreak.classList.add('hidden');
                 }
             }
         });
 
-        // Optional: Click on peek card to expand
-        if (projectPeekContainer) {
-            projectPeekContainer.addEventListener('click', function() {
+        // Click on any peek card to expand
+        allPeekCards.forEach(peek => {
+            peek.addEventListener('click', function() {
                 showMoreBtn.click();
             });
-        }
+        });
+    }
+
+    // Experience Expandable Drawer
+    const showMoreExperienceBtn = document.getElementById('showMoreExperienceBtn');
+    const moreExperienceItems = document.querySelectorAll('.more-experience-item');
+
+    if (showMoreExperienceBtn && moreExperienceItems.length > 0) {
+        showMoreExperienceBtn.addEventListener('click', function() {
+            const isExpanded = showMoreExperienceBtn.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Remove expanded state immediately to update button
+                showMoreExperienceBtn.classList.remove('expanded');
+                
+                // Collapse - animate items going UP before hiding
+                moreExperienceItems.forEach(item => {
+                    if (item.classList.contains('visible')) {
+                        item.classList.remove('visible');
+                        item.classList.add('closing');
+                    }
+                });
+                
+                // Wait for animation to finish (300ms) then clean up
+                setTimeout(() => {
+                    moreExperienceItems.forEach(item => {
+                        if (item.classList.contains('closing')) {
+                            item.classList.remove('closing');
+                        }
+                    });
+                }, 300);
+                
+                // Update button text
+                const btnText = showMoreExperienceBtn.querySelector('[data-i18n]');
+                if (btnText) {
+                    if (window.i18n && window.i18n.translate) {
+                        btnText.textContent = window.i18n.translate('experience.showMore');
+                    } else {
+                        btnText.textContent = 'Ver Mais Experiências';
+                    }
+                }
+                
+                // Update icon
+                const icon = showMoreExperienceBtn.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-chevron-down ms-2';
+                }
+            } else {
+                // Expand - show hidden items
+                moreExperienceItems.forEach(item => {
+                    item.classList.add('visible');
+                });
+                showMoreExperienceBtn.classList.add('expanded');
+                
+                // Update button text
+                const btnText = showMoreExperienceBtn.querySelector('[data-i18n]');
+                if (btnText) {
+                    if (window.i18n && window.i18n.translate) {
+                        btnText.textContent = window.i18n.translate('experience.showLess');
+                    } else {
+                        btnText.textContent = 'Ver Menos';
+                    }
+                }
+                
+                // Update icon
+                const icon = showMoreExperienceBtn.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-chevron-up ms-2';
+                }
+            }
+        });
     }
 });
