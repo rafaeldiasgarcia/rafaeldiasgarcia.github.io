@@ -98,6 +98,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .container {
     position: relative;
     overflow: visible !important;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .navbar-nav {
@@ -739,7 +741,6 @@ body.menu-open {
 .navbar-brand {
     color: var(--text-primary) !important;
     transition: color 0.3s ease;
-    margin-left: 1rem;
 }
 
 /* Navbar divider */
@@ -1459,13 +1460,44 @@ footer a:not(.btn):hover {
     white-space: normal;
 }
 
-/* Navbar toggler dark mode */
-.navbar-toggler-icon {
-    filter: var(--toggler-filter, none);
+/* Navbar toggler custom hamburger */
+.hamburger-icon {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-[data-theme="dark"] .navbar-toggler-icon {
-    --toggler-filter: invert(1);
+.hamburger-icon span {
+    display: block;
+    height: 2.5px;
+    width: 100%;
+    background-color: var(--text-primary);
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Quando o menu está aberto, aplicamos a classe active via JS */
+body.menu-open .hamburger-icon span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+body.menu-open .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+body.menu-open .hamburger-icon span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* PDF Viewer Modal */
