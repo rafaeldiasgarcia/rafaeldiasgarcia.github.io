@@ -11,6 +11,8 @@ const translations = {
         'nav.experience': 'Experiência',
         'nav.blog': 'Artigos',
         'nav.contact': 'Contato',
+        'blog.loading': 'Carregando conteúdo...',
+        'blog.fetching': 'Buscando artigos...',
         
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
@@ -151,6 +153,8 @@ const translations = {
         'nav.experience': 'Experience',
         'nav.blog': 'Articles',
         'nav.contact': 'Contact',
+        'blog.loading': 'Loading content...',
+        'blog.fetching': 'Fetching articles...',
         
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
