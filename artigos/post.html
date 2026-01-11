@@ -532,7 +532,7 @@
             }
 
             // 2. Load the markdown file
-            const markdownResponse = await fetch(`conteudo/${postMetadata.file}`);
+            const markdownResponse = await fetch(`${postMetadata.file}`);
             if (!markdownResponse.ok) throw new Error('Falha ao carregar o arquivo do post');
             const markdown = await markdownResponse.text();
 

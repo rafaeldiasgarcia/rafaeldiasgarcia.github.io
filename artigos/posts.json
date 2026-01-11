@@ -1,17 +1,24 @@
 [
     {
+        "id": "primeiras-magias-sql",
+        "title": "Primeiras Magias no SQL",
+        "date": "2026-01-11",
+        "excerpt": "Concluí o curso gratuito de SQL do Téo Calvo! Confira minhas resoluções e o material de apoio.",
+        "file": "2026/01/11/primeiras-magias-sql/index.md"
+    },
+    {
         "id": "roadmap-java",
         "title": "Roadmap Java Backend: Minha Jornada",
         "date": "2026-01-04",
         "excerpt": "Compartilhando minha rotina de estudos, o prompt que utilizo para aprender com IA e a prática de código baseada no roadmap de mercado.",
-        "file": "roadmap-java.md"
+        "file": "2026/01/04/roadmap-java/index.md"
     },
     {
         "id": "post-teste",
         "title": "Post de Teste",
         "date": "2025-12-15",
         "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "file": "teste.md"
+        "file": "2025/12/15/post-teste/index.md"
     }
 ]
 
