@@ -69,6 +69,42 @@ ORDER BY qtdeTransacao DESC
 
 ---
 
+## Subindo o nível com Window Functions
+
+Depois de dominar os joins e agregações básicas, comecei a explorar as **Window Functions**. Elas são ferramentas poderosas para análises que dependem da ordem ou de "olhar" para a linha anterior ou posterior sem precisar de subqueries complexas.
+
+Um exemplo legal foi usar a função `lag()` para calcular o tempo médio entre as transações de cada cliente em 2025. A lógica foi extrair o dia, pegar a data da compra anterior com o `lag` e calcular a diferença de dias.
+
+```sql
+WITH cliente_dia AS (
+    SELECT DISTINCT IdCliente,
+                    substr(DtCriacao,1,10) AS dtDia
+    FROM transacoes
+    WHERE substr(DtCriacao,1,4) = '2025'
+    ORDER BY IdCliente, dtDia
+),
+tb_lag AS (
+    SELECT *,
+           lag(dtDia) OVER (PARTITION BY IdCliente ORDER BY dtDia) AS lagDia
+    FROM cliente_dia
+),
+tb_diff_dt AS (
+    SELECT *,
+           julianday(dtDia) - julianday(lagDia) AS DtDiff
+    FROM tb_lag
+),
+avg_cliente AS (
+    SELECT IdCliente,
+           avg(DtDiff) AS avgDia
+    FROM tb_diff_dt
+    GROUP BY IdCliente
+)
+SELECT avg(avgDia)
+FROM avg_cliente
+```
+
+---
+
 ## Material de Apoio (Slides)
 
 Para acompanhar as magias, aqui está a apresentação oficial do curso. Você pode navegar pelos slides diretamente aqui:
