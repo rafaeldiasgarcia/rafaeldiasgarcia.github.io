@@ -34,7 +34,7 @@ No curso, o Téo utiliza o VS Code com a extensão de SQLite. É uma configuraç
 
 O suporte a SQL no IntelliJ é excelente. Ter o console de query, a visualização das tabelas e o autocomplete no mesmo lugar onde escrevo meu código Java facilita muito o fluxo.
 
-![Meu setup no IntelliJ usando SQLite](2026/01/11/primeiras-magias-sql/assets/image.png)
+![Meu setup no IntelliJ usando SQLite](2026/01/12/primeiras-magias-sql/assets/image.png)
 *(Legenda: Explorando as tabelas e rodando queries diretamente no IntelliJ IDEA)*
 
 ---
