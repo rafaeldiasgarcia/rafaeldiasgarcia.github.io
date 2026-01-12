@@ -1,4 +1,4 @@
-# Primeiras Magias na Linguagem dos Dados: O curso do Téo Me Why!
+# Primeiras Magias na Linguagem dos Dados
 
 Neste semestre vou começar a matéria de Design e Desenvolvimento de Banco de Dados na faculdade. Para me preparar, decidi dar uma lida no material didático principal, o livro [*Introdução a Sistemas de Bancos de Dados*](https://www.amazon.com.br/Introdu%C3%A7%C3%A3o-Sistemas-Bancos-Dados-Date/dp/8535212736) de C. J. Date, e procurei por cursos introdutórios de SQL. Mesmo já tendo feito uma introdução no CWI Crescer, queria garantir uma base sólida para as aulas. Por indicação, cheguei ao curso gratuito de SQL do Téo Calvo (Téo Me Why) no YouTube.
 
