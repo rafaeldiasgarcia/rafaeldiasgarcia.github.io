@@ -1,5 +1,12 @@
 [
     {
+        "id": "go-lang-teo-me-why",
+        "title": "Primeiros passos em go com Téo Me Why",
+        "date": "2026-01-30",
+        "excerpt": "Primeiras impressões do curso de Go do Téo Me Why. Explorando a sintaxe, performance e o que torna essa linguagem tão especial.",
+        "file": "2026/01/30/go-lang-teo-me-why/index.md"
+    },
+    {
         "id": "primeiras-magias-sql",
         "title": "Primeiras Magias no SQL",
         "date": "2026-01-12",
