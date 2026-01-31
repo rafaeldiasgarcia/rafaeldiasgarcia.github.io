@@ -42,43 +42,49 @@ Para quem está acostumado com linguagens interpretadas como Python, esse delay 
 
 Uma característica marcante do Go é a formatação automática do código através da ferramenta `gofmt`. O problema? Ela tem regras próprias de identação e espaçamento que nem sempre batem com minha preferência pessoal.
 
-O curioso é que o `gofmt` não é totalmente consistente — em alguns casos mantém o espaçamento, em outros remove. Como sou iniciante na linguagem, posso estar perdendo algum contexto importante, mas essa foi minha primeira impressão.
-
-Veja este exemplo de um verificador de média que escrevi:
+Veja este exemplo de conversão de temperatura que escrevi:
 
 ```go
 package main
 
 import "fmt"
 
+type Altura float64 
+type Peso float64   
+
+type Celsius float64
+type Fahrenheit float64
+
+func IMC(h Altura, p Peso) float64 {
+	return float64(p) / float64(h*h)
+}
+
+func CtoF(c Celsius) Fahrenheit {
+	return Fahrenheit(float64(c)*9.0/5.0 + 32.0) // aqui!
+}
+
 func main() {
-	fmt.Println("=== Verificador de Média ===")
-	fmt.Println("Digite as 3 notas:")
 
-	var nota1, nota2, nota3 float64
+	alturaTeo := Altura(1.80)
+	pesoTeo := Peso(70.34)
 
-	fmt.Print("Nota 1: ")
-	fmt.Scanf("%f", &nota1)
+	res := float64(alturaTeo) + float64(pesoTeo)
+	fmt.Println("altura + peso =", res)
 
-	fmt.Print("Nota 2: ")
-	fmt.Scanf("%f", &nota2)
+	imc := IMC(alturaTeo, pesoTeo)
+	fmt.Printf("IMC do Téo: %f\n", imc)
 
-	fmt.Print("Nota 3: ")
-	fmt.Scanf("%f", &nota3)
+	c := Celsius(30)
 
-	media := (nota1 + nota2 + nota3) / 3
+	fNew := CtoF(c)
+	fmt.Printf("%f C = %f F", c, fNew)
 
-	fmt.Printf("\nMédia: %.2f\n", media)
-
-	if media >= 6.0 {
-		fmt.Println("Aprovado! Parabéns!")
-	} else {
-		fmt.Printf("Reprovado. Faltaram %.2f pontos.\n", 6.0-media)
-	}
 }
 ```
 
-Repare na linha 20: o código mantém os espaços ao redor dos operadores matemáticos `(nota1 + nota2 + nota3) / 3`, o que facilita a leitura. Porém, na linha 28, o `gofmt` remove os espaços e formata como `6.0-media`, ficando tudo junto. Para mim, isso dificulta a leitura, principalmente em expressões mais complexas.
+Repare na linha 16, no cálculo de conversão de Celsius para Fahrenheit: `float64(c)*9.0/5.0 + 32.0`. O `gofmt` junta a multiplicação e divisão sem espaços (`c*9.0/5.0`), mas separa o operador de adição (` + 32.0`). Aparentemente, a ferramenta faz isso para demonstrar visualmente a precedência de operadores — multiplicação e divisão acontecem primeiro, depois a adição.
+
+O problema é que, na minha opinião de leigo, isso não é tão intuitivo. Gostaria de ter o poder de deixar o código formatado como me agrada mais, com espaçamento uniforme para facilitar a leitura. Como sou iniciante na linguagem, posso estar perdendo algum contexto importante, mas essa foi minha primeira impressão.
 
 **Reflexão importante:** A comunidade Go valoriza muito o código padronizado. Toda a base de código Go no mundo segue o mesmo estilo graças ao `gofmt`. Isso facilita a colaboração em equipe, mas exige que você abra mão de algumas preferências pessoais.
 
@@ -96,7 +102,7 @@ O curso do Téo cobre uma gama completa de tópicos, desde o básico até concor
 
 ## Por Que Vale a Pena Aprender Go?
 
-Mesmo com minhas ressalvas iniciais sobre formatação e ferramentas, Go é uma linguagem que vale muito a pena. Aqui estão os pontos que me convenceram:
+Mesmo com minhas ressalvas iniciais sobre formatação, Go é uma linguagem que vale muito a pena. Aqui estão os pontos que me convenceram:
 
 1. **Simplicidade Real:** A linguagem foi projetada para ser fácil de aprender e manter.
 2. **Performance de Baixo Nível:** Comparável a C, mas sem a complexidade de gerenciamento manual de memória.
