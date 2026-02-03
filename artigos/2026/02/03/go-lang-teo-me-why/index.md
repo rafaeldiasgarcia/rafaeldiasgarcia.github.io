@@ -378,6 +378,8 @@ Para quem está começando em desenvolvimento, Go é uma escolha sólida. Você 
 
 Vou continuar praticando e, honestamente, procurando oportunidades de usar Go em projetos pessoais. A sensação de compilar um programa e ter um único binário pronto para distribuir é libertadora. A facilidade de escrever código concorrente com goroutines abre portas para problemas que seriam complexos em outras linguagens.
 
+Como desafio final do curso, implementei um [simulador de álbum de figurinhas](https://github.com/rafaeldiasgarcia/figurinhas_go) que calcula quantos pacotes são necessários em média para completar um álbum. O projeto usa goroutines e canais para processar milhares de simulações em paralelo — algo que seria bem mais complicado em outras linguagens.
+
 **Vale a pena aprender Go em 2026?** Minha resposta, após este curso, é um sim convicto. Especialmente se você curte a ideia de escrever código limpo, performático e que "simplesmente funciona" sem magia nos bastidores.
 
 O curso do Téo é gratuito, didático e vai direto ao ponto. Se você tem curiosidade, não tem desculpa para não experimentar.
