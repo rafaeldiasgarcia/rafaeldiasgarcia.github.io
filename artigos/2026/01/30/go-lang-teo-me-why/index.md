@@ -28,6 +28,22 @@ Simples, direto e eficiente. Não há necessidade de classes desnecessárias ou 
 
 ---
 
+## Curva de Aprendizado
+
+Como alguém que programa principalmente em Java, a transição para Go foi surpreendentemente suave. A sintaxe limpa e a ausência de "magia" nos bastidores facilitam muito o entendimento do que está acontecendo. O curso do Téo tem cerca de 14 módulos, e consegui completar em aproximadamente duas semanas dedicando algumas horas por dia.
+
+O que mais me ajudou foi a filosofia do Go de "uma maneira certa de fazer as coisas". Diferente do Java, onde existem múltiplas abordagens para o mesmo problema, Go é mais opinativo e direto. Isso pode incomodar alguns, mas para iniciantes é libertador — você não fica paralisado tentando decidir qual caminho seguir.
+
+Os conceitos que exigiram mais atenção foram:
+
+- **Ponteiros:** Embora mais simples que em C, ainda requerem compreensão de quando usar `&` (endereço) e `*` (valor)
+- **Interfaces:** A forma implícita como funcionam é diferente do Java, onde você declara explicitamente
+- **Goroutines e Canais:** Conceito novo, mas muito bem explicado pelo Téo
+
+No geral, se você já programa em qualquer linguagem, Go é acessível. Se está começando do zero, é uma excelente primeira linguagem por ser explícita e direta.
+
+---
+
 ## Performance: O Pequeno Delay da Primeira Execução
 
 Uma peculiaridade que notei logo de cara foi o tempo de compilação. Na primeira vez que você roda o código, há uma pequena demora. Depois disso, as execuções subsequentes são praticamente instantâneas. 
@@ -38,11 +54,39 @@ Para quem está acostumado com linguagens interpretadas como Python, esse delay 
 
 ---
 
+## Structs: Orientação a Objetos sem Classes
+
+Uma das características mais interessantes do Go é como ele lida com organização de código. Não existem classes no sentido tradicional, mas você tem **structs** (estruturas) que podem ter métodos associados.
+
+Veja este exemplo de tipos personalizados:
+
+```go
+type Altura float64 
+type Peso float64   
+
+type Celsius float64
+type Fahrenheit float64
+
+func IMC(h Altura, p Peso) float64 {
+	return float64(p) / float64(h*h)
+}
+
+func CtoF(c Celsius) Fahrenheit {
+	return Fahrenheit(float64(c)*9.0/5.0 + 32.0)
+}
+```
+
+Aqui criamos tipos personalizados baseados em `float64`. Isso traz segurança: você não pode acidentalmente passar um `Celsius` onde se espera um `Fahrenheit` — o compilador vai reclamar.
+
+Para quem está acostumado com linguagens orientadas a objetos tradicionais, onde tudo é classe e herança, a abordagem do Go de **composição sobre herança** é diferente. Você monta estruturas complexas combinando structs simples, e interfaces definem comportamentos de forma implícita. É mais flexível e menos acoplado.
+
+---
+
 ## Formatação Automática: Um Caso de Amor e Ódio
 
 Uma característica marcante do Go é a formatação automática do código através da ferramenta `gofmt`. O problema? Ela tem regras próprias de identação e espaçamento que nem sempre batem com minha preferência pessoal.
 
-Veja este exemplo de conversão de temperatura que escrevi:
+Voltando ao exemplo de conversão de temperatura que mostrei antes, repare nos tipos personalizados:
 
 ```go
 package main
@@ -124,6 +168,33 @@ Não consigo identificar uma lógica clara para quando o formatador mantém ou r
 
 **Reflexão importante:** Aparentemente a comunidade Go valoriza muito o código padronizado. Toda a base de código Go no mundo segue o mesmo 
 estilo graças ao `gofmt`. Isso facilita a colaboração em equipe, mas exige que você abra mão de algumas preferências pessoais.
+
+---
+
+## Gerenciamento de Erros: Explícito e Direto
+
+Go não tem `try/catch` ou exceções no sentido tradicional. Em vez disso, funções que podem falhar retornam múltiplos valores, sendo o último geralmente um `error`.
+
+```go
+func dividir(a, b float64) (float64, error) {
+    if b == 0 {
+        return 0, fmt.Errorf("divisão por zero")
+    }
+    return a / b, nil
+}
+
+// Usando a função
+resultado, err := dividir(10, 0)
+if err != nil {
+    log.Println("Erro:", err)
+    return
+}
+fmt.Println("Resultado:", resultado)
+```
+
+Inicialmente, parece verboso — você fica checando `if err != nil` o tempo todo. Mas há uma vantagem: **você é forçado a pensar sobre erros no momento em que escreve o código**, não como algo opcional que você pode "tratar depois".
+
+Comparado com exceções que podem surgir em qualquer lugar e você precisa rastrear a stack trace, o modelo do Go é mais previsível. Você sabe exatamente quais funções podem falhar só olhando a assinatura delas.
 
 ---
 
@@ -229,13 +300,47 @@ O conceito de canais com buffer é interessante: o canal pode armazenar até 40 
 
 ---
 
-## Conteúdo do Curso
+## Tooling e Ecossistema
 
-O curso do Téo cobre uma gama completa de tópicos, desde o básico até concorrência (um dos grandes diferenciais do Go). Confira a apresentação completa com exemplos de código e exercícios:
+Uma surpresa positiva foi a qualidade das ferramentas que acompanham o Go. Tudo que você precisa já vem na instalação padrão:
 
-<div class="ratio ratio-16x9 my-5 shadow-lg rounded overflow-hidden">
-    <iframe src="https://docs.google.com/presentation/d/1A853kcKhvdhTrXK72xlufd5-wSVjg743HO0T1cuuvuc/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
+- **`go mod`:** Gerenciamento de dependências moderno e simples
+- **`go test`:** Framework de testes integrado, sem precisar instalar JUnit ou similar
+- **`go build`:** Compilação rápida que gera um único binário executável
+- **`gofmt`:** Formatação automática (que eu tanto critiquei, mas reconheço a utilidade)
+- **`go doc`:** Documentação integrada e acessível via terminal
+
+A compilação é incrivelmente rápida. Projetos que levariam minutos para compilar em Java compilam em segundos no Go. E o resultado é um único arquivo executável sem dependências — você copia e roda em qualquer servidor. Nada de `java -jar` com classpath ou configuração de runtime.
+
+O ecossistema de bibliotecas também é maduro. Para tarefas comuns (web servers, banco de dados, APIs REST), a biblioteca padrão já resolve a maior parte. Quando você precisa de algo externo, o `go get` instala de forma simples e previsível.
+
+---
+
+## Go vs Java vs Python: Quando Usar Cada Um?
+
+Depois de explorar Go, comecei a pensar em cenários práticos onde usaria cada linguagem. Como ainda estou aprendendo, essas são impressões baseadas no que vi até agora:
+
+**Go parece ideal para:**
+- Microserviços e APIs RESTful onde performance é importante
+- Ferramentas CLI (command line) que você quer distribuir facilmente como um único arquivo
+- Sistemas que precisam lidar com muitas operações simultâneas (concorrência)
+- Quando você precisa de algo rápido mas não quer a complexidade de C
+
+**Java, pelo que vejo no estágio, é forte em:**
+- Sistemas corporativos grandes e complexos
+- Projetos onde você tem uma equipe grande trabalhando junto
+- Aplicações enterprise com Spring Boot, que tem muito suporte e documentação
+- Quando você precisa integrar com sistemas antigos que já são Java
+
+**Python parece continuar sendo melhor para:**
+- Ciência de dados, machine learning e análise estatística (tem muito mais bibliotecas que Go)
+- Scripts rápidos e automação do dia a dia
+- Quando você quer testar uma ideia rapidamente
+- Processamento e análise de dados em geral
+
+Aparentemente, Go é forte em sistemas que precisam de performance e concorrência, mas Python ainda domina completamente quando o assunto é trabalhar com dados e estatística. Go pode ser rápido, mas não tem o ecossistema maduro de bibliotecas como pandas, numpy, scikit-learn que Python oferece.
+
+Minha impressão pessoal: **Go parece ser a linguagem que eu gostaria de usar para construir sistemas novos do zero**, especialmente APIs e serviços. Java continua sendo o que uso no estágio. Python seria minha escolha se eu fosse trabalhar com dados ou precisasse automatizar algo rapidamente.
 
 ---
 
@@ -251,11 +356,31 @@ Mesmo com minhas ressalvas iniciais sobre formatação, Go é uma linguagem que 
 
 ---
 
+## Conteúdo do Curso
+
+O curso do Téo cobre uma gama completa de tópicos, desde o básico até concorrência (um dos grandes diferenciais do Go). Confira a apresentação completa com exemplos de código e exercícios:
+
+<div class="ratio ratio-16x9 my-5 shadow-lg rounded overflow-hidden">
+    <iframe src="https://docs.google.com/presentation/d/1A853kcKhvdhTrXK72xlufd5-wSVjg743HO0T1cuuvuc/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+Todo o material oficial do curso está disponível no [repositório do Téo no GitHub](https://github.com/TeoMeWhy/curso-go-ds).
+
+---
+
 ## Conclusão
 
-Minha jornada com Go está apenas começando, mas já deu para perceber o potencial da linguagem. A curva de aprendizado é suave, especialmente se você já tem experiência com outras linguagens, e o ecossistema é sólido e bem documentado.
+Concluir o curso de Go do Téo Me Why foi uma experiência que superou minhas expectativas. O que começou como curiosidade sobre "mais uma linguagem" se transformou em genuíno interesse por incorporar Go em projetos futuros.
 
-O curso do Téo é um excelente ponto de partida. Se você quer explorar uma linguagem moderna, performática e com demanda crescente no mercado, Go é uma boa aposta.
+A linguagem tem suas peculiaridades — a formatação automática que não me agrada totalmente, a ausência de genéricos robustos (embora tenha sido adicionado em versões recentes), e o gerenciamento de erros que pode parecer repetitivo. Mas esses são detalhes diante do que Go entrega: **simplicidade, performance e ferramentas excelentes prontas para usar**.
+
+Para quem está começando em desenvolvimento, Go é uma escolha sólida. Você aprende conceitos fundamentais sem se perder em complexidade desnecessária. Para quem já programa, é uma adição valiosa ao arsenal — especialmente se você trabalha ou quer trabalhar com sistemas distribuídos, DevOps ou infraestrutura.
+
+Vou continuar praticando e, honestamente, procurando oportunidades de usar Go em projetos pessoais. A sensação de compilar um programa e ter um único binário pronto para distribuir é libertadora. A facilidade de escrever código concorrente com goroutines abre portas para problemas que seriam complexos em outras linguagens.
+
+**Vale a pena aprender Go em 2026?** Minha resposta, após este curso, é um sim convicto. Especialmente se você curte a ideia de escrever código limpo, performático e que "simplesmente funciona" sem magia nos bastidores.
+
+O curso do Téo é gratuito, didático e vai direto ao ponto. Se você tem curiosidade, não tem desculpa para não experimentar.
 
 <div class="text-center my-5">
     <a href="https://github.com/rafaeldiasgarcia/curso-go-ds" target="_blank" class="btn btn-outline-dark btn-lg px-5 shadow-sm">
