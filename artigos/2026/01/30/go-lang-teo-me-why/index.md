@@ -127,6 +127,108 @@ estilo graças ao `gofmt`. Isso facilita a colaboração em equipe, mas exige qu
 
 ---
 
+## Goroutines: O Grande Diferencial
+
+A parte mais impressionante do curso foi, sem dúvida, o módulo de concorrência. Goroutines são threads leves gerenciadas pelo runtime do Go, e a facilidade de uso delas é surpreendente. Basta adicionar a palavra `go` antes de uma função e ela roda em paralelo.
+
+Veja este exemplo simples mas didático de um padrão rítmico "Tum Tá":
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"time"
+)
+
+func toque(txt string, t int) {
+	for {
+		log.Println(txt)
+		time.Sleep(time.Second * time.Duration(t))
+	}
+}
+
+func main() {
+	go toque("Tum", 1)
+	go toque("Tá", 2)
+	
+	stop := ""
+	fmt.Scanf("%s", &stop)
+}
+```
+
+Aqui temos duas goroutines rodando simultaneamente: uma imprime "Tum" a cada 1 segundo, outra imprime "Tá" a cada 2 segundos. É uma forma muito elegante de criar comportamentos paralelos sem complicação.
+
+### Canais: Comunicação Entre Goroutines
+
+Goroutines sozinhas são poderosas, mas para comunicação entre elas, Go oferece os **channels** (canais). Eles funcionam como tubos por onde você passa dados de uma goroutine para outra de forma segura.
+
+Um exemplo mais avançado usando canais com buffer e sincronização:
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"sync"
+	"time"
+)
+
+func pinger(c chan string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for i := 1; i <= 20; i++ {
+		c <- "ping!"
+		log.Println("Mensagem enviada! (ping)")
+	}
+	fmt.Println("Envio de Pinger Finalizado!!")
+}
+
+func ponger(c chan string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for i := 1; i <= 20; i++ {
+		c <- "pong!"
+		log.Println("Mensagem enviada! (pong)")
+	}
+	fmt.Println("Envio de Ponger Finalizado!!")
+}
+
+func printer(c chan string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for msg := range c {
+		log.Println("Mensagem recebida!", msg)
+		time.Sleep(time.Millisecond * 250)
+	}
+	log.Println("Todas mensagens retiradas do canal!")
+}
+
+func main() {
+	wgSenders := sync.WaitGroup{}
+	canal := make(chan string, 40) // canal com buffer de 40
+	
+	wgPrinter := sync.WaitGroup{}
+	wgPrinter.Add(1)
+	go printer(canal, &wgPrinter)
+	
+	wgSenders.Add(1)
+	go pinger(canal, &wgSenders)
+	
+	wgSenders.Add(1)
+	go ponger(canal, &wgSenders)
+	
+	wgSenders.Wait()
+	close(canal)
+	wgPrinter.Wait()
+}
+```
+
+Este exemplo implementa o padrão **producer-consumer**: duas goroutines (pinger e ponger) produzem mensagens e uma terceira (printer) as consome. O `sync.WaitGroup` garante que o programa só termina quando todas as goroutines finalizam seu trabalho.
+
+O conceito de canais com buffer é interessante: o canal pode armazenar até 40 mensagens antes de bloquear. Isso permite que os produtores trabalhem mais rápido que o consumidor sem travar.
+
+---
+
 ## Conteúdo do Curso
 
 O curso do Téo cobre uma gama completa de tópicos, desde o básico até concorrência (um dos grandes diferenciais do Go). Confira a apresentação completa com exemplos de código e exercícios:
