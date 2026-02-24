@@ -1,5 +1,12 @@
 [
     {
+        "id": "modelagem-3d-projeto-integrador",
+        "title": "Projeto Integrador III: Iniciando a Modelagem 3D",
+        "date": "2026-02-24",
+        "excerpt": "Primeiros passos na modelagem 3D com Blender para a disciplina de Projeto Integrador III. Comparativo de modelos iniciais e aprendizados.",
+        "file": "2026/02/24/modelagem-3d-projeto-integrador/index.md"
+    },
+    {
         "id": "go-lang-teo-me-why",
         "title": "Aprendendo Go com Téo Me Why",
         "date": "2026-02-03",
