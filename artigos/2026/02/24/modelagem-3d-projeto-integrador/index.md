@@ -1,6 +1,6 @@
 Neste semestre, no curso de Engenharia de Software da UNIFIO, iniciamos a disciplina de **Projeto Integrador III**. Diferente das matérias puramente de código, esta tem um foco prático muito interessante: **Modelagem e Impressão 3D**.
 
-O objetivo é aprendermos a modelar objetos tridimensionais usando o Blender para, no próximo semestre, materializarmos essas criações nas impressoras 3D da faculdade. É uma mudança de ares bem-vinda, saindo um pouco do IDE e indo para a viewport 3D.
+O objetivo é aprendermos a modelar objetos tridimensionais usando o [Blender](https://store.steampowered.com/app/365670/Blender/) para, no próximo semestre, materializarmos essas criações nas impressoras 3D da faculdade. É uma mudança de ares bem-vinda, saindo um pouco do IDE e indo para a viewport 3D.
 
 ---
 
