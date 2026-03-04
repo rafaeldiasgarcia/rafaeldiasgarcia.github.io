@@ -1,5 +1,12 @@
 [
     {
+        "id": "api-partituras-spring-crescer",
+        "title": "Uma API de Partituras com Spring Boot no Crescer",
+        "date": "2026-03-04",
+        "excerpt": "Como usei uma API de partituras para treinar arquitetura em camadas com Spring Boot durante o Crescer Level 2, conectando controllers, services, mappers, validators e banco de dados.",
+        "file": "2026/03/04/api-partituras-spring-crescer/index.md"
+    },
+    {
         "id": "modelagem-3d-projeto-integrador",
         "title": "Projeto Integrador III: Iniciando a Modelagem 3D",
         "date": "2026-02-24",

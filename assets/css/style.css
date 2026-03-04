@@ -1686,3 +1686,13 @@ body.menu-open .hamburger-icon span:nth-child(3) {
 #showMoreTechsBtn {
     z-index: 10;
 }
+
+/* Discreet GitHub links in articles */
+.article-github-link {
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.article-github-link:hover {
+    color: var(--primary-color) !important;
+    text-decoration: underline;
+}

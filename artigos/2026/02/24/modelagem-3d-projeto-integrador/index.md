@@ -116,8 +116,10 @@ Atualmente, nosso grupo está na fase de brainstorming e pesquisa para definir q
 
 Vou continuar documentando o progresso e as escolhas do nosso grupo por aqui.
 
-<div class="text-center my-5">
-    <a href="https://github.com/rafaeldiasgarcia/trabalho-integrador-blender" target="_blank" class="btn btn-outline-dark btn-lg px-5 shadow-sm">
-        <i class="fab fa-github me-2"></i> Ver Repositório no GitHub
+<p class="text-center my-5">
+    <a href="https://github.com/rafaeldiasgarcia/trabalho-integrador-blender"
+       target="_blank"
+       class="text-muted small text-decoration-none article-github-link">
+        <i class="fab fa-github me-1"></i> Ver projeto completo no GitHub
     </a>
-</div>
+</p>
