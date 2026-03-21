@@ -874,6 +874,18 @@ body.menu-open {
     transition: transform 0.3s;
 }
 
+.tech-icon-img,
+.tech-icon-svg {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.tech-icon-img {
+    object-fit: contain;
+}
+
 .tech-name {
     font-weight: 600;
     margin: 0;
