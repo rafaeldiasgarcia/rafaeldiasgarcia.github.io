@@ -1,5 +1,12 @@
 [
     {
+        "id": "trabalho-final-cwi-crescer-28",
+        "title": "DEFI Finances: automação de testes no trabalho final do CWI Crescer 28",
+        "date": "2026-04-10",
+        "excerpt": "Como estruturamos a estratégia de qualidade e a automação de testes da POC DEFI Finances — arquitetura em camadas com Playwright, contract tests, race conditions e 95% de cobertura em duas semanas.",
+        "file": "2026/04/10/trabalho-final-cwi-crescer-28/index.md"
+    },
+    {
         "id": "api-partituras-spring-crescer",
         "title": "Uma API de Partituras com Spring Boot no Crescer",
         "date": "2026-03-04",
