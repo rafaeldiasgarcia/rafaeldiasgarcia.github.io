@@ -135,6 +135,8 @@ const translations = {
         'certs.huawei.org': 'Huawei Talent Online',
         'certs.english': 'Advanced English (C1)',
         'certs.english.org': 'UNINTER - U-BEST',
+        'certs.devdojo': 'Maratona Java & Spring Boot',
+        'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Clique no ícone para visualizar o certificado',
         
         // Mobile Menu
@@ -282,6 +284,8 @@ const translations = {
         'certs.huawei.org': 'Huawei Talent Online',
         'certs.english': 'Advanced English (C1)',
         'certs.english.org': 'UNINTER - U-BEST',
+        'certs.devdojo': 'Java & Spring Boot Bootcamp',
+        'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Click the icon to view the certificate',
         
         // Mobile Menu
@@ -421,6 +425,8 @@ const translations = {
         'certs.huawei.org': 'Huawei Talent Online',
         'certs.english': 'Inglés Avanzado (C1)',
         'certs.english.org': 'UNINTER - U-BEST',
+        'certs.devdojo': 'Bootcamp de Java y Spring Boot',
+        'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Haz clic en el icono para ver el certificado',
         
         // Mobile Menu
@@ -560,6 +566,8 @@ const translations = {
         'certs.huawei.org': 'Huawei Talent Online',
         'certs.english': '高级英语 (C1)',
         'certs.english.org': 'UNINTER - U-BEST',
+        'certs.devdojo': 'Java 与 Spring Boot 训练营',
+        'certs.devdojo.org': 'DevDojo',
         'certs.info': '点击图标查看证书',
         
         // Mobile Menu
@@ -699,6 +707,8 @@ const translations = {
         'certs.huawei.org': 'Huawei Talent Online',
         'certs.english': 'Fortgeschrittenes Englisch (C1)',
         'certs.english.org': 'UNINTER - U-BEST',
+        'certs.devdojo': 'Java & Spring Boot Bootcamp',
+        'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Klicken Sie auf das Symbol, um das Zertifikat anzuzeigen',
         
         // Mobile Menu

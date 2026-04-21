@@ -14,6 +14,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigos | Rafael Dias Garcia</title>
+
+    <!-- Theme init (prevents flash on reload) -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✍️</text></svg>">
@@ -36,17 +44,31 @@
             margin: 20px auto;
             padding: 20px;
         }
+        .year-group {
+            margin-bottom: 50px;
+        }
+        .year-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
         .month-group {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            padding-left: 10px;
         }
         .month-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 2rem;
+            font-weight: 600;
+            font-size: 1.4rem;
             border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            padding-bottom: 10px;
+            margin-bottom: 18px;
             color: var(--text-primary);
+            opacity: 0.85;
         }
         .posts-ul {
             list-style: none;
@@ -55,8 +77,13 @@
         .post-li {
             margin-bottom: 12px;
             display: flex;
-            align-items: center;
-            gap: 10px;
+            align-items: baseline;
+            gap: 12px;
+        }
+        .post-li::before {
+            content: "—";
+            color: var(--text-muted);
+            flex-shrink: 0;
         }
         .post-link {
             text-decoration: none;
@@ -240,9 +267,7 @@
 </div>
 
 <div class="blog-list-container">
-    <h1 class="display-4 fw-bold mb-5 d-flex align-items-center" style="font-family: 'Space Grotesk', sans-serif;">
-        <i class="fas fa-newspaper text-primary me-3"></i> Artigos
-    </h1>
+    <h1 class="display-4 fw-bold mb-5" style="font-family: 'Space Grotesk', sans-serif;">Artigos</h1>
     
     <div id="posts-list">
         <!-- Posts will be loaded here -->
@@ -322,41 +347,56 @@
             // Sort posts by date descending
             posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            let currentMonthGroup = null;
+            let currentYear = null;
+            let currentMonth = null;
+            let currentYearDiv = null;
             let currentUl = null;
 
             posts.forEach(post => {
                 // Parse date manually to avoid timezone shifts (treating as local date)
                 const [y, m, d] = post.date.split('-').map(Number);
                 const date = new Date(y, m - 1, d);
-                
+
                 const year = date.getFullYear();
                 const month = date.toLocaleDateString('pt-BR', { month: 'long' });
                 const formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);
-                const formattedHeader = `${year} - ${formattedMonth}`;
 
-                if (formattedHeader !== currentMonthGroup) {
-                    currentMonthGroup = formattedHeader;
-                    
-                    const groupDiv = document.createElement('div');
-                    groupDiv.className = 'month-group';
-                    
-                    const title = document.createElement('h2');
-                    title.className = 'month-title';
-                    title.textContent = formattedHeader;
-                    
+                if (year !== currentYear) {
+                    currentYear = year;
+                    currentMonth = null;
+
+                    currentYearDiv = document.createElement('div');
+                    currentYearDiv.className = 'year-group';
+
+                    const yearTitle = document.createElement('h2');
+                    yearTitle.className = 'year-title';
+                    yearTitle.textContent = year;
+
+                    currentYearDiv.appendChild(yearTitle);
+                    listContainer.appendChild(currentYearDiv);
+                }
+
+                if (formattedMonth !== currentMonth) {
+                    currentMonth = formattedMonth;
+
+                    const monthDiv = document.createElement('div');
+                    monthDiv.className = 'month-group';
+
+                    const monthTitle = document.createElement('h3');
+                    monthTitle.className = 'month-title';
+                    monthTitle.textContent = formattedMonth;
+
                     currentUl = document.createElement('ul');
                     currentUl.className = 'posts-ul';
-                    
-                    groupDiv.appendChild(title);
-                    groupDiv.appendChild(currentUl);
-                    listContainer.appendChild(groupDiv);
+
+                    monthDiv.appendChild(monthTitle);
+                    monthDiv.appendChild(currentUl);
+                    currentYearDiv.appendChild(monthDiv);
                 }
 
                 const li = document.createElement('li');
                 li.className = 'post-li';
                 li.innerHTML = `
-                    <i class="far fa-file-alt text-primary opacity-75 me-1"></i>
                     <a href="post.html?id=${post.id}" class="post-link">${post.title}</a>
                 `;
                 currentUl.appendChild(li);

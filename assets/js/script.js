@@ -151,46 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if(errorMessage) errorMessage.classList.add('d-none');
     }
 
-    // Function to open PDF viewer modal
-    window.openPdfViewer = function(pdfPath, title) {
-        const pdfFrame = document.getElementById('pdfFrame');
-        const pdfTitle = document.getElementById('pdfTitle');
-        const pdfViewerModalElement = document.getElementById('pdfViewerModal');
-        const certsModalElement = document.getElementById('certsModal');
-        
-        // Set PDF source and title
-        pdfFrame.src = pdfPath;
-        pdfTitle.textContent = title;
-        
-        // Close certificates modal properly
-        const certsModal = bootstrap.Modal.getInstance(certsModalElement);
-        if (certsModal) {
-            certsModalElement.addEventListener('hidden.bs.modal', function openPdfAfterClose() {
-                // Open PDF viewer after certs modal is fully closed
-                const pdfViewerModal = new bootstrap.Modal(pdfViewerModalElement);
-                pdfViewerModal.show();
-                // Remove the event listener after it fires
-                certsModalElement.removeEventListener('hidden.bs.modal', openPdfAfterClose);
-            }, { once: true });
-            certsModal.hide();
-        } else {
-            // If certs modal isn't open, just open the PDF viewer
-            const pdfViewerModal = new bootstrap.Modal(pdfViewerModalElement);
-            pdfViewerModal.show();
-        }
-    }
-
-    // Clean up PDF iframe when viewer modal is closed
-    const pdfViewerModalElement = document.getElementById('pdfViewerModal');
-    if (pdfViewerModalElement) {
-        pdfViewerModalElement.addEventListener('hidden.bs.modal', function() {
-            const pdfFrame = document.getElementById('pdfFrame');
-            if (pdfFrame) {
-                pdfFrame.src = '';
-            }
-        });
-    }
-
     // Projects Expandable Drawer
     const showMoreProjectsBtn = document.getElementById('showMoreProjectsBtn');
     const projectsWrapper = document.getElementById('projectsWrapper');

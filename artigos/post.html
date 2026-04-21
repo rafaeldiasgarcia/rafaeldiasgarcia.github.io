@@ -14,6 +14,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigo | Rafael Dias Garcia</title>
+
+    <!-- Theme init (prevents flash on reload) -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✍️</text></svg>">
@@ -66,27 +74,27 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .post-content pre {
-            background: #f8fafc; /* Fundo claro por padrão */
-            color: #334155;
+            background: #ebe1c8;
+            color: #3a342a;
             padding: 45px 0 15px 0;
             border-radius: 12px;
             overflow-x: auto;
             margin: 30px 0;
             position: relative;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
             font-family: 'Fira Code', 'Cascadia Code', monospace;
             font-size: 0.9rem;
             line-height: 1.6;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(90, 75, 50, 0.08);
             transition: all 0.3s ease;
         }
 
         /* Tema Escuro para o Bloco de Código */
         [data-theme="dark"] .post-content pre {
-            background: #0b0f1a;
-            color: #e2e8f0;
-            border-color: rgba(255,255,255,0.08);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: #141210;
+            color: #ede8dc;
+            border-color: rgba(255, 245, 220, 0.06);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         /* Barra de título da janela de código */
@@ -135,31 +143,38 @@
             background: transparent !important;
         }
 
-        /* Ajustes de cores para o highlight.js - Tema Claro (Melhor Contraste) */
-        .hljs-keyword, .hljs-selector-tag { color: #d73a49; font-weight: 600; }
-        .hljs-string { color: #032f62; font-weight: 500; }
-        .hljs-comment { color: #57606a; font-style: italic; }
-        .hljs-title, .hljs-section { color: #6f42c1; font-weight: 600; }
-        .hljs-variable, .hljs-template-variable { color: #24292f; }
-        .hljs-attr { color: #005cc5; }
-        .hljs-number { color: #0550ae; }
-        .hljs-type { color: #6f42c1; font-weight: 600; }
-        .hljs-params { color: #24292f; }
-        .hljs-punctuation, .hljs-operator { color: #24292f; }
-        .code-text { color: #24292f; } /* Cor padrão do texto do código no tema claro */
+        /* Syntax highlight - Tema Claro (paleta warm cream) */
+        .hljs { color: #3a342a; background: transparent; }
+        .hljs-keyword, .hljs-selector-tag { color: #b45309; font-weight: 600; }
+        .hljs-string, .hljs-regexp, .hljs-symbol { color: #15803d; font-weight: 500; }
+        .hljs-comment, .hljs-meta, .hljs-quote { color: #8a7f6b; font-style: italic; }
+        .hljs-title, .hljs-section, .hljs-function, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class { color: #9f1239; font-weight: 600; }
+        .hljs-variable, .hljs-template-variable, .hljs-subst, .hljs-property, .hljs-params { color: #3a342a; }
+        .hljs-attr, .hljs-attribute, .hljs-built_in, .hljs-class, .hljs-type, .hljs-doctag { color: #0e7490; }
+        .hljs-number, .hljs-literal, .hljs-bullet { color: #7e22ce; }
+        .hljs-punctuation, .hljs-operator { color: #5c5443; }
+        .hljs-link { color: #0e7490; text-decoration: underline; }
+        .hljs-strong { font-weight: 700; }
+        .hljs-emphasis { font-style: italic; }
+        /* Seletores combinados do github-dark que precisam de override explícito */
+        .hljs-variable.language_ { color: #b45309; font-weight: 600; }
+        .hljs-title.class_, .hljs-title.class_.inherited__, .hljs-title.function_ { color: #9f1239; font-weight: 600; }
+        .hljs-meta .hljs-keyword, .hljs-meta .hljs-string { color: #8a7f6b; }
+        .hljs-template-tag { color: #b45309; font-weight: 600; }
+        .code-text { color: #3a342a; }
 
-        /* Ajustes de cores para o highlight.js - Tema Escuro */
-        [data-theme="dark"] .hljs-keyword, [data-theme="dark"] .hljs-selector-tag { color: #ff79c6; font-weight: 600; }
-        [data-theme="dark"] .hljs-string { color: #f1fa8c; }
-        [data-theme="dark"] .hljs-comment { color: #6272a4; font-style: italic; }
-        [data-theme="dark"] .hljs-title, [data-theme="dark"] .hljs-section { color: #50fa7b; font-weight: 600; }
-        [data-theme="dark"] .hljs-variable, [data-theme="dark"] .hljs-template-variable { color: #f8f8f2; }
-        [data-theme="dark"] .hljs-attr { color: #8be9fd; }
-        [data-theme="dark"] .hljs-number { color: #bd93f9; }
-        [data-theme="dark"] .hljs-type { color: #8be9fd; font-weight: 600; }
-        [data-theme="dark"] .hljs-params { color: #f8f8f2; }
-        [data-theme="dark"] .hljs-punctuation, [data-theme="dark"] .hljs-operator { color: #f8f8f2; }
-        [data-theme="dark"] .code-text { color: #e2e8f0; }
+        /* Syntax highlight - Tema Escuro (paleta warm dark) */
+        [data-theme="dark"] .hljs { color: #ede8dc; }
+        [data-theme="dark"] .hljs-keyword, [data-theme="dark"] .hljs-selector-tag { color: #fbbf24; font-weight: 600; }
+        [data-theme="dark"] .hljs-string, [data-theme="dark"] .hljs-regexp, [data-theme="dark"] .hljs-symbol { color: #86efac; }
+        [data-theme="dark"] .hljs-comment, [data-theme="dark"] .hljs-meta, [data-theme="dark"] .hljs-quote { color: #78716c; font-style: italic; }
+        [data-theme="dark"] .hljs-title, [data-theme="dark"] .hljs-section, [data-theme="dark"] .hljs-function, [data-theme="dark"] .hljs-tag, [data-theme="dark"] .hljs-name, [data-theme="dark"] .hljs-selector-id, [data-theme="dark"] .hljs-selector-class { color: #fda4af; font-weight: 600; }
+        [data-theme="dark"] .hljs-variable, [data-theme="dark"] .hljs-template-variable, [data-theme="dark"] .hljs-subst, [data-theme="dark"] .hljs-property, [data-theme="dark"] .hljs-params { color: #ede8dc; }
+        [data-theme="dark"] .hljs-attr, [data-theme="dark"] .hljs-attribute, [data-theme="dark"] .hljs-built_in, [data-theme="dark"] .hljs-class, [data-theme="dark"] .hljs-type, [data-theme="dark"] .hljs-doctag { color: #67e8f9; }
+        [data-theme="dark"] .hljs-number, [data-theme="dark"] .hljs-literal, [data-theme="dark"] .hljs-bullet { color: #c4b5fd; }
+        [data-theme="dark"] .hljs-punctuation, [data-theme="dark"] .hljs-operator { color: #c9c3b5; }
+        [data-theme="dark"] .hljs-link { color: #67e8f9; }
+        [data-theme="dark"] .code-text { color: #ede8dc; }
 
         .code-text {
             white-space: pre-wrap;
@@ -254,7 +269,7 @@
             border-color: var(--primary-color);
             color: white !important;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+            box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.2);
         }
         .transition-all {
             transition: all 0.3s ease;
