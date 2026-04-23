@@ -13,6 +13,12 @@ const translations = {
         'nav.contact': 'Contato',
         'blog.loading': 'Carregando conteúdo...',
         'blog.fetching': 'Buscando artigos...',
+        'blog.latestTitle': 'Últimos Artigos',
+        'blog.latestSubtitle': 'Os artigos mais recentes sobre estudos, projetos e aprendizados da minha jornada em software.',
+        'blog.readPost': 'Ler artigo',
+        'blog.viewAll': 'Ver todos os artigos',
+        'blog.showMore': 'Ver Mais Artigos',
+        'blog.showLess': 'Ver Menos',
         
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
@@ -109,6 +115,7 @@ const translations = {
         'footer.description': 'Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).',
         'footer.sendEmail': 'Enviar Email',
         'footer.linkedin': 'LinkedIn',
+        'footer.sourceCode': 'Código do site',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
@@ -164,6 +171,12 @@ const translations = {
         'nav.contact': 'Contact',
         'blog.loading': 'Loading content...',
         'blog.fetching': 'Fetching articles...',
+        'blog.latestTitle': 'Latest Articles',
+        'blog.latestSubtitle': 'The newest posts about studies, projects, and lessons from my software journey.',
+        'blog.readPost': 'Read article',
+        'blog.viewAll': 'View all articles',
+        'blog.showMore': 'Show More Articles',
+        'blog.showLess': 'Show Less',
         
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
@@ -260,6 +273,7 @@ const translations = {
         'footer.description': 'I am open to opportunities in web development (Backend/Fullstack).',
         'footer.sendEmail': 'Send Email',
         'footer.linkedin': 'LinkedIn',
+        'footer.sourceCode': 'Site source code',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
@@ -403,6 +417,7 @@ const translations = {
         'footer.description': 'Estoy abierto a oportunidades en desarrollo web (Backend/Fullstack).',
         'footer.sendEmail': 'Enviar Email',
         'footer.linkedin': 'LinkedIn',
+        'footer.sourceCode': 'Código del sitio',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
@@ -546,6 +561,7 @@ const translations = {
         'footer.description': '我愿意接受 Web 开发（后端/全栈）方面的机会。',
         'footer.sendEmail': '发送电子邮件',
         'footer.linkedin': 'LinkedIn',
+        'footer.sourceCode': '网站源码',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal
@@ -689,6 +705,7 @@ const translations = {
         'footer.description': 'Ich bin offen für Möglichkeiten in der Webentwicklung (Backend/Fullstack).',
         'footer.sendEmail': 'E-Mail senden',
         'footer.linkedin': 'LinkedIn',
+        'footer.sourceCode': 'Quellcode der Website',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
         
         // Contact Modal

@@ -261,4 +261,96 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Latest Posts Expandable Drawer (Mobile only)
+    const showMoreLatestPostsBtn = document.getElementById('showMoreLatestPostsBtn');
+    const latestPostsWrapper = document.getElementById('latestPostsWrapper');
+    const latestPostsMobileMedia = window.matchMedia('(max-width: 767px)');
+
+    function updateLatestPostsButton(isExpanded) {
+        if (!showMoreLatestPostsBtn) {
+            return;
+        }
+
+        const btnText = showMoreLatestPostsBtn.querySelector('[data-i18n]');
+        const icon = showMoreLatestPostsBtn.querySelector('i');
+
+        if (btnText) {
+            if (window.i18n && window.i18n.translate) {
+                btnText.textContent = isExpanded
+                    ? window.i18n.translate('blog.showLess')
+                    : window.i18n.translate('blog.showMore');
+            } else {
+                btnText.textContent = isExpanded ? 'Ver Menos' : 'Ver Mais Artigos';
+            }
+        }
+
+        if (icon) {
+            icon.className = isExpanded ? 'fas fa-chevron-up ms-2' : 'fas fa-chevron-down ms-2';
+        }
+    }
+
+    if (showMoreLatestPostsBtn && latestPostsWrapper) {
+        const latestPostCards = latestPostsWrapper.querySelectorAll('.latest-post-card');
+        const latestPostsRow = latestPostsWrapper.querySelector('.row');
+
+        function getLatestPostsCollapsedHeight() {
+            const firstItem = latestPostsWrapper.querySelector('.latest-post-item');
+
+            if (!firstItem || !latestPostsRow) {
+                return null;
+            }
+
+            const rowStyles = window.getComputedStyle(latestPostsRow);
+            const rowGap = parseFloat(rowStyles.rowGap || rowStyles.gap || '0');
+            const peekHeight = 96;
+
+            return Math.ceil(firstItem.offsetHeight + rowGap + peekHeight);
+        }
+
+        if (latestPostCards.length <= 1) {
+            showMoreLatestPostsBtn.style.display = 'none';
+        } else {
+            const syncLatestPostsDrawer = () => {
+                if (!latestPostsMobileMedia.matches) {
+                    latestPostsWrapper.style.maxHeight = '';
+                    latestPostsWrapper.classList.remove('expanded');
+                    updateLatestPostsButton(false);
+                    return;
+                }
+
+                if (latestPostsWrapper.classList.contains('expanded')) {
+                    latestPostsWrapper.style.maxHeight = latestPostsWrapper.scrollHeight + 'px';
+                    updateLatestPostsButton(true);
+                    return;
+                }
+
+                const collapsedHeight = getLatestPostsCollapsedHeight();
+                latestPostsWrapper.style.maxHeight = collapsedHeight ? collapsedHeight + 'px' : '';
+                updateLatestPostsButton(false);
+            };
+
+            showMoreLatestPostsBtn.addEventListener('click', function() {
+                if (!latestPostsMobileMedia.matches) {
+                    return;
+                }
+
+                const isExpanded = latestPostsWrapper.classList.contains('expanded');
+
+                if (!isExpanded) {
+                    latestPostsWrapper.style.maxHeight = latestPostsWrapper.scrollHeight + 'px';
+                    latestPostsWrapper.classList.add('expanded');
+                } else {
+                    const collapsedHeight = getLatestPostsCollapsedHeight();
+                    latestPostsWrapper.style.maxHeight = collapsedHeight ? collapsedHeight + 'px' : '';
+                    latestPostsWrapper.classList.remove('expanded');
+                }
+
+                updateLatestPostsButton(!isExpanded);
+            });
+
+            window.addEventListener('resize', syncLatestPostsDrawer);
+            syncLatestPostsDrawer();
+        }
+    }
 });

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rafael Dias Garcia</title>
+    <link>https://rafaeldiasgarcia.github.io</link>
+    <description>Artigos sobre estudos, projetos e aprendizados da minha jornada em software.</description>
+    <language>pt-BR</language>
+    <atom:link href="https://rafaeldiasgarcia.github.io/rss.xml" rel="self" type="application/rss+xml" />
+<item>
+      <title>DEFI Finances: automação de testes no trabalho final do CWI Crescer 28</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=trabalho-final-cwi-crescer-28</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=trabalho-final-cwi-crescer-28</guid>
+      <pubDate>Fri, 10 Apr 2026 12:00:00 GMT</pubDate>
+      <description>Como estruturamos a estratégia de qualidade e a automação de testes da POC DEFI Finances — arquitetura em camadas com Playwright, contract tests, race conditions e 95% de cobertura em duas semanas.</description>
+    </item>
+<item>
+      <title>Uma API de Partituras com Spring Boot no Crescer</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=api-partituras-spring-crescer</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=api-partituras-spring-crescer</guid>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
+      <description>Como usei uma API de partituras para treinar arquitetura em camadas com Spring Boot durante o Crescer Level 2, conectando controllers, services, mappers, validators e banco de dados.</description>
+    </item>
+<item>
+      <title>Projeto Integrador III: Iniciando a Modelagem 3D</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=modelagem-3d-projeto-integrador</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=modelagem-3d-projeto-integrador</guid>
+      <pubDate>Tue, 24 Feb 2026 12:00:00 GMT</pubDate>
+      <description>Primeiros passos na modelagem 3D com Blender para a disciplina de Projeto Integrador III. Comparativo de modelos iniciais e aprendizados.</description>
+    </item>
+<item>
+      <title>Aprendendo Go com Téo Me Why</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=go-lang-teo-me-why</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=go-lang-teo-me-why</guid>
+      <pubDate>Tue, 03 Feb 2026 12:00:00 GMT</pubDate>
+      <description>Primeiras impressões do curso de Go do Téo Me Why. Explorando a sintaxe, performance e o que torna essa linguagem tão especial.</description>
+    </item>
+<item>
+      <title>Primeiras Magias no SQL</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=primeiras-magias-sql</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=primeiras-magias-sql</guid>
+      <pubDate>Mon, 12 Jan 2026 12:00:00 GMT</pubDate>
+      <description>Concluí o curso gratuito de SQL do Téo Calvo! Confira minhas resoluções e o material de apoio.</description>
+    </item>
+<item>
+      <title>Roadmap Java Backend: Minha Jornada</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=roadmap-java</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=roadmap-java</guid>
+      <pubDate>Sun, 04 Jan 2026 12:00:00 GMT</pubDate>
+      <description>Compartilhando minha rotina de estudos, o prompt que utilizo para aprender com IA e a prática de código baseada no roadmap de mercado.</description>
+    </item>
+<item>
+      <title>Post de Teste</title>
+      <link>https://rafaeldiasgarcia.github.io/artigos/post.html?id=post-teste</link>
+      <guid>https://rafaeldiasgarcia.github.io/artigos/post.html?id=post-teste</guid>
+      <pubDate>Mon, 15 Dec 2025 12:00:00 GMT</pubDate>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+    </item>
+  </channel>
+</rss>

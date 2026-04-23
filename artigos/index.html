@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigos | Rafael Dias Garcia</title>
+    <link rel="alternate" type="application/rss+xml" title="Rafael Dias Garcia RSS" href="../rss.xml">
 
     <!-- Theme init (prevents flash on reload) -->
     <script>
@@ -99,6 +100,7 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
 
+<!-- build:header-blog:start -->
 <!-- Navbar -->
 <nav id="navbar-main" class="navbar navbar-expand-lg fixed-top">
     <div class="container">
@@ -116,7 +118,7 @@
                 <li class="nav-item"><a class="nav-link px-3" href="../index.html#techs" data-i18n="nav.technologies">Tecnologias</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="../index.html#projetos" data-i18n="nav.projects">Projetos</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="../index.html#experiencia" data-i18n="nav.experience">Experiência</a></li>
-                <li class="nav-item"><a class="nav-link px-3 active" href="#" data-i18n="nav.blog">Artigos</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="index.html" data-i18n="nav.blog">Artigos</a></li>
                 <li class="nav-item">
                     <div class="navbar-divider"></div>
                 </li>
@@ -128,6 +130,11 @@
                 <li class="nav-item">
                     <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" class="nav-icon-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../rss.xml" class="nav-icon-link" aria-label="RSS Feed" title="RSS Feed">
+                        <i class="fas fa-rss"></i>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -204,11 +211,11 @@
             <a href="../index.html#experiencia" class="mobile-menu-item">
                 <i class="fas fa-briefcase me-2"></i><span data-i18n="nav.experience">Experiência</span>
             </a>
-            <a href="#" class="mobile-menu-item active">
+            <a href="index.html" class="mobile-menu-item active">
                 <i class="fas fa-newspaper me-2"></i><span data-i18n="nav.blog">Artigos</span>
             </a>
         </nav>
-        
+
         <div class="mobile-menu-social">
             <a href="https://github.com/rafaeldiasgarcia" target="_blank" class="mobile-social-link">
                 <i class="fab fa-github"></i>
@@ -220,8 +227,13 @@
                 <span>LinkedIn</span>
                 <i class="fas fa-arrow-right ms-auto"></i>
             </a>
+            <a href="../rss.xml" class="mobile-social-link">
+                <i class="fas fa-rss"></i>
+                <span>RSS</span>
+                <i class="fas fa-arrow-right ms-auto"></i>
+            </a>
         </div>
-        
+
         <div class="mobile-menu-footer">
             <button class="mobile-theme-toggle-icon" id="mobileThemeToggle">
                 <i class="fas fa-moon theme-icon moon"></i>
@@ -265,6 +277,7 @@
         </div>
     </div>
 </div>
+<!-- build:header-blog:end -->
 
 <div class="blog-list-container">
     <h1 class="display-4 fw-bold mb-5" style="font-family: 'Space Grotesk', sans-serif;">Artigos</h1>
@@ -278,6 +291,26 @@
     </div>
 </div>
 
+<!-- build:footer:start -->
+<!-- Footer -->
+<footer class="py-5 text-center">
+    <div class="container">
+        <div class="row pt-3 text-secondary small">
+            <div class="col-md-6 text-md-start" data-i18n="footer.copyright">
+                &copy; 2025-2026 Rafael Dias Garcia - All Rights Reserved
+            </div>
+            <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                <a href="https://github.com/rafaeldiasgarcia/rafaeldiasgarcia.github.io" class="footer-meta-link">
+                    <i class="fab fa-github"></i>
+                    <span data-i18n="footer.sourceCode">Código do site</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- build:footer:end -->
+
+<!-- build:contact-modal:start -->
 <!-- Contact Modal -->
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel">
     <div class="modal-dialog modal-dialog-centered">
@@ -289,7 +322,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4">
-                <!-- Form -->
                 <form id="contactForm" action="https://formspree.io/f/xrbqbvyy" method="POST">
                     <div class="mb-3">
                         <label for="email" class="form-label fw-bold text-muted small mb-1" data-i18n="contact.emailLabel">Seu Email</label>
@@ -304,7 +336,6 @@
                     </div>
                 </form>
 
-                <!-- Success Message (Hidden by default) -->
                 <div id="successMessage" class="text-center py-4 d-none">
                     <div class="mb-4">
                         <i class="fas fa-check-circle text-success fa-4x animate__animated animate__bounceIn"></i>
@@ -314,7 +345,6 @@
                     <button type="button" class="btn btn-outline-success rounded-pill mt-3 px-5" data-bs-dismiss="modal" data-i18n="contact.close">Fechar</button>
                 </div>
 
-                <!-- Error Message (Hidden by default) -->
                 <div id="errorMessage" class="text-center py-4 d-none">
                     <div class="mb-4">
                         <i class="fas fa-exclamation-circle text-danger fa-4x"></i>
@@ -323,11 +353,11 @@
                     <p class="text-muted" data-i18n="contact.errorMessage">Houve um problema. Tente novamente ou use meu email direto.</p>
                     <button type="button" class="btn btn-outline-secondary rounded-pill mt-3 px-5" onclick="resetForm()" data-i18n="contact.tryAgain">Tentar Novamente</button>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+<!-- build:contact-modal:end -->
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
