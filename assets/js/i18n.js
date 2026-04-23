@@ -37,8 +37,8 @@ const translations = {
         'about.viewCertificates': 'Ver Lista Completa',
         'about.englishLevel': 'INGLÊS AVANÇADO',
         'about.degree': 'BACHARELADO ENG. SOFTWARE',
-        'about.quote': '"Arquitetura de software é música congelada."',
-        'about.quoteAuthor': '— Adaptado de Goethe',
+        'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
+        'about.quoteAuthor': '— Villa-Lobos',
         
         // Tech Stack Section
         'tech.title': 'Stack Tecnológico',
@@ -195,8 +195,8 @@ const translations = {
         'about.viewCertificates': 'View Full List',
         'about.englishLevel': 'ADVANCED ENGLISH',
         'about.degree': 'SOFTWARE ENG. BACHELOR',
-        'about.quote': '"Software architecture is frozen music."',
-        'about.quoteAuthor': '— Adapted from Goethe',
+        'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
+        'about.quoteAuthor': '— Villa-Lobos',
         
         // Tech Stack Section
         'tech.title': 'Tech Stack',
@@ -345,8 +345,8 @@ const translations = {
         'about.viewCertificates': 'Ver Lista Completa',
         'about.englishLevel': 'INGLÉS AVANZADO',
         'about.degree': 'LICENCIATURA ING. SOFTWARE',
-        'about.quote': '"La arquitectura de software es música congelada."',
-        'about.quoteAuthor': '— Adaptado de Goethe',
+        'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
+        'about.quoteAuthor': '— Villa-Lobos',
         
         // Tech Stack Section
         'tech.title': 'Stack Tecnológico',
@@ -489,8 +489,8 @@ const translations = {
         'about.viewCertificates': '查看完整列表',
         'about.englishLevel': '高级英语',
         'about.degree': '软件工程学士',
-        'about.quote': '"软件架构是冰冻的音乐。"',
-        'about.quoteAuthor': '— 改编自歌德',
+        'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
+        'about.quoteAuthor': '— Villa-Lobos',
         
         // Tech Stack Section
         'tech.title': '技术栈',
@@ -633,8 +633,8 @@ const translations = {
         'about.viewCertificates': 'Vollständige Liste anzeigen',
         'about.englishLevel': 'FORTGESCHRITTENES ENGLISCH',
         'about.degree': 'SOFTWARE-ENG. BACHELOR',
-        'about.quote': '"Software-Architektur ist gefrorene Musik."',
-        'about.quoteAuthor': '— Adaptiert von Goethe',
+        'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
+        'about.quoteAuthor': '— Villa-Lobos',
         
         // Tech Stack Section
         'tech.title': 'Tech-Stack',
