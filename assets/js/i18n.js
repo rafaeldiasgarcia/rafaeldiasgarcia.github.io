@@ -19,14 +19,14 @@ const translations = {
         'blog.viewAll': 'Ver todos os artigos',
         'blog.showMore': 'Ver Mais Artigos',
         'blog.showLess': 'Ver Menos',
-        
+
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Engenharia de Software | Full Stack Developer',
         'hero.description': 'Desenvolvedor apaixonado por criar soluções robustas com Java e Angular. Músico clássico trazendo harmonia e lógica para o código.',
         'hero.viewProjects': 'Ver Projetos',
         'hero.contact': 'Entrar em Contato',
-        
+
         // About Section
         'about.title': 'Sobre Mim',
         'about.p1': 'Atualmente cursando o terceiro termo de Engenharia de Software, minha trajetória é marcada pela disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei anos ao estudo do violão clássico no Conservatório de Tatuí, o que me ensinou a importância da prática deliberada, atenção aos detalhes e trabalho em equipe.',
@@ -39,7 +39,7 @@ const translations = {
         'about.degree': 'BACHARELADO ENG. SOFTWARE',
         'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
         'about.quoteAuthor': '— Villa-Lobos',
-        
+
         // Tech Stack Section
         'tech.title': 'Stack Tecnológico',
         'tech.subtitle': 'Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.',
@@ -62,39 +62,20 @@ const translations = {
         'tech.security': 'Proteção de dados, vulnerabilidades e OWASP.',
         'tech.ai': 'Integração com LLMs e ferramentas de GenAI.',
         'tech.agile': 'Metodologias ágeis (Scrum/Kanban) para projetos.',
-        
-        // SGE Project
-        'sge.badge': 'Projeto Destaque',
-        'sge.title': 'SGE - Sistema de Gerenciamento de Eventos',
-        'sge.description': 'Sistema de Gerenciamento de Eventos desenvolvido para o Centro Universitário UNIFIO. Aplicação web completa para modernizar e centralizar a gestão de eventos esportivos e acadêmicos na quadra poliesportiva da instituição.',
-        'sge.feature1': 'PHP 8.2 & MySQL',
-        'sge.feature2': 'Repository Pattern',
-        'sge.feature3': 'Controle de Acesso (RBAC)',
-        'sge.feature4': 'Dockerizado',
-        'sge.viewCode': 'Ver Código',
-        
-        // Other Projects
+
+        // Projects
         'projects.title': 'Projetos',
         'projects.showMore': 'Ver Mais Projetos',
         'projects.showLess': 'Ver Menos',
-        'projects.llm.title': 'Classificador de Texto LLMOps',
-        'projects.llm.badge': 'Gemini AI Powered',
-        'projects.llm.description': 'Sistema de classificação de feedbacks usando fine-tuning (DistilBERT) com deploy via Docker e API FastAPI.',
-        'projects.llm.note': 'Feito inteiramente com Gemini AI para iFood GenAI.',
-        'projects.todo.title': 'Task Manager Pro',
-        'projects.todo.badge': 'Java 21',
-        'projects.todo.description': 'Sistema de gerenciamento de tarefas desktop com Swing. Prioridades, categorias, observações e exportação CSV/JSON.',
-        'projects.weather.title': 'WeatherNow',
-        'projects.weather.description': 'Dashboard de clima consumindo API OpenWeatherMap. Features de tema dark/light e requisições assíncronas.',
-        'projects.guitar.title': 'Violão Clássico',
-        'projects.guitar.description': 'Guia interativo open-source para a comunidade de violonistas. Recurso educacional colaborativo.',
-        'projects.bookshelf.title': 'Bookshelf API',
-        'projects.bookshelf.description': 'API RESTful com Node.js e Express. CRUD completo de livros com persistência local em JSON.',
+        'projects.realworld.title': 'RealWorld Automation',
+        'projects.realworld.description': 'Full-stack automation lab: testes E2E com Playwright para o app RealWorld Conduit (Angular + Spring Boot + PostgreSQL), containerizado com Docker.',
+        'projects.mastersys.title': 'MasterSys Academia',
+        'projects.mastersys.description': 'Projeto de back-end com Spring Boot focado em gestão de academias. Implementação de versionamento de banco de dados com Flyway, JPA e Lombok.',
         'projects.partituras.title': 'Partituras API',
         'projects.partituras.description': 'API REST em Spring Boot para gerenciar partituras, praticando arquitetura em camadas, validações e boas práticas do programa Crescer.',
-        'projects.javaRoadmap.title': 'Roadmap Java Backend 2026',
-        'projects.javaRoadmap.description': 'Guia completo de estudos em Java Backend. Roadmap estruturado com cronograma, notas de teoria e projetos práticos aplicando desde fundamentos até arquitetura.',
-        
+        'projects.portfolio.title': 'Portfólio & Blog',
+        'projects.portfolio.description': 'Código-fonte deste site. Desenvolvido com HTML, CSS e JavaScript Vanilla, com sistema de multi-idiomas nativo e geração de blog estático.',
+
         // Experience Section
         'experience.title': 'Experiência Profissional',
         'experience.current': 'Atual',
@@ -109,7 +90,7 @@ const translations = {
         'experience.microtec.company': 'Microtec Papelaria e Informática',
         'experience.microtec.position': 'Estagiário de TI',
         'experience.microtec.description': 'Suporte técnico (hardware/software), gestão de inventário e atendimento ao cliente.',
-        
+
         // Footer
         'footer.title': 'Vamos conversar?',
         'footer.description': 'Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).',
@@ -117,7 +98,7 @@ const translations = {
         'footer.linkedin': 'LinkedIn',
         'footer.sourceCode': 'Código do site',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
-        
+
         // Contact Modal
         'contact.title': 'Enviar Mensagem',
         'contact.emailLabel': 'Seu Email',
@@ -131,7 +112,7 @@ const translations = {
         'contact.errorMessage': 'Houve um problema. Tente novamente ou use meu email direto.',
         'contact.tryAgain': 'Tentar Novamente',
         'contact.close': 'Fechar',
-        
+
         // Certificates Modal
         'certs.title': 'Certificados & Cursos',
         'certs.cs50': 'CS50: Introduction to Computer Science',
@@ -147,20 +128,20 @@ const translations = {
         'certs.devdojo': 'Maratona Java & Spring Boot',
         'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Clique no ícone para visualizar o certificado',
-        
+
         // Mobile Menu
         'mobile.menu': 'Menu',
         'mobile.navigation': 'Navegação',
         'mobile.contactButton': 'Vamos conversar',
         'mobile.language': 'Idioma',
-        
+
         // Tooltips
         'tooltip.university': 'Centro Universitário das Faculdades Integradas de Ourinhos',
         'tooltip.englishLevel': 'Nível avançado de inglês segundo o Quadro Europeu Comum de Referência para Línguas',
         'tooltip.degree': 'Cursando o 3º termo da faculdade de Engenharia de Software na UNIFIO',
         'tooltip.viewCertificate': 'Clique no ícone para visualizar o certificado',
     },
-    
+
     'en': {
         // Navbar
         'nav.about': 'About',
@@ -177,14 +158,14 @@ const translations = {
         'blog.viewAll': 'View all articles',
         'blog.showMore': 'Show More Articles',
         'blog.showLess': 'Show Less',
-        
+
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Software Engineering | Full Stack Developer',
         'hero.description': 'Developer passionate about creating robust solutions with Java and Angular. Classical musician bringing harmony and logic to code.',
         'hero.viewProjects': 'View Projects',
         'hero.contact': 'Get in Touch',
-        
+
         // About Section
         'about.title': 'About Me',
         'about.p1': 'Currently in my third term of Software Engineering, my journey is marked by discipline and the constant pursuit of excellence. Before diving into code, I dedicated years to studying classical guitar at Tatuí Conservatory, which taught me the importance of deliberate practice, attention to detail, and teamwork.',
@@ -197,7 +178,7 @@ const translations = {
         'about.degree': 'SOFTWARE ENG. BACHELOR',
         'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
         'about.quoteAuthor': '— Villa-Lobos',
-        
+
         // Tech Stack Section
         'tech.title': 'Tech Stack',
         'tech.subtitle': 'Tools I use on a daily basis. Hover to learn more.',
@@ -220,39 +201,20 @@ const translations = {
         'tech.security': 'Data protection, vulnerabilities, and OWASP.',
         'tech.ai': 'Integration with LLMs and GenAI tools.',
         'tech.agile': 'Agile methodologies (Scrum/Kanban) for projects.',
-        
-        // SGE Project
-        'sge.badge': 'Featured Project',
-        'sge.title': 'SGE - Event Management System',
-        'sge.description': 'Event Management System developed for UNIFIO University Center. Complete web application to modernize and centralize the management of sports and academic events at the institution\'s sports court.',
-        'sge.feature1': 'PHP 8.2 & MySQL',
-        'sge.feature2': 'Repository Pattern',
-        'sge.feature3': 'Access Control (RBAC)',
-        'sge.feature4': 'Dockerized',
-        'sge.viewCode': 'View Code',
-        
-        // Other Projects
+
+        // Projects
         'projects.title': 'Projects',
         'projects.showMore': 'Show More Projects',
         'projects.showLess': 'Show Less',
-        'projects.llm.title': 'LLMOps Text Classifier',
-        'projects.llm.badge': 'Gemini AI Powered',
-        'projects.llm.description': 'Feedback classification system using fine-tuning (DistilBERT) with deployment via Docker and FastAPI.',
-        'projects.llm.note': 'Entirely made with Gemini AI for iFood GenAI.',
-        'projects.todo.title': 'Task Manager Pro',
-        'projects.todo.badge': 'Java 21',
-        'projects.todo.description': 'Desktop task management system with Swing. Priorities, categories, notes and CSV/JSON export.',
-        'projects.weather.title': 'WeatherNow',
-        'projects.weather.description': 'Weather dashboard consuming OpenWeatherMap API. Features dark/light theme and asynchronous requests.',
-        'projects.guitar.title': 'Classical Guitar',
-        'projects.guitar.description': 'Interactive open-source guide for the guitar community. Collaborative educational resource.',
-        'projects.bookshelf.title': 'Bookshelf API',
-        'projects.bookshelf.description': 'RESTful API with Node.js and Express. Complete CRUD for books with local JSON persistence.',
+        'projects.realworld.title': 'RealWorld Automation',
+        'projects.realworld.description': 'Full-stack automation lab: E2E testing with Playwright for the RealWorld Conduit app (Angular + Spring Boot + PostgreSQL), containerized with Docker.',
+        'projects.mastersys.title': 'MasterSys Academia',
+        'projects.mastersys.description': 'Spring Boot backend project focused on gym management. Database versioning implementation with Flyway, JPA, and Lombok.',
         'projects.partituras.title': 'Partituras API',
-        'projects.partituras.description': 'Spring Boot REST API for managing sheet music, used to practice layered architecture, validations, and Crescer best practices.',
-        'projects.javaRoadmap.title': 'Java Backend Roadmap 2026',
-        'projects.javaRoadmap.description': 'Complete Java Backend study guide. Structured roadmap with timeline, theory notes, and practical projects from fundamentals to architecture.',
-        
+        'projects.partituras.description': 'Spring Boot REST API for managing sheet music, practicing layered architecture, validations, and Crescer best practices.',
+        'projects.portfolio.title': 'Portfolio & Blog',
+        'projects.portfolio.description': 'Source code for this website. Built with HTML, CSS, and Vanilla JavaScript, featuring a native multi-language system and static blog generation.',
+
         // Experience Section
         'experience.title': 'Professional Experience',
         'experience.current': 'Current',
@@ -267,7 +229,7 @@ const translations = {
         'experience.microtec.company': 'Microtec Office Supplies and IT',
         'experience.microtec.position': 'IT Intern',
         'experience.microtec.description': 'Technical support (hardware/software), inventory management, and customer service.',
-        
+
         // Footer
         'footer.title': 'Let\'s talk?',
         'footer.description': 'I am open to opportunities in web development (Backend/Fullstack).',
@@ -275,7 +237,7 @@ const translations = {
         'footer.linkedin': 'LinkedIn',
         'footer.sourceCode': 'Site source code',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
-        
+
         // Contact Modal
         'contact.title': 'Send Message',
         'contact.emailLabel': 'Your Email',
@@ -289,7 +251,7 @@ const translations = {
         'contact.errorMessage': 'There was a problem. Please try again or use my direct email.',
         'contact.tryAgain': 'Try Again',
         'contact.close': 'Close',
-        
+
         // Certificates Modal
         'certs.title': 'Certificates & Courses',
         'certs.cs50': 'CS50: Introduction to Computer Science',
@@ -305,20 +267,20 @@ const translations = {
         'certs.devdojo': 'Java & Spring Boot Bootcamp',
         'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Click the icon to view the certificate',
-        
+
         // Mobile Menu
         'mobile.menu': 'Menu',
         'mobile.navigation': 'Navigation',
         'mobile.contactButton': 'Let\'s talk',
         'mobile.language': 'Language',
-        
+
         // Tooltips
         'tooltip.university': 'University Center of the Integrated Faculties of Ourinhos',
         'tooltip.englishLevel': 'Advanced English level according to the Common European Framework of Reference for Languages',
         'tooltip.degree': 'Currently in the 3rd term of Software Engineering at UNIFIO',
         'tooltip.viewCertificate': 'Click the icon to view the certificate',
     },
-    
+
     'es': {
         // Navbar
         'nav.about': 'Sobre Mí',
@@ -327,14 +289,14 @@ const translations = {
         'nav.experience': 'Experiencia',
         'nav.blog': 'Artículos',
         'nav.contact': 'Contacto',
-        
+
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Ingeniería de Software | Desarrollador Full Stack',
         'hero.description': 'Desarrollador apasionado por crear soluciones robustas con Java y Angular. Músico clásico que aporta armonía y lógica al código.',
         'hero.viewProjects': 'Ver Proyectos',
         'hero.contact': 'Ponerse en Contacto',
-        
+
         // About Section
         'about.title': 'Sobre Mí',
         'about.p1': 'Actualmente cursando el tercer período de Ingeniería de Software, mi trayectoria está marcada por la disciplina y la búsqueda constante de excelencia. Antes de sumergirme en el código, dediqué años al estudio de la guitarra clásica en el Conservatorio de Tatuí, lo que me enseñó la importancia de la práctica deliberada, la atención al detalle y el trabajo en equipo.',
@@ -347,7 +309,7 @@ const translations = {
         'about.degree': 'LICENCIATURA ING. SOFTWARE',
         'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
         'about.quoteAuthor': '— Villa-Lobos',
-        
+
         // Tech Stack Section
         'tech.title': 'Stack Tecnológico',
         'tech.subtitle': 'Herramientas que uso a diario. Pasa el cursor para saber más.',
@@ -368,37 +330,20 @@ const translations = {
         'tech.security': 'Protección de datos, vulnerabilidades y OWASP.',
         'tech.ai': 'Integración con LLMs y herramientas de GenAI.',
         'tech.agile': 'Metodologías ágiles (Scrum/Kanban) para proyectos.',
-        
-        // SGE Project
-        'sge.badge': 'Proyecto Destacado',
-        'sge.title': 'SGE - Sistema de Gestión de Eventos',
-        'sge.description': 'Sistema de Gestión de Eventos desarrollado para el Centro Universitario UNIFIO. Aplicación web completa para modernizar y centralizar la gestión de eventos deportivos y académicos en la cancha deportiva de la institución.',
-        'sge.feature1': 'PHP 8.2 & MySQL',
-        'sge.feature2': 'Patrón Repository',
-        'sge.feature3': 'Control de Acceso (RBAC)',
-        'sge.feature4': 'Dockerizado',
-        'sge.viewCode': 'Ver Código',
-        
-        // Other Projects
+
+        // Projects
         'projects.title': 'Proyectos',
         'projects.showMore': 'Ver Más Proyectos',
         'projects.showLess': 'Ver Menos',
-        'projects.llm.title': 'Clasificador de Texto LLMOps',
-        'projects.llm.badge': 'Potenciado por Gemini AI',
-        'projects.llm.description': 'Sistema de clasificación de feedbacks usando fine-tuning (DistilBERT) con despliegue vía Docker y API FastAPI.',
-        'projects.llm.note': 'Hecho completamente con Gemini AI para iFood GenAI.',
-        'projects.todo.title': 'Task Manager Pro',
-        'projects.todo.badge': 'Java 21',
-        'projects.todo.description': 'Sistema de gestión de tareas de escritorio con Swing. Prioridades, categorías, notas y exportación CSV/JSON.',
-        'projects.weather.title': 'WeatherNow',
-        'projects.weather.description': 'Dashboard de clima consumiendo API OpenWeatherMap. Características de tema oscuro/claro y solicitudes asíncronas.',
-        'projects.guitar.title': 'Guitarra Clásica',
-        'projects.guitar.description': 'Guía interactiva de código abierto para la comunidad de guitarristas. Recurso educativo colaborativo.',
-        'projects.bookshelf.title': 'Bookshelf API',
-        'projects.bookshelf.description': 'API RESTful con Node.js y Express. CRUD completo de libros con persistencia local en JSON.',
-        'projects.javaRoadmap.title': 'Hoja de Ruta Java Backend 2026',
-        'projects.javaRoadmap.description': 'Guía completa de estudios en Java Backend. Hoja de ruta estructurada con cronograma, notas de teoría y proyectos prácticos desde fundamentos hasta arquitectura.',
-        
+        'projects.realworld.title': 'RealWorld Automation',
+        'projects.realworld.description': 'Laboratorio de automatización full-stack: pruebas E2E con Playwright para la app RealWorld Conduit (Angular + Spring Boot + PostgreSQL), en contenedores con Docker.',
+        'projects.mastersys.title': 'MasterSys Academia',
+        'projects.mastersys.description': 'Proyecto backend con Spring Boot enfocado en la gestión de gimnasios. Implementación de versionado de base de datos con Flyway, JPA y Lombok.',
+        'projects.partituras.title': 'Partituras API',
+        'projects.partituras.description': 'API REST en Spring Boot para gestionar partituras, practicando arquitectura en capas, validaciones y buenas prácticas del programa Crescer.',
+        'projects.portfolio.title': 'Portafolio y Blog',
+        'projects.portfolio.description': 'Código fuente de este sitio web. Desarrollado con HTML, CSS y JavaScript Vanilla, con un sistema nativo de múltiples idiomas y generación de blog estático.',
+
         // Experience Section
         'experience.title': 'Experiencia Profesional',
         'experience.current': 'Actual',
@@ -411,7 +356,7 @@ const translations = {
         'experience.microtec.company': 'Microtec Papelería e Informática',
         'experience.microtec.position': 'Pasante de TI',
         'experience.microtec.description': 'Soporte técnico (hardware/software), gestión de inventario y atención al cliente.',
-        
+
         // Footer
         'footer.title': '¿Hablamos?',
         'footer.description': 'Estoy abierto a oportunidades en desarrollo web (Backend/Fullstack).',
@@ -419,7 +364,7 @@ const translations = {
         'footer.linkedin': 'LinkedIn',
         'footer.sourceCode': 'Código del sitio',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
-        
+
         // Contact Modal
         'contact.title': 'Enviar Mensaje',
         'contact.emailLabel': 'Tu Email',
@@ -433,7 +378,7 @@ const translations = {
         'contact.errorMessage': 'Hubo un problema. Inténtalo de nuevo o usa mi email directo.',
         'contact.tryAgain': 'Intentar de Nuevo',
         'contact.close': 'Cerrar',
-        
+
         // Certificates Modal
         'certs.title': 'Certificados y Cursos',
         'certs.cs50': 'CS50: Introducción a la Ciencia de la Computación',
@@ -449,20 +394,20 @@ const translations = {
         'certs.devdojo': 'Bootcamp de Java y Spring Boot',
         'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Haz clic en el icono para ver el certificado',
-        
+
         // Mobile Menu
         'mobile.menu': 'Menú',
         'mobile.navigation': 'Navegación',
         'mobile.contactButton': 'Hablemos',
         'mobile.language': 'Idioma',
-        
+
         // Tooltips
         'tooltip.university': 'Centro Universitario de las Facultades Integradas de Ourinhos',
         'tooltip.englishLevel': 'Nivel avanzado de inglés según el Marco Común Europeo de Referencia para las Lenguas',
         'tooltip.degree': 'Cursando el 3er período de Ingeniería de Software en UNIFIO',
         'tooltip.viewCertificate': 'Haz clic en el icono para ver el certificado',
     },
-    
+
     'zh': {
         // Navbar
         'nav.about': '关于',
@@ -471,14 +416,14 @@ const translations = {
         'nav.experience': '经验',
         'nav.blog': '文章',
         'nav.contact': '联系',
-        
+
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': '软件工程 | 全栈开发者',
         'hero.description': '热衷于使用 Java 和 Angular 创建强大解决方案的开发者。古典音乐家为代码带来和谐与逻辑。',
         'hero.viewProjects': '查看项目',
         'hero.contact': '联系我',
-        
+
         // About Section
         'about.title': '关于我',
         'about.p1': '目前正在攻读软件工程第三学期，我的旅程以纪律和对卓越的不断追求为特征。在深入代码之前，我多年致力于在 Tatuí 音乐学院学习古典吉他，这教会了我刻意练习、注重细节和团队合作的重要性。',
@@ -491,7 +436,7 @@ const translations = {
         'about.degree': '软件工程学士',
         'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
         'about.quoteAuthor': '— Villa-Lobos',
-        
+
         // Tech Stack Section
         'tech.title': '技术栈',
         'tech.subtitle': '我日常使用的工具。悬停以了解更多。',
@@ -512,37 +457,20 @@ const translations = {
         'tech.security': '数据保护、漏洞和 OWASP。',
         'tech.ai': '与 LLM 和 GenAI 工具集成。',
         'tech.agile': '项目的敏捷方法论（Scrum/Kanban）。',
-        
-        // SGE Project
-        'sge.badge': '特色项目',
-        'sge.title': 'SGE - 活动管理系统',
-        'sge.description': '为 UNIFIO 大学中心开发的活动管理系统。完整的 Web 应用程序，用于现代化和集中管理学校体育场的体育和学术活动。',
-        'sge.feature1': 'PHP 8.2 & MySQL',
-        'sge.feature2': 'Repository 模式',
-        'sge.feature3': '访问控制 (RBAC)',
-        'sge.feature4': 'Docker 化',
-        'sge.viewCode': '查看代码',
-        
-        // Other Projects
+
+        // Projects
         'projects.title': '项目',
         'projects.showMore': '查看更多项目',
         'projects.showLess': '收起',
-        'projects.llm.title': 'LLMOps 文本分类器',
-        'projects.llm.badge': 'Gemini AI 驱动',
-        'projects.llm.description': '使用微调 (DistilBERT) 的反馈分类系统，通过 Docker 和 FastAPI 部署。',
-        'projects.llm.note': '完全使用 Gemini AI 为 iFood GenAI 制作。',
-        'projects.todo.title': 'Task Manager Pro',
-        'projects.todo.badge': 'Java 21',
-        'projects.todo.description': '使用 Swing 的桌面任务管理系统。优先级、类别、笔记和 CSV/JSON 导出。',
-        'projects.weather.title': 'WeatherNow',
-        'projects.weather.description': '消费 OpenWeatherMap API 的天气仪表板。具有深色/浅色主题和异步请求功能。',
-        'projects.guitar.title': '古典吉他',
-        'projects.guitar.description': '为吉他社区提供的交互式开源指南。协作教育资源。',
-        'projects.bookshelf.title': 'Bookshelf API',
-        'projects.bookshelf.description': '使用 Node.js 和 Express 的 RESTful API。具有本地 JSON 持久性的完整书籍 CRUD。',
-        'projects.javaRoadmap.title': 'Java 后端路线图 2026',
-        'projects.javaRoadmap.description': '完整的 Java 后端学习指南。结构化路线图，包含时间表、理论笔记和从基础到架构的实践项目。',
-        
+        'projects.realworld.title': 'RealWorld Automation',
+        'projects.realworld.description': '全栈自动化实验室：使用 Playwright 为 RealWorld Conduit 应用程序（Angular + Spring Boot + PostgreSQL）进行 E2E 测试，并使用 Docker 容器化。',
+        'projects.mastersys.title': 'MasterSys Academia',
+        'projects.mastersys.description': '专注于健身房管理的 Spring Boot 后端项目。使用 Flyway、JPA 和 Lombok 实现数据库版本控制。',
+        'projects.partituras.title': 'Partituras API',
+        'projects.partituras.description': '使用 Spring Boot 的 REST API，用于管理乐谱，练习分层架构、验证和 Crescer 最佳实践。',
+        'projects.portfolio.title': '作品集与博客',
+        'projects.portfolio.description': '本网站的源代码。使用 HTML、CSS 和原生 JavaScript 开发，具有原生多语言系统和静态博客生成功能。',
+
         // Experience Section
         'experience.title': '专业经验',
         'experience.current': '当前',
@@ -555,7 +483,7 @@ const translations = {
         'experience.microtec.company': 'Microtec 办公用品和 IT',
         'experience.microtec.position': 'IT 实习生',
         'experience.microtec.description': '技术支持（硬件/软件）、库存管理和客户服务。',
-        
+
         // Footer
         'footer.title': '让我们谈谈？',
         'footer.description': '我愿意接受 Web 开发（后端/全栈）方面的机会。',
@@ -563,7 +491,7 @@ const translations = {
         'footer.linkedin': 'LinkedIn',
         'footer.sourceCode': '网站源码',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
-        
+
         // Contact Modal
         'contact.title': '发送消息',
         'contact.emailLabel': '您的电子邮件',
@@ -577,7 +505,7 @@ const translations = {
         'contact.errorMessage': '出现问题。请重试或使用我的直接电子邮件。',
         'contact.tryAgain': '重试',
         'contact.close': '关闭',
-        
+
         // Certificates Modal
         'certs.title': '证书与课程',
         'certs.cs50': 'CS50：计算机科学导论',
@@ -593,20 +521,20 @@ const translations = {
         'certs.devdojo': 'Java 与 Spring Boot 训练营',
         'certs.devdojo.org': 'DevDojo',
         'certs.info': '点击图标查看证书',
-        
+
         // Mobile Menu
         'mobile.menu': '菜单',
         'mobile.navigation': '导航',
         'mobile.contactButton': '让我们谈谈',
         'mobile.language': '语言',
-        
+
         // Tooltips
         'tooltip.university': 'Ourinhos 综合学院大学中心',
         'tooltip.englishLevel': '根据欧洲语言共同参考框架的高级英语水平',
         'tooltip.degree': '目前在 UNIFIO 就读软件工程第三学期',
         'tooltip.viewCertificate': '点击图标查看证书',
     },
-    
+
     'de': {
         // Navbar
         'nav.about': 'Über',
@@ -615,14 +543,14 @@ const translations = {
         'nav.experience': 'Erfahrung',
         'nav.blog': 'Artikel',
         'nav.contact': 'Kontakt',
-        
+
         // Hero Section
         'hero.name': 'Rafael Dias Garcia',
         'hero.title': 'Software-Engineering | Full-Stack-Entwickler',
         'hero.description': 'Entwickler mit Leidenschaft für robuste Lösungen mit Java und Angular. Klassischer Musiker, der Harmonie und Logik in den Code bringt.',
         'hero.viewProjects': 'Projekte ansehen',
         'hero.contact': 'Kontakt aufnehmen',
-        
+
         // About Section
         'about.title': 'Über mich',
         'about.p1': 'Ich befinde mich derzeit im dritten Semester des Software-Engineerings, und mein Weg ist geprägt von Disziplin und dem ständigen Streben nach Exzellenz. Bevor ich mich in den Code vertiefte, widmete ich Jahre dem Studium der klassischen Gitarre am Tatuí-Konservatorium, was mir die Bedeutung von gezieltem Üben, Liebe zum Detail und Teamarbeit lehrte.',
@@ -635,7 +563,7 @@ const translations = {
         'about.degree': 'SOFTWARE-ENG. BACHELOR',
         'about.quote': '"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."',
         'about.quoteAuthor': '— Villa-Lobos',
-        
+
         // Tech Stack Section
         'tech.title': 'Tech-Stack',
         'tech.subtitle': 'Tools, die ich täglich verwende. Fahren Sie mit der Maus darüber, um mehr zu erfahren.',
@@ -656,37 +584,20 @@ const translations = {
         'tech.security': 'Datenschutz, Schwachstellen und OWASP.',
         'tech.ai': 'Integration mit LLMs und GenAI-Tools.',
         'tech.agile': 'Agile Methoden (Scrum/Kanban) für Projekte.',
-        
-        // SGE Project
-        'sge.badge': 'Vorgestelltes Projekt',
-        'sge.title': 'SGE - Event-Management-System',
-        'sge.description': 'Event-Management-System, das für das UNIFIO-Universitätszentrum entwickelt wurde. Vollständige Webanwendung zur Modernisierung und Zentralisierung der Verwaltung von Sport- und akademischen Veranstaltungen auf dem Sportplatz der Institution.',
-        'sge.feature1': 'PHP 8.2 & MySQL',
-        'sge.feature2': 'Repository-Muster',
-        'sge.feature3': 'Zugriffskontrolle (RBAC)',
-        'sge.feature4': 'Dockerisiert',
-        'sge.viewCode': 'Code ansehen',
-        
-        // Other Projects
+
+        // Projects
         'projects.title': 'Projekte',
         'projects.showMore': 'Mehr Projekte anzeigen',
         'projects.showLess': 'Weniger anzeigen',
-        'projects.llm.title': 'LLMOps-Textklassifikator',
-        'projects.llm.badge': 'Angetrieben von Gemini AI',
-        'projects.llm.description': 'Feedback-Klassifizierungssystem mit Feinabstimmung (DistilBERT) und Bereitstellung über Docker und FastAPI.',
-        'projects.llm.note': 'Vollständig mit Gemini AI für iFood GenAI erstellt.',
-        'projects.todo.title': 'Task Manager Pro',
-        'projects.todo.badge': 'Java 21',
-        'projects.todo.description': 'Desktop-Aufgabenverwaltungssystem mit Swing. Prioritäten, Kategorien, Notizen und CSV/JSON-Export.',
-        'projects.weather.title': 'WeatherNow',
-        'projects.weather.description': 'Wetter-Dashboard, das die OpenWeatherMap-API nutzt. Funktionen mit dunklem/hellem Design und asynchronen Anfragen.',
-        'projects.guitar.title': 'Klassische Gitarre',
-        'projects.guitar.description': 'Interaktiver Open-Source-Leitfaden für die Gitarren-Community. Kollaborative Bildungsressource.',
-        'projects.bookshelf.title': 'Bookshelf API',
-        'projects.bookshelf.description': 'RESTful-API mit Node.js und Express. Vollständige CRUD für Bücher mit lokaler JSON-Persistenz.',
-        'projects.javaRoadmap.title': 'Java-Backend-Roadmap 2026',
-        'projects.javaRoadmap.description': 'Vollständiger Java-Backend-Studienführer. Strukturierte Roadmap mit Zeitplan, Theorienotizen und praktischen Projekten von Grundlagen bis Architektur.',
-        
+        'projects.realworld.title': 'RealWorld Automation',
+        'projects.realworld.description': 'Full-Stack-Automatisierungslabor: E2E-Tests mit Playwright für die RealWorld Conduit-App (Angular + Spring Boot + PostgreSQL), containerisiert mit Docker.',
+        'projects.mastersys.title': 'MasterSys Academia',
+        'projects.mastersys.description': 'Spring Boot-Backend-Projekt mit Schwerpunkt auf der Verwaltung von Fitnessstudios. Implementierung der Datenbankversionierung mit Flyway, JPA und Lombok.',
+        'projects.partituras.title': 'Partituras API',
+        'projects.partituras.description': 'Spring Boot REST-API zur Verwaltung von Noten, zum Üben von Schichtenarchitektur, Validierungen und Crescer-Best Practices.',
+        'projects.portfolio.title': 'Portfolio & Blog',
+        'projects.portfolio.description': 'Quellcode dieser Website. Entwickelt mit HTML, CSS und Vanilla JavaScript, mit nativem Mehrsprachensystem und statischer Blog-Generierung.',
+
         // Experience Section
         'experience.title': 'Berufserfahrung',
         'experience.current': 'Aktuell',
@@ -699,7 +610,7 @@ const translations = {
         'experience.microtec.company': 'Microtec Bürobedarf und IT',
         'experience.microtec.position': 'IT-Praktikant',
         'experience.microtec.description': 'Technischer Support (Hardware/Software), Bestandsverwaltung und Kundenservice.',
-        
+
         // Footer
         'footer.title': 'Lass uns reden?',
         'footer.description': 'Ich bin offen für Möglichkeiten in der Webentwicklung (Backend/Fullstack).',
@@ -707,7 +618,7 @@ const translations = {
         'footer.linkedin': 'LinkedIn',
         'footer.sourceCode': 'Quellcode der Website',
         'footer.copyright': '© 2025-2026 Rafael Dias Garcia - All Rights Reserved',
-        
+
         // Contact Modal
         'contact.title': 'Nachricht senden',
         'contact.emailLabel': 'Ihre E-Mail',
@@ -721,7 +632,7 @@ const translations = {
         'contact.errorMessage': 'Es gab ein Problem. Bitte versuchen Sie es erneut oder verwenden Sie meine direkte E-Mail.',
         'contact.tryAgain': 'Erneut versuchen',
         'contact.close': 'Schließen',
-        
+
         // Certificates Modal
         'certs.title': 'Zertifikate & Kurse',
         'certs.cs50': 'CS50: Einführung in die Informatik',
@@ -737,13 +648,13 @@ const translations = {
         'certs.devdojo': 'Java & Spring Boot Bootcamp',
         'certs.devdojo.org': 'DevDojo',
         'certs.info': 'Klicken Sie auf das Symbol, um das Zertifikat anzuzeigen',
-        
+
         // Mobile Menu
         'mobile.menu': 'Menü',
         'mobile.navigation': 'Navigation',
         'mobile.contactButton': 'Lass uns reden',
         'mobile.language': 'Sprache',
-        
+
         // Tooltips
         'tooltip.university': 'Universitätszentrum der Integrierten Fakultäten von Ourinhos',
         'tooltip.englishLevel': 'Fortgeschrittenes Englischniveau nach dem Gemeinsamen Europäischen Referenzrahmen für Sprachen',
@@ -774,7 +685,7 @@ function setLanguage(lang) {
 function updatePageLanguage() {
     const t = translations[currentLanguage];
     if (!t) return;
-    
+
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -787,7 +698,7 @@ function updatePageLanguage() {
             }
         }
     });
-    
+
     // Update placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
@@ -795,7 +706,7 @@ function updatePageLanguage() {
             element.placeholder = t[key];
         }
     });
-    
+
     // Update tooltips only if Bootstrap is available
     if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
         // Update tooltips - dispose all first, then recreate
@@ -805,7 +716,7 @@ function updatePageLanguage() {
                 tooltipInstance.dispose();
             }
         });
-        
+
         // Now update tooltip text and recreate them
         document.querySelectorAll('[data-i18n-tooltip]').forEach(element => {
             const key = element.getAttribute('data-i18n-tooltip');
@@ -814,33 +725,33 @@ function updatePageLanguage() {
                 element.setAttribute('data-bs-title', t[key]);
             }
         });
-        
+
         // Reinitialize all tooltips
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         [...tooltipTriggerList].forEach(tooltipTriggerEl => {
             new bootstrap.Tooltip(tooltipTriggerEl);
         });
     }
-    
+
     // Update HTML lang attribute
     document.documentElement.lang = currentLanguage;
 }
 
 function updateLanguageSelector() {
     const currentLang = languages[currentLanguage];
-    
+
     // Update desktop selector
     const desktopBtn = document.getElementById('languageSelectorBtn');
     if (desktopBtn) {
         desktopBtn.innerHTML = `${currentLang.flag} <i class="fas fa-chevron-down ms-1"></i>`;
     }
-    
+
     // Update mobile selector
     const mobileBtn = document.getElementById('mobileLanguageBtn');
     if (mobileBtn) {
         mobileBtn.innerHTML = `<span class="flag-emoji">${currentLang.flag}</span>`;
     }
-    
+
     // Update active state in dropdowns
     document.querySelectorAll('[data-lang]').forEach(item => {
         const lang = item.getAttribute('data-lang');
@@ -853,30 +764,30 @@ function updateLanguageSelector() {
 }
 
 // Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Small delay to ensure Bootstrap tooltips are initialized first
-    setTimeout(function() {
+    setTimeout(function () {
         // Set initial language
         updatePageLanguage();
         updateLanguageSelector();
     }, 50);
-    
+
     // Add click handlers for language selection
     document.querySelectorAll('[data-lang]').forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
             setLanguage(lang);
-            
+
             // Close dropdowns after selection
             const desktopDropdown = document.getElementById('languageDropdown');
             const mobileDropdown = document.getElementById('mobileLanguageDropdown');
-            
+
             if (desktopDropdown) {
                 desktopDropdown.classList.remove('show');
             }
             if (mobileDropdown) {
-                mobileDropdown.classList.remove('show');    
+                mobileDropdown.classList.remove('show');
             }
         });
     });

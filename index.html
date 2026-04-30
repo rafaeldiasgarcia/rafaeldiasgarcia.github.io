@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYL1VH5W53"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-FYL1VH5W53');
+        gtag('config', 'G-FYL1VH5W53');
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.7, maximum-scale=2.0, user-scalable=yes">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.7, maximum-scale=2.0, user-scalable=yes">
     <title>Rafael Dias Garcia | Engenharia de Software</title>
     <link rel="alternate" type="application/rss+xml" title="Rafael Dias Garcia RSS" href="rss.xml">
 
     <!-- Theme init (prevents flash on reload) -->
     <script>
-        (function() {
+        (function () {
             var t = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,14 +39,17 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Custom CSS (Local File) -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="100">
 
-<!-- build:header-home:start -->
+    <!-- build:header-home:start -->
 <!-- Navbar -->
 <nav id="navbar-main" class="navbar navbar-expand-lg fixed-top">
     <div class="container">
@@ -222,531 +228,512 @@
 </div>
 <!-- build:header-home:end -->
 
-<!-- Hero Section -->
-<section id="hero">
-    <div class="container text-center">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h1 class="display-3 mb-3" data-i18n="hero.name">Rafael Dias Garcia</h1>
-                <p class="lead text-secondary mb-4 fs-4" data-i18n="hero.title">Engenharia de Software | Full Stack Developer</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-3 mb-3" data-i18n="hero.name">Rafael Dias Garcia</h1>
+                    <p class="lead text-secondary mb-4 fs-4" data-i18n="hero.title">Engenharia de Software | Full Stack
+                        Developer</p>
 
-                <p class="mb-5 text-muted mx-auto" style="max-width: 600px;" data-i18n="hero.description">
-                    Desenvolvedor apaixonado por criar soluções robustas com Java e Angular.
-                    Músico clássico trazendo harmonia e lógica para o código.
-                </p>
+                    <p class="mb-5 text-muted mx-auto" style="max-width: 600px;" data-i18n="hero.description">
+                        Desenvolvedor apaixonado por criar soluções robustas com Java e Angular.
+                        Músico clássico trazendo harmonia e lógica para o código.
+                    </p>
 
-                <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
-                    <a href="#projetos" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 px-sm-5 btn-sm-lg" data-i18n="hero.viewProjects">Ver Projetos</a>
-                    <a href="#contato" class="btn btn-outline-secondary btn-lg rounded-pill px-5 px-sm-5 btn-sm-lg" data-i18n="hero.contact">Entrar em Contato</a>
+                    <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
+                        <a href="#projetos" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 px-sm-5 btn-sm-lg"
+                            data-i18n="hero.viewProjects">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-outline-secondary btn-lg rounded-pill px-5 px-sm-5 btn-sm-lg"
+                            data-i18n="hero.contact">Entrar em Contato</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Sobre Mim -->
-<section id="sobre" class="py-5 bg-white">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <h2 class="fw-bold mb-4" data-i18n="about.title">Sobre Mim</h2>
-                <p class="text-secondary mb-4" data-i18n="about.p1">
-                    Atualmente cursando o terceiro termo de Engenharia de Software, minha trajetória é marcada pela disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei anos ao estudo do violão clássico no Conservatório de Tatuí, o que me ensinou a importância da prática deliberada, atenção aos detalhes e trabalho em equipe.
-                </p>
-                <p class="text-secondary" data-i18n="about.p2" data-i18n-html>
-                    Como estagiário no <strong>CWI Crescer</strong>, estou aplicando esses conceitos em um ambiente corporativo de alta performance, desenvolvendo softwares escaláveis e aprendendo as melhores práticas de mercado.
-                </p>
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4" data-i18n="about.title">Sobre Mim</h2>
+                    <p class="text-secondary mb-4" data-i18n="about.p1">
+                        Atualmente cursando o terceiro termo de Engenharia de Software, minha trajetória é marcada pela
+                        disciplina e pela busca constante por excelência. Antes de mergulhar no código, dediquei anos ao
+                        estudo do violão clássico no Conservatório de Tatuí, o que me ensinou a importância da prática
+                        deliberada, atenção aos detalhes e trabalho em equipe.
+                    </p>
+                    <p class="text-secondary" data-i18n="about.p2" data-i18n-html>
+                        Como estagiário no <strong>CWI Crescer</strong>, estou aplicando esses conceitos em um ambiente
+                        corporativo de alta performance, desenvolvendo softwares escaláveis e aprendendo as melhores
+                        práticas de mercado.
+                    </p>
 
-                <div class="row mt-4 g-3">
-                    <div class="col-sm-6">
-                        <div class="info-card d-flex align-items-center gap-3 p-3 rounded"
-                             data-bs-toggle="tooltip" 
-                             data-bs-placement="top" 
-                             data-bs-title="Centro Universitário das Faculdades Integradas de Ourinhos"
-                             data-i18n-tooltip="tooltip.university"
-                             style="cursor: pointer;">
-                            <i class="fas fa-graduation-cap text-primary fs-3"></i>
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-0 fw-bold" data-i18n="about.university">UNIFIO</h6>
-                                <small class="text-muted" data-i18n="about.universityDesc">Eng. Software (2028)</small>
+                    <div class="row mt-4 g-3">
+                        <div class="col-sm-6">
+                            <div class="info-card d-flex align-items-center gap-3 p-3 rounded" data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-title="Centro Universitário das Faculdades Integradas de Ourinhos"
+                                data-i18n-tooltip="tooltip.university" style="cursor: pointer;">
+                                <i class="fas fa-graduation-cap text-primary fs-3"></i>
+                                <div class="d-flex flex-column">
+                                    <h6 class="mb-0 fw-bold" data-i18n="about.university">UNIFIO</h6>
+                                    <small class="text-muted" data-i18n="about.universityDesc">Eng. Software
+                                        (2028)</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <!-- Card Interativo de Certificados -->
-                        <div class="info-card info-card-hover d-flex align-items-center gap-3 p-3 rounded cursor-pointer" data-bs-toggle="modal" data-bs-target="#certsModal">
-                            <i class="fas fa-award text-warning fs-3"></i>
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-0 fw-bold" data-i18n="about.certificates">Certificados & Cursos</h6>
-                                <div class="d-flex align-items-center text-nowrap">
-                                    <small class="text-muted" data-i18n="about.viewCertificates">Ver Lista Completa</small>
-                                    <i class="fas fa-arrow-right text-muted ms-1" style="font-size: 0.7rem;"></i>
+                        <div class="col-sm-6">
+                            <!-- Card Interativo de Certificados -->
+                            <div class="info-card info-card-hover d-flex align-items-center gap-3 p-3 rounded cursor-pointer"
+                                data-bs-toggle="modal" data-bs-target="#certsModal">
+                                <i class="fas fa-award text-warning fs-3"></i>
+                                <div class="d-flex flex-column">
+                                    <h6 class="mb-0 fw-bold" data-i18n="about.certificates">Certificados & Cursos</h6>
+                                    <div class="d-flex align-items-center text-nowrap">
+                                        <small class="text-muted" data-i18n="about.viewCertificates">Ver Lista
+                                            Completa</small>
+                                        <i class="fas fa-arrow-right text-muted ms-1" style="font-size: 0.7rem;"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <!-- Ilustração abstrata com CSS/Bootstrap -->
-                <div class="info-highlight-card position-relative p-4 rounded-4">
-                    <div class="row g-3">
-                        <div class="col-6 text-center">
-                            <h2 class="fw-bold text-primary display-4" 
-                                data-bs-toggle="tooltip" 
-                                data-bs-placement="top" 
-                                data-bs-title="Nível avançado de inglês segundo o Quadro Europeu Comum de Referência para Línguas"
-                                data-i18n-tooltip="tooltip.englishLevel"
-                                style="cursor: pointer;">C1</h2>
-                            <p class="text-muted small fw-bold" data-i18n="about.englishLevel">INGLÊS AVANÇADO</p>
-                        </div>
-                        <div class="col-6 text-center highlight-divider ps-3">
-                            <h2 class="fw-bold text-success display-4"
-                                data-bs-toggle="tooltip" 
-                                data-bs-placement="top" 
-                                data-bs-title="Cursando o 3º termo da faculdade de Engenharia de Software na UNIFIO"
-                                data-i18n-tooltip="tooltip.degree"
-                                style="cursor: pointer;">3º</h2>
-                            <p class="text-muted small fw-bold" data-i18n="about.degree">BACHARELADO ENG. SOFTWARE</p>
-                        </div>
-                        <div class="col-12 highlight-divider-top pt-2">
-                            <p class="fst-italic text-muted text-center mb-2" data-i18n="about.quote">"Tarde, uma nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."</p>
-                            <p class="text-end small text-muted mb-0" data-i18n="about.quoteAuthor">— Villa-Lobos</p>
+                <div class="col-lg-6">
+                    <!-- Ilustração abstrata com CSS/Bootstrap -->
+                    <div class="info-highlight-card position-relative p-4 rounded-4">
+                        <div class="row g-3">
+                            <div class="col-6 text-center">
+                                <h2 class="fw-bold text-primary display-4" data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-title="Nível avançado de inglês segundo o Quadro Europeu Comum de Referência para Línguas"
+                                    data-i18n-tooltip="tooltip.englishLevel" style="cursor: pointer;">C1</h2>
+                                <p class="text-muted small fw-bold" data-i18n="about.englishLevel">INGLÊS AVANÇADO</p>
+                            </div>
+                            <div class="col-6 text-center highlight-divider ps-3">
+                                <h2 class="fw-bold text-success display-4" data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-title="Cursando o 3º termo da faculdade de Engenharia de Software na UNIFIO"
+                                    data-i18n-tooltip="tooltip.degree" style="cursor: pointer;">3º</h2>
+                                <p class="text-muted small fw-bold" data-i18n="about.degree">BACHARELADO ENG. SOFTWARE
+                                </p>
+                            </div>
+                            <div class="col-12 highlight-divider-top pt-2">
+                                <p class="fst-italic text-muted text-center mb-2" data-i18n="about.quote">"Tarde, uma
+                                    nuvem rósea lenta e transparente, sobre o espaço sonhadora e bela..."</p>
+                                <p class="text-end small text-muted mb-0" data-i18n="about.quoteAuthor">— Villa-Lobos
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="techs" class="py-5">
+        <div class="container">
+            <!-- Stack Principal -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" data-i18n="tech.title">Stack Tecnológico</h2>
+                <p class="text-muted" data-i18n="tech.subtitle">Ferramentas que utilizo no dia a dia. Passe o mouse para
+                    saber mais.</p>
+            </div>
+
+            <div class="techs-expandable-wrapper" id="techsWrapper">
+                <div class="row g-3 justify-content-center mb-5">
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-java tech-icon text-warning"></i>
+                            <h6 class="tech-name">Java</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.java">Linguagem robusta para sistemas backend
+                                    corporativos.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-php tech-icon text-primary"></i>
+                            <h6 class="tech-name">PHP</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.php">Desenvolvimento web dinâmico e veloz para
+                                    servidores.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-js tech-icon text-warning"></i>
+                            <h6 class="tech-name">JavaScript</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.javascript">Interatividade no frontend e lógica
+                                    no backend.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <svg class="tech-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" role="img" aria-hidden="true">
+                                <desc>Playwright Streamline Icon: https://streamlinehq.com</desc>
+                                <path fill="#2d4552"
+                                    d="M7.99585 13.141725c-0.87725 0.248975 -1.452775 0.685475 -1.8319 1.12165 0.363125 -0.317775 0.849525 -0.609425 1.505675 -0.795425 0.6711 -0.1902 1.243625 -0.188825 1.7167 -0.09755v-0.369925c-0.40355 -0.0369 -0.866225 -0.0075 -1.390475 0.14125Zm-1.872 -3.109775 -3.25795 0.858325s0.059375 0.083875 0.1693 0.195775l2.76235 -0.727875s-0.03915 0.5044 -0.379075 0.9556c0.643 -0.486475 0.705375 -1.281825 0.705375 -1.281825Zm2.727125 7.65675C4.26615 18.923575 1.8404825 13.61025 1.1060875 10.852425c-0.3393 -1.273 -0.487415 -2.2371 -0.5268925 -2.859275 -0.0042425 -0.0646 -0.0022825 -0.11905 0.002285 -0.16895 -0.237835 0.01435 -0.3517015 0.137975 -0.328535 0.49525 0.0394775 0.621825 0.187595 1.585875 0.526895 2.859275C1.5139075 13.936125 3.9399 19.24945 8.52475 18.0146c0.99795 -0.26885 1.747675 -0.758525 2.310475 -1.383625 -0.51875 0.468525 -1.168 0.8375 -1.98425 1.057725Zm0.861575 -10.90855v0.3263h1.79835c-0.0369 -0.115525 -0.074075 -0.219625 -0.110975 -0.3263h-1.687375Z"
+                                    stroke-width="0.25"></path>
+                                <path fill="#2d4552"
+                                    d="M11.9129 9.46735c0.80875 0.229675 1.2365 0.7967 1.462575 1.2985l0.90175 0.2561s-0.123 -1.756175 -1.711525 -2.2074c-1.486075 -0.422225 -2.400575 0.8257 -2.5118 0.9872 0.4323 -0.308 1.063575 -0.56015 1.859 -0.3344Zm7.178175 1.3066c-1.487425 -0.424125 -2.401575 0.8264 -2.511175 0.985625 0.432625 -0.307625 1.063575 -0.559875 1.85865 -0.3331 0.80745 0.23005 1.23485 0.796375 1.461625 1.298525l0.90305 0.25705s-0.125 -1.756525 -1.71215 -2.2081Zm-0.8959 4.6305 -7.501475 -2.097125s0.0812 0.411725 0.3928 0.94485l6.3159 1.765675c0.519975 -0.30085 0.792775 -0.6134 0.792775 -0.6134ZM12.994375 19.918475C7.054675 18.326 7.77275 10.758025 8.733875 7.171825c0.395725 -1.4779 0.802575 -2.576375 1.13995 -3.312725 -0.2013 -0.041425 -0.368025 0.0646 -0.532775 0.39965 -0.358225 0.726575 -0.8163 1.90955 -1.259625 3.5656 -0.96085 3.586125 -1.67895 11.15385 4.2605 12.746325 2.79955 0.75 4.980475 -0.3899 6.60625 -2.18005 -1.543175 1.3977 -3.513425 2.181325 -5.9538 1.52785Z"
+                                    stroke-width="0.25"></path>
+                                <path fill="#e2574c"
+                                    d="M9.7126 15.915175V14.388l-4.243175 1.2032s0.313525 -1.82175 2.526475 -2.4495c0.6711 -0.1902 1.2437 -0.1889 1.7167 -0.09755V6.780125h2.124575c-0.231325 -0.714825 -0.4551 -1.26515 -0.64305 -1.64755 -0.310925 -0.632925 -0.62965 -0.21335 -1.35325 0.39185 -0.50965 0.425775 -1.797675 1.33405 -3.7359 1.85635 -1.938275 0.522625 -3.50525 0.384025 -4.15906 0.2708 -0.9268825 -0.1599 -1.4116925 -0.36345 -1.3663375 0.34155 0.03947 0.621825 0.187595 1.58595 0.5268925 2.859275C1.8405325 13.609875 4.266525 18.9232 8.85135 17.68835c1.197625 -0.3227 2.04295 -0.960525 2.6289 -1.7735h-1.76765v0.000325ZM2.865625 10.89025l3.258275 -0.858325s-0.094975 1.25345 -1.31645 1.57545c-1.2218 0.321675 -1.941825 -0.717125 -1.941825 -0.717125Z"
+                                    stroke-width="0.25"></path>
+                                <path fill="#2ead33"
+                                    d="M21.975075 6.8525c-0.84695 0.148475 -2.878875 0.33345 -5.389975 -0.339625 -2.5118 -0.672675 -4.17835 -1.849175 -4.838625 -2.402175 -0.936 -0.783975 -1.347725 -1.328825 -1.752925 -0.5047 -0.358225 0.726875 -0.816325 1.909875 -1.259725 3.565925 -0.960775 3.586125 -1.67885 11.15385 4.260525 12.7463 5.938125 1.591125 9.09945 -5.322175 10.0603 -8.908625 0.4434 -1.655725 0.637825 -2.9095 0.691325 -3.717925 0.061 -0.915775 -0.568025 -0.64995 -1.7709 -0.439175ZM10.0418 9.81945s0.936 -1.45575 2.523525 -1.00455c1.588525 0.451225 1.711525 2.207425 1.711525 2.207425l-4.23505 -1.202875ZM13.917 16.352c-2.79235 -0.817975 -3.223 -3.04465 -3.223 -3.04465l7.501125 2.0972c0 -0.00035 -1.5141 1.755175 -4.278125 0.94745Zm2.6521 -4.57605s0.9347 -1.45475 2.521925 -1.00225c1.587175 0.4519 1.71215 2.2081 1.71215 2.2081l-4.234075 -1.20585Z"
+                                    stroke-width="0.25"></path>
+                                <path fill="#d65348"
+                                    d="M8.2299 14.808525 5.4695 15.590875s0.29985 -1.708225 2.33335 -2.385175l-1.563075 -5.865975 -0.135075 0.04105c-1.93825 0.5227 -3.505225 0.384025 -4.15903 0.2708 -0.9268775 -0.159825 -1.411685 -0.36345 -1.3663375 0.341625 0.0394775 0.621825 0.187595 1.585875 0.5268925 2.85925 0.7340675 2.757425 3.160075 8.07075 7.744875 6.8359l0.135075 -0.042425 -0.756275 -2.8374ZM2.8657 10.8903l3.258275 -0.858375s-0.094975 1.25345 -1.316425 1.57545c-1.221825 0.321675 -1.94185 -0.717075 -1.94185 -0.717075Z"
+                                    stroke-width="0.25"></path>
+                                <path fill="#1d8d22"
+                                    d="m14.04295 16.382625 -0.1263 -0.0307c-2.792325 -0.8179 -3.223 -3.044575 -3.223 -3.044575l3.86805 1.0812 2.047825 -7.86915 -0.024775 -0.006525c-2.5118 -0.672675 -4.17825 -1.849175 -4.838625 -2.402175 -0.936 -0.783975 -1.347725 -1.328825 -1.752925 -0.5047 -0.357875 0.726875 -0.815975 1.909875 -1.259375 3.565925 -0.960775 3.586125 -1.67885 11.15385 4.260525 12.74625l0.121725 0.027425 0.926875 -3.562975ZM10.0418 9.819475s0.936 -1.455775 2.523525 -1.004575c1.588525 0.451225 1.711525 2.207425 1.711525 2.207425l-4.23505 -1.20285Z"
+                                    stroke-width="0.25"></path>
+                                <path fill="#c04b41"
+                                    d="m8.37055 14.7683 -0.740275 0.2101c0.174875 0.9859 0.483125 1.93205 0.966975 2.7679 0.0842 -0.0186 0.167725 -0.034575 0.2535 -0.058075 0.2248 -0.06065 0.43325 -0.13575 0.63395 -0.21765 -0.5406 -0.802225 -0.898225 -1.726175 -1.11415 -2.702275Zm-0.289075 -6.9439c-0.3804 1.419825 -0.720725 3.46345 -0.62705 5.51325 0.167675 -0.072775 0.3448 -0.140575 0.54155 -0.1964l0.13705 -0.030625c-0.167075 -2.189525 0.194075 -4.4207 0.600925 -5.93875 0.103125 -0.384025 0.206525 -0.741225 0.3096 -1.07435 -0.166025 0.105675 -0.3448 0.213975 -0.548425 0.32555 -0.137325 0.42385 -0.276 0.887125 -0.41365 1.401325Z"
+                                    stroke-width="0.25"></path>
+                            </svg>
+                            <h6 class="tech-name">Playwright</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.playwright">Testes E2E em navegadores com API
+                                    estável e paralelização.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fas fa-database tech-icon text-secondary"></i>
+                            <h6 class="tech-name">SQL</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.sql">Modelagem e consulta eficiente de bancos de
+                                    dados.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fas fa-leaf tech-icon text-success"></i>
+                            <h6 class="tech-name">Spring Boot</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.spring">Framework Spring Boot para APIs REST e
+                                    serviços backend escaláveis.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-html5 tech-icon text-danger"></i>
+                            <h6 class="tech-name">HTML/CSS</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.html">Estrutura semântica e estilização visual
+                                    responsiva.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-golang tech-icon text-info"></i>
+                            <h6 class="tech-name">Go</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.go">Linguagem moderna para sistemas de alta
+                                    performance.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-python tech-icon text-info"></i>
+                            <h6 class="tech-name">Python</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.python">Automação, processamento de dados e
+                                    IA.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-git-alt tech-icon text-danger"></i>
+                            <h6 class="tech-name">Git</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.git">Controle de versão e colaboração em
+                                    equipe.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-docker tech-icon text-primary"></i>
+                            <h6 class="tech-name">Docker</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.docker">Containerização para ambientes de deploy
+                                    consistentes.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisor -->
+                <div class="section-divider">
+                    <span data-i18n="tech.divider">Aprendendo Agora</span>
+                </div>
+
+                <!-- Aprendizados CWI -->
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fab fa-angular tech-icon text-danger"></i>
+                            <h6 class="tech-name">Angular</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.angular">Framework SPA do Google para aplicações
+                                    web escaláveis.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fas fa-server tech-icon text-primary"></i>
+                            <h6 class="tech-name">DevOps</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.devops">Integração contínua (CI/CD) e
+                                    infraestrutura ágil.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fas fa-shield-halved tech-icon text-success"></i>
+                            <h6 class="tech-name">Segurança</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.security">Proteção de dados, vulnerabilidades e
+                                    OWASP.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fas fa-brain tech-icon text-info"></i>
+                            <h6 class="tech-name">IA</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.ai">Integração com LLMs e ferramentas de
+                                    GenAI.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-card">
+                            <i class="fas fa-users-gear tech-icon text-secondary"></i>
+                            <h6 class="tech-name">Agile</h6>
+                            <div class="tech-overlay">
+                                <span class="tech-desc" data-i18n="tech.agile">Metodologias ágeis (Scrum/Kanban) para
+                                    projetos.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="text-center mt-5">
+                <button id="showMoreTechsBtn" class="btn btn-outline-primary rounded-pill px-5" type="button">
+                    <span data-i18n="tech.showMore">Ver Mais Tecnologias</span>
+                    <i class="fas fa-chevron-down ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
     </div>
-</section>
-
-<!-- Tech Stack Section -->
-<section id="techs" class="py-5">
-    <div class="container">
-        <!-- Stack Principal -->
-        <div class="text-center mb-5">
-            <h2 class="fw-bold" data-i18n="tech.title">Stack Tecnológico</h2>
-            <p class="text-muted" data-i18n="tech.subtitle">Ferramentas que utilizo no dia a dia. Passe o mouse para saber mais.</p>
-        </div>
-
-        <div class="techs-expandable-wrapper" id="techsWrapper">
-            <div class="row g-3 justify-content-center mb-5">
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-java tech-icon text-warning"></i>
-                        <h6 class="tech-name">Java</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.java">Linguagem robusta para sistemas backend corporativos.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-php tech-icon text-primary"></i>
-                        <h6 class="tech-name">PHP</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.php">Desenvolvimento web dinâmico e veloz para servidores.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-js tech-icon text-warning"></i>
-                        <h6 class="tech-name">JavaScript</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.javascript">Interatividade no frontend e lógica no backend.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <svg class="tech-icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" role="img" aria-hidden="true">
-                            <desc>Playwright Streamline Icon: https://streamlinehq.com</desc>
-                            <path fill="#2d4552" d="M7.99585 13.141725c-0.87725 0.248975 -1.452775 0.685475 -1.8319 1.12165 0.363125 -0.317775 0.849525 -0.609425 1.505675 -0.795425 0.6711 -0.1902 1.243625 -0.188825 1.7167 -0.09755v-0.369925c-0.40355 -0.0369 -0.866225 -0.0075 -1.390475 0.14125Zm-1.872 -3.109775 -3.25795 0.858325s0.059375 0.083875 0.1693 0.195775l2.76235 -0.727875s-0.03915 0.5044 -0.379075 0.9556c0.643 -0.486475 0.705375 -1.281825 0.705375 -1.281825Zm2.727125 7.65675C4.26615 18.923575 1.8404825 13.61025 1.1060875 10.852425c-0.3393 -1.273 -0.487415 -2.2371 -0.5268925 -2.859275 -0.0042425 -0.0646 -0.0022825 -0.11905 0.002285 -0.16895 -0.237835 0.01435 -0.3517015 0.137975 -0.328535 0.49525 0.0394775 0.621825 0.187595 1.585875 0.526895 2.859275C1.5139075 13.936125 3.9399 19.24945 8.52475 18.0146c0.99795 -0.26885 1.747675 -0.758525 2.310475 -1.383625 -0.51875 0.468525 -1.168 0.8375 -1.98425 1.057725Zm0.861575 -10.90855v0.3263h1.79835c-0.0369 -0.115525 -0.074075 -0.219625 -0.110975 -0.3263h-1.687375Z" stroke-width="0.25"></path>
-                            <path fill="#2d4552" d="M11.9129 9.46735c0.80875 0.229675 1.2365 0.7967 1.462575 1.2985l0.90175 0.2561s-0.123 -1.756175 -1.711525 -2.2074c-1.486075 -0.422225 -2.400575 0.8257 -2.5118 0.9872 0.4323 -0.308 1.063575 -0.56015 1.859 -0.3344Zm7.178175 1.3066c-1.487425 -0.424125 -2.401575 0.8264 -2.511175 0.985625 0.432625 -0.307625 1.063575 -0.559875 1.85865 -0.3331 0.80745 0.23005 1.23485 0.796375 1.461625 1.298525l0.90305 0.25705s-0.125 -1.756525 -1.71215 -2.2081Zm-0.8959 4.6305 -7.501475 -2.097125s0.0812 0.411725 0.3928 0.94485l6.3159 1.765675c0.519975 -0.30085 0.792775 -0.6134 0.792775 -0.6134ZM12.994375 19.918475C7.054675 18.326 7.77275 10.758025 8.733875 7.171825c0.395725 -1.4779 0.802575 -2.576375 1.13995 -3.312725 -0.2013 -0.041425 -0.368025 0.0646 -0.532775 0.39965 -0.358225 0.726575 -0.8163 1.90955 -1.259625 3.5656 -0.96085 3.586125 -1.67895 11.15385 4.2605 12.746325 2.79955 0.75 4.980475 -0.3899 6.60625 -2.18005 -1.543175 1.3977 -3.513425 2.181325 -5.9538 1.52785Z" stroke-width="0.25"></path>
-                            <path fill="#e2574c" d="M9.7126 15.915175V14.388l-4.243175 1.2032s0.313525 -1.82175 2.526475 -2.4495c0.6711 -0.1902 1.2437 -0.1889 1.7167 -0.09755V6.780125h2.124575c-0.231325 -0.714825 -0.4551 -1.26515 -0.64305 -1.64755 -0.310925 -0.632925 -0.62965 -0.21335 -1.35325 0.39185 -0.50965 0.425775 -1.797675 1.33405 -3.7359 1.85635 -1.938275 0.522625 -3.50525 0.384025 -4.15906 0.2708 -0.9268825 -0.1599 -1.4116925 -0.36345 -1.3663375 0.34155 0.03947 0.621825 0.187595 1.58595 0.5268925 2.859275C1.8405325 13.609875 4.266525 18.9232 8.85135 17.68835c1.197625 -0.3227 2.04295 -0.960525 2.6289 -1.7735h-1.76765v0.000325ZM2.865625 10.89025l3.258275 -0.858325s-0.094975 1.25345 -1.31645 1.57545c-1.2218 0.321675 -1.941825 -0.717125 -1.941825 -0.717125Z" stroke-width="0.25"></path>
-                            <path fill="#2ead33" d="M21.975075 6.8525c-0.84695 0.148475 -2.878875 0.33345 -5.389975 -0.339625 -2.5118 -0.672675 -4.17835 -1.849175 -4.838625 -2.402175 -0.936 -0.783975 -1.347725 -1.328825 -1.752925 -0.5047 -0.358225 0.726875 -0.816325 1.909875 -1.259725 3.565925 -0.960775 3.586125 -1.67885 11.15385 4.260525 12.7463 5.938125 1.591125 9.09945 -5.322175 10.0603 -8.908625 0.4434 -1.655725 0.637825 -2.9095 0.691325 -3.717925 0.061 -0.915775 -0.568025 -0.64995 -1.7709 -0.439175ZM10.0418 9.81945s0.936 -1.45575 2.523525 -1.00455c1.588525 0.451225 1.711525 2.207425 1.711525 2.207425l-4.23505 -1.202875ZM13.917 16.352c-2.79235 -0.817975 -3.223 -3.04465 -3.223 -3.04465l7.501125 2.0972c0 -0.00035 -1.5141 1.755175 -4.278125 0.94745Zm2.6521 -4.57605s0.9347 -1.45475 2.521925 -1.00225c1.587175 0.4519 1.71215 2.2081 1.71215 2.2081l-4.234075 -1.20585Z" stroke-width="0.25"></path>
-                            <path fill="#d65348" d="M8.2299 14.808525 5.4695 15.590875s0.29985 -1.708225 2.33335 -2.385175l-1.563075 -5.865975 -0.135075 0.04105c-1.93825 0.5227 -3.505225 0.384025 -4.15903 0.2708 -0.9268775 -0.159825 -1.411685 -0.36345 -1.3663375 0.341625 0.0394775 0.621825 0.187595 1.585875 0.5268925 2.85925 0.7340675 2.757425 3.160075 8.07075 7.744875 6.8359l0.135075 -0.042425 -0.756275 -2.8374ZM2.8657 10.8903l3.258275 -0.858375s-0.094975 1.25345 -1.316425 1.57545c-1.221825 0.321675 -1.94185 -0.717075 -1.94185 -0.717075Z" stroke-width="0.25"></path>
-                            <path fill="#1d8d22" d="m14.04295 16.382625 -0.1263 -0.0307c-2.792325 -0.8179 -3.223 -3.044575 -3.223 -3.044575l3.86805 1.0812 2.047825 -7.86915 -0.024775 -0.006525c-2.5118 -0.672675 -4.17825 -1.849175 -4.838625 -2.402175 -0.936 -0.783975 -1.347725 -1.328825 -1.752925 -0.5047 -0.357875 0.726875 -0.815975 1.909875 -1.259375 3.565925 -0.960775 3.586125 -1.67885 11.15385 4.260525 12.74625l0.121725 0.027425 0.926875 -3.562975ZM10.0418 9.819475s0.936 -1.455775 2.523525 -1.004575c1.588525 0.451225 1.711525 2.207425 1.711525 2.207425l-4.23505 -1.20285Z" stroke-width="0.25"></path>
-                            <path fill="#c04b41" d="m8.37055 14.7683 -0.740275 0.2101c0.174875 0.9859 0.483125 1.93205 0.966975 2.7679 0.0842 -0.0186 0.167725 -0.034575 0.2535 -0.058075 0.2248 -0.06065 0.43325 -0.13575 0.63395 -0.21765 -0.5406 -0.802225 -0.898225 -1.726175 -1.11415 -2.702275Zm-0.289075 -6.9439c-0.3804 1.419825 -0.720725 3.46345 -0.62705 5.51325 0.167675 -0.072775 0.3448 -0.140575 0.54155 -0.1964l0.13705 -0.030625c-0.167075 -2.189525 0.194075 -4.4207 0.600925 -5.93875 0.103125 -0.384025 0.206525 -0.741225 0.3096 -1.07435 -0.166025 0.105675 -0.3448 0.213975 -0.548425 0.32555 -0.137325 0.42385 -0.276 0.887125 -0.41365 1.401325Z" stroke-width="0.25"></path>
-                        </svg>
-                        <h6 class="tech-name">Playwright</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.playwright">Testes E2E em navegadores com API estável e paralelização.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fas fa-database tech-icon text-secondary"></i>
-                        <h6 class="tech-name">SQL</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.sql">Modelagem e consulta eficiente de bancos de dados.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fas fa-leaf tech-icon text-success"></i>
-                        <h6 class="tech-name">Spring Boot</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.spring">Framework Spring Boot para APIs REST e serviços backend escaláveis.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-html5 tech-icon text-danger"></i>
-                        <h6 class="tech-name">HTML/CSS</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.html">Estrutura semântica e estilização visual responsiva.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-golang tech-icon text-info"></i>
-                        <h6 class="tech-name">Go</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.go">Linguagem moderna para sistemas de alta performance.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-python tech-icon text-info"></i>
-                        <h6 class="tech-name">Python</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.python">Automação, processamento de dados e IA.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-git-alt tech-icon text-danger"></i>
-                        <h6 class="tech-name">Git</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.git">Controle de versão e colaboração em equipe.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-docker tech-icon text-primary"></i>
-                        <h6 class="tech-name">Docker</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.docker">Containerização para ambientes de deploy consistentes.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Divisor -->
-            <div class="section-divider">
-                <span data-i18n="tech.divider">Aprendendo Agora</span>
-            </div>
-
-            <!-- Aprendizados CWI -->
-            <div class="row g-3 justify-content-center">
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fab fa-angular tech-icon text-danger"></i>
-                        <h6 class="tech-name">Angular</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.angular">Framework SPA do Google para aplicações web escaláveis.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fas fa-server tech-icon text-primary"></i>
-                        <h6 class="tech-name">DevOps</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.devops">Integração contínua (CI/CD) e infraestrutura ágil.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fas fa-shield-halved tech-icon text-success"></i>
-                        <h6 class="tech-name">Segurança</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.security">Proteção de dados, vulnerabilidades e OWASP.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fas fa-brain tech-icon text-info"></i>
-                        <h6 class="tech-name">IA</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.ai">Integração com LLMs e ferramentas de GenAI.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="tech-card">
-                        <i class="fas fa-users-gear tech-icon text-secondary"></i>
-                        <h6 class="tech-name">Agile</h6>
-                        <div class="tech-overlay">
-                            <span class="tech-desc" data-i18n="tech.agile">Metodologias ágeis (Scrum/Kanban) para projetos.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Show More Button -->
-        <div class="text-center mt-5">
-            <button id="showMoreTechsBtn" class="btn btn-outline-primary rounded-pill px-5" type="button">
-                <span data-i18n="tech.showMore">Ver Mais Tecnologias</span>
-                <i class="fas fa-chevron-down ms-2"></i>
-            </button>
-        </div>
     </div>
-</section>
+    </div>
+    </div>
+    </section>
 
+    <!-- Projetos -->
+    <section id="projetos" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" data-i18n="projects.title">Projetos</h2>
+
+            <div class="projects-expandable-wrapper" id="projectsWrapper">
+                <div class="row g-4">
+                    <!-- RealWorld Automation -->
+                    <div class="col-md-6 col-lg-4 project-card">
+                        <div class="custom-card p-4 d-flex flex-column border-primary border-opacity-25"
+                            style="background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(var(--primary-rgb), 0.02) 100%);">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
+                                    <i class="fas fa-vial fa-2x"></i>
+                                </div>
+                                <a href="https://github.com/rafaeldiasgarcia/realworld-automation" target="_blank"
+                                    class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                            <h4 class="fw-bold" data-i18n="projects.realworld.title">RealWorld Automation</h4>
+                            <p class="text-muted small flex-grow-1" data-i18n="projects.realworld.description">
+                                Full-stack automation lab: testes E2E com Playwright para o app RealWorld Conduit
+                                (Angular + Spring Boot + PostgreSQL), containerizado com Docker.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark border">Playwright</span>
+                                <span class="badge bg-light text-dark border">Angular</span>
+                                <span class="badge bg-light text-dark border">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MasterSys Academia -->
+                    <div class="col-md-6 col-lg-4 project-card">
+                        <div class="custom-card p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
+                                    <i class="fas fa-dumbbell fa-2x"></i>
+                                </div>
+                                <a href="https://github.com/rafaeldiasgarcia/mastersys-academia" target="_blank"
+                                    class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                            <h4 class="fw-bold" data-i18n="projects.mastersys.title">MasterSys Academia</h4>
+                            <p class="text-muted small flex-grow-1" data-i18n="projects.mastersys.description">
+                                Projeto de back-end com Spring Boot focado em gestão de academias. Implementação de
+                                versionamento de banco de dados com Flyway, JPA e Lombok.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark border">Java</span>
+                                <span class="badge bg-light text-dark border">Spring Boot</span>
+                                <span class="badge bg-light text-dark border">Flyway</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partituras API -->
+                    <div class="col-md-6 col-lg-4 project-card">
+                        <div class="custom-card p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
+                                    <i class="fas fa-music fa-2x"></i>
+                                </div>
+                                <a href="https://github.com/rafaeldiasgarcia/partituras-api" target="_blank"
+                                    class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                            <h4 class="fw-bold" data-i18n="projects.partituras.title">Partituras API</h4>
+                            <p class="text-muted small flex-grow-1" data-i18n="projects.partituras.description">
+                                API REST em Spring Boot para gerenciar partituras, praticando arquitetura em camadas,
+                                validações e boas práticas do programa Crescer.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark border">Java</span>
+                                <span class="badge bg-light text-dark border">Spring Boot</span>
+                                <span class="badge bg-light text-dark border">JPA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfólio & Blog -->
+                    <div class="col-md-6 col-lg-4 project-card">
+                        <div class="custom-card p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
+                                    <i class="fas fa-globe fa-2x"></i>
+                                </div>
+                                <a href="https://github.com/rafaeldiasgarcia/rafaeldiasgarcia.github.io" target="_blank"
+                                    class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                            <h4 class="fw-bold" data-i18n="projects.portfolio.title">Portfólio & Blog</h4>
+                            <p class="text-muted small flex-grow-1" data-i18n="projects.portfolio.description">
+                                Código-fonte deste site. Desenvolvido com HTML, CSS e JavaScript Vanilla, com sistema de
+                                multi-idiomas nativo e geração de blog estático.
+                            </p>
+                            <div class="mt-3">
+                                <span class="badge bg-light text-dark border">HTML/CSS</span>
+                                <span class="badge bg-light text-dark border">JavaScript</span>
+                                <span class="badge bg-light text-dark border">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="drawer-mask"></div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="col-12 text-center mt-4">
+                <button id="showMoreProjectsBtn" class="btn btn-outline-primary btn-lg rounded-pill px-5" type="button">
+                    <span data-i18n="projects.showMore">Ver Mais Projetos</span>
+                    <i class="fas fa-chevron-down ms-2"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Experiência -->
+    <section id="experiencia" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5" data-i18n="experience.title">Experiência Profissional</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="experience-expandable-wrapper" id="experienceWrapper">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <span class="badge bg-primary mb-2" data-i18n="experience.current">Atual</span>
+                            <h5 class="fw-bold mb-1" data-i18n="experience.cwi.company">CWI Software (Crescer)</h5>
+                            <p class="text-primary fw-medium mb-2" data-i18n="experience.cwi.position">Estagiário</p>
+                            <p class="text-muted small" data-i18n="experience.cwi.description">
+                                Capacitação intensiva em desenvolvimento de software corporativo focando em Java e
+                                Angular.
+                                Práticas de DevOps, Segurança e Metodologias Ágeis em ambiente simulado de alta
+                                performance.
+                            </p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <span class="badge bg-secondary mb-2">2024</span>
+                            <h5 class="fw-bold mb-1" data-i18n="experience.conservatory.company">Conservatório de Tatuí
+                            </h5>
+                            <p class="text-secondary fw-medium mb-2" data-i18n="experience.conservatory.position">
+                                Bolsista - Camerata de Violões</p>
+                            <p class="text-muted small" data-i18n="experience.conservatory.description">
+                                Atuação profissional como músico, desenvolvendo disciplina rigorosa, trabalho em equipe
+                                e gestão de tempo sob pressão de apresentações públicas.
+                            </p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-item" style="border-left-color: transparent;">
+                            <span class="badge bg-secondary mb-2">2020 - 2021</span>
+                            <h5 class="fw-bold mb-1" data-i18n="experience.microtec.company">Microtec Papelaria e
+                                Informática</h5>
+                            <p class="text-secondary fw-medium mb-2" data-i18n="experience.microtec.position">Estagiário
+                            </p>
+                            <p class="text-muted small" data-i18n="experience.microtec.description">
+                                Suporte técnico (hardware/software), gestão de inventário e atendimento ao cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Show More Button -->
+                    <div class="text-center mt-4">
+                        <button id="showMoreExperienceBtn" class="btn btn-outline-primary rounded-pill px-5"
+                            type="button">
+                            <span data-i18n="experience.showMore">Ver Mais Experiências</span>
+                            <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Projetos -->
-<section id="projetos" class="py-5 bg-white">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5" data-i18n="projects.title">Projetos</h2>
-
-        <div class="projects-expandable-wrapper" id="projectsWrapper">
-            <div class="row g-4">
-                <!-- SGE - Sistema de Gerenciamento de Eventos -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column border-primary border-opacity-25" style="background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(var(--primary-rgb), 0.02) 100%);">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-calendar-check fa-2x"></i>
-                            </div>
-                            <a href="https://github.com/rafaeldiasgarcia/SGE" target="_blank" class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="sge.title">SGE - Sistema de Gerenciamento de Eventos</h4>
-                        <p class="text-muted small flex-grow-1" data-i18n="sge.description">
-                            Sistema completo para gestão de eventos acadêmicos e esportivos na UNIFIO. Desenvolvido com foco em escalabilidade e controle de acesso robusto (RBAC).
-                        </p>
-                        <div class="mt-3 sge-quick-info mb-2">
-                            <div class="d-flex align-items-center gap-2 mb-1">
-                                <i class="fab fa-docker text-primary" style="width: 16px;"></i>
-                                <small class="text-muted" style="font-size: 0.75rem;">Docker ready: php, mysql, pma</small>
-                            </div>
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="fas fa-key text-primary" style="width: 16px;"></i>
-                                <small class="text-muted" style="font-size: 0.75rem;">Login: sadmin / sadmin</small>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <span class="badge bg-light text-dark border">PHP 8.2</span>
-                            <span class="badge bg-light text-dark border">MySQL</span>
-                            <span class="badge bg-light text-dark border">RBAC</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Classificador LLMOps -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-robot fa-2x"></i>
-                            </div>
-                            <a href="https://github.com/rafaeldiasgarcia/classificador-texto-llmops" target="_blank" class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="projects.llm.title">Classificador de Texto LLMOps</h4>
-                        <div class="mb-3">
-                            <span class="badge bg-dark text-white"><i class="fas fa-star text-warning me-1"></i><span data-i18n="projects.llm.badge">Gemini AI Powered</span></span>
-                        </div>
-                        <p class="text-muted small flex-grow-1" data-i18n="projects.llm.description">
-                            Sistema de classificação de feedbacks usando fine-tuning (DistilBERT) com deploy via Docker e API FastAPI.
-                        </p>
-                        <p class="text-muted small"><em class="text-primary small" data-i18n="projects.llm.note">Feito inteiramente com Gemini AI para iFood GenAI.</em></p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark border">Python</span>
-                            <span class="badge bg-light text-dark border">PyTorch</span>
-                            <span class="badge bg-light text-dark border">Docker</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Partituras API -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-music fa-2x"></i>
-                            </div>
-                            <a href="https://github.com/rafaeldiasgarcia/partituras-api" target="_blank" class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="projects.partituras.title">Partituras API</h4>
-                        <p class="text-muted small flex-grow-1" data-i18n="projects.partituras.description">
-                            API REST em Spring Boot para gerenciar partituras, praticando arquitetura em camadas, validações e boas práticas do programa Crescer.
-                        </p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark border">Java</span>
-                            <span class="badge bg-light text-dark border">Spring Boot</span>
-                            <span class="badge bg-light text-dark border">JPA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TodoApp -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-tasks fa-2x"></i>
-                            </div>
-                            <a href="https://github.com/rafaeldiasgarcia/TodoApp" target="_blank" class="text-secondary"><i class="fab fa-github fa-lg"></i></a>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="projects.todo.title">Task Manager Pro</h4>
-                        
-                        <p class="text-muted small flex-grow-1" data-i18n="projects.todo.description">
-                            Sistema de gerenciamento de tarefas desktop com Swing. Prioridades, categorias, observações e exportação CSV/JSON.
-                        </p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark border">Java 21</span>
-                            <span class="badge bg-light text-dark border">Swing</span>
-                            <span class="badge bg-light text-dark border">Desktop</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- WeatherNow -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-cloud-sun fa-2x"></i>
-                            </div>
-                            <div>
-                                <a href="https://weather-now-lyart.vercel.app/" target="_blank" class="text-secondary me-2"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/rafaeldiasgarcia/WeatherNow" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="projects.weather.title">WeatherNow</h4>
-                        <p class="text-muted small flex-grow-1" data-i18n="projects.weather.description">Dashboard de clima consumindo API OpenWeatherMap. Features de tema dark/light e requisições assíncronas.</p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark border">JS</span>
-                            <span class="badge bg-light text-dark border">API</span>
-                            <span class="badge bg-light text-dark border">CSS3</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Violão -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-guitar fa-2x"></i>
-                            </div>
-                            <div>
-                                <a href="https://rafaeldiasgarcia.github.io/tecnicas-violao-classico/" target="_blank" class="text-secondary me-2"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/rafaeldiasgarcia/tecnicas-violao-classico" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="projects.guitar.title">Violão Clássico</h4>
-                        <p class="text-muted small flex-grow-1" data-i18n="projects.guitar.description">Guia interativo open-source para a comunidade de violonistas. Recurso educacional colaborativo.</p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark border">HTML</span>
-                            <span class="badge bg-light text-dark border">Comunidade</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bookshelf API -->
-                <div class="col-md-6 col-lg-4 project-card">
-                    <div class="custom-card p-4 d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <div class="bg-warning bg-opacity-10 text-primary p-3 rounded-3">
-                                <i class="fas fa-book fa-2x"></i>
-                            </div>
-                            <a href="https://github.com/rafaeldiasgarcia/BookshelfAPI" target="_blank" class="text-secondary"><i class="fab fa-github"></i></a>
-                        </div>
-                        <h4 class="fw-bold" data-i18n="projects.bookshelf.title">Bookshelf API</h4>
-                        <p class="text-muted small flex-grow-1" data-i18n="projects.bookshelf.description">API RESTful com Node.js e Express. CRUD completo de livros com persistência local em JSON.</p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark border">Node.js</span>
-                            <span class="badge bg-light text-dark border">Express</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="drawer-mask"></div>
-        </div>
-
-        <!-- Show More Button -->
-        <div class="col-12 text-center mt-4">
-            <button id="showMoreProjectsBtn" class="btn btn-outline-primary btn-lg rounded-pill px-5" type="button">
-                <span data-i18n="projects.showMore">Ver Mais Projetos</span>
-                <i class="fas fa-chevron-down ms-2"></i>
-            </button>
-        </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experiência -->
-<section id="experiencia" class="py-5">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5" data-i18n="experience.title">Experiência Profissional</h2>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="experience-expandable-wrapper" id="experienceWrapper">
-                    <!-- Item 1 -->
-                    <div class="timeline-item">
-                        <span class="badge bg-primary mb-2" data-i18n="experience.current">Atual</span>
-                        <h5 class="fw-bold mb-1" data-i18n="experience.cwi.company">CWI Software (Crescer)</h5>
-                        <p class="text-primary fw-medium mb-2" data-i18n="experience.cwi.position">Estagiário</p>
-                        <p class="text-muted small" data-i18n="experience.cwi.description">
-                            Capacitação intensiva em desenvolvimento de software corporativo focando em Java e Angular.
-                            Práticas de DevOps, Segurança e Metodologias Ágeis em ambiente simulado de alta performance.
-                        </p>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="timeline-item">
-                        <span class="badge bg-secondary mb-2">2024</span>
-                        <h5 class="fw-bold mb-1" data-i18n="experience.conservatory.company">Conservatório de Tatuí</h5>
-                        <p class="text-secondary fw-medium mb-2" data-i18n="experience.conservatory.position">Bolsista - Camerata de Violões</p>
-                        <p class="text-muted small" data-i18n="experience.conservatory.description">
-                            Atuação profissional como músico, desenvolvendo disciplina rigorosa, trabalho em equipe e gestão de tempo sob pressão de apresentações públicas.
-                        </p>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="timeline-item" style="border-left-color: transparent;">
-                        <span class="badge bg-secondary mb-2">2020 - 2021</span>
-                        <h5 class="fw-bold mb-1" data-i18n="experience.microtec.company">Microtec Papelaria e Informática</h5>
-                        <p class="text-secondary fw-medium mb-2" data-i18n="experience.microtec.position">Estagiário</p>
-                        <p class="text-muted small" data-i18n="experience.microtec.description">
-                            Suporte técnico (hardware/software), gestão de inventário e atendimento ao cliente.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Show More Button -->
-                <div class="text-center mt-4">
-                    <button id="showMoreExperienceBtn" class="btn btn-outline-primary rounded-pill px-5" type="button">
-                        <span data-i18n="experience.showMore">Ver Mais Experiências</span>
-                        <i class="fas fa-chevron-down ms-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- build:latest-posts:start -->
+    <!-- build:latest-posts:start -->
 <section id="ultimos-posts" class="py-5 bg-white">
     <div class="container">
         <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between gap-3 mb-5">
@@ -795,24 +782,26 @@
 </section>
 <!-- build:latest-posts:end -->
 
-<!-- Contact Section -->
-<section id="contato" class="py-5 text-center">
-    <div class="container">
-        <h2 class="fw-bold mb-4" style="color: var(--text-primary);" data-i18n="footer.title">Vamos conversar?</h2>
-        <p class="mb-5 text-secondary" data-i18n="footer.description">Estou aberto a oportunidades em desenvolvimento web (Backend/Fullstack).</p>
+    <!-- Contact Section -->
+    <section id="contato" class="py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-4" style="color: var(--text-primary);" data-i18n="footer.title">Vamos conversar?</h2>
+            <p class="mb-5 text-secondary" data-i18n="footer.description">Estou aberto a oportunidades em
+                desenvolvimento web (Backend/Fullstack).</p>
 
-        <div class="d-flex justify-content-center flex-column flex-sm-row gap-3 mb-0">
-            <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#contactModal">
-                <i class="fas fa-envelope me-2"></i><span data-i18n="footer.sendEmail">Enviar Email</span>
-            </button>
-            <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank" class="btn btn-outline-primary px-4">
-                <i class="fab fa-linkedin me-2"></i><span data-i18n="footer.linkedin">LinkedIn</span>
-            </a>
+            <div class="d-flex justify-content-center flex-column flex-sm-row gap-3 mb-0">
+                <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    <i class="fas fa-envelope me-2"></i><span data-i18n="footer.sendEmail">Enviar Email</span>
+                </button>
+                <a href="https://www.linkedin.com/in/rafaeldiasgarcia/" target="_blank"
+                    class="btn btn-outline-primary px-4">
+                    <i class="fab fa-linkedin me-2"></i><span data-i18n="footer.linkedin">LinkedIn</span>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- build:footer:start -->
+    <!-- build:footer:start -->
 <!-- Footer -->
 <footer class="py-5 text-center">
     <div class="container">
@@ -831,114 +820,118 @@
 </footer>
 <!-- build:footer:end -->
 
-<!-- Certificados Modal -->
-<div class="modal fade" id="certsModal" tabindex="-1" aria-labelledby="certsModalLabel">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-        <div class="modal-content border-0 shadow-lg">
-            <div class="modal-header border-0 pb-0">
-                <h5 class="modal-title fw-bold d-flex align-items-center text-primary" id="certsModalLabel">
-                    <span data-i18n="certs.title">Certificados & Cursos</span>
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="list-group list-group-flush certs-list border-0">
-                    <!-- CS50 Harvard -->
-                    <div class="list-group-item p-3 mb-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1 fw-bold" data-i18n="certs.cs50">CS50: Introduction to Computer Science</h6>
-                                <small class="text-muted" data-i18n="certs.cs50.org">Harvard University</small>
+    <!-- Certificados Modal -->
+    <div class="modal fade" id="certsModal" tabindex="-1" aria-labelledby="certsModalLabel">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold d-flex align-items-center text-primary" id="certsModalLabel">
+                        <span data-i18n="certs.title">Certificados & Cursos</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="list-group list-group-flush certs-list border-0">
+                        <!-- CS50 Harvard -->
+                        <div class="list-group-item p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n="certs.cs50">CS50: Introduction to Computer
+                                        Science</h6>
+                                    <small class="text-muted" data-i18n="certs.cs50.org">Harvard University</small>
+                                </div>
+                                <a href="assets/certificates/cs50x.pdf" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="assets/certificates/cs50x.pdf" target="_blank" rel="noopener"
-                               class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
-                    </div>
 
-                    <!-- Cisco JavaScript -->
-                    <div class="list-group-item p-3 mb-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1 fw-bold" data-i18n="certs.cisco">JavaScript Essentials</h6>
-                                <small class="text-muted" data-i18n="certs.cisco.org">Cisco Networking Academy</small>
+                        <!-- Cisco JavaScript -->
+                        <div class="list-group-item p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n="certs.cisco">JavaScript Essentials</h6>
+                                    <small class="text-muted" data-i18n="certs.cisco.org">Cisco Networking
+                                        Academy</small>
+                                </div>
+                                <a href="assets/certificates/cisco-js.pdf" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary btn-view" title="Visualizar Badge">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="assets/certificates/cisco-js.pdf" target="_blank" rel="noopener"
-                               class="btn btn-outline-primary btn-view" title="Visualizar Badge">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
-                    </div>
 
-                    <!-- Huawei Python -->
-                    <div class="list-group-item p-3 mb-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1 fw-bold" data-i18n="certs.huawei">Python Advanced</h6>
-                                <small class="text-muted" data-i18n="certs.huawei.org">Huawei Talent Online</small>
+                        <!-- Huawei Python -->
+                        <div class="list-group-item p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n="certs.huawei">Python Advanced</h6>
+                                    <small class="text-muted" data-i18n="certs.huawei.org">Huawei Talent Online</small>
+                                </div>
+                                <a href="assets/certificates/huawei-talent-online.pdf" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="assets/certificates/huawei-talent-online.pdf" target="_blank" rel="noopener"
-                               class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
-                    </div>
 
-                    <!-- UNINTER English -->
-                    <div class="list-group-item p-3 mb-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1 fw-bold" data-i18n="certs.english">Advanced English (C1)</h6>
-                                <small class="text-muted" data-i18n="certs.english.org">UNINTER - U-BEST</small>
+                        <!-- UNINTER English -->
+                        <div class="list-group-item p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n="certs.english">Advanced English (C1)</h6>
+                                    <small class="text-muted" data-i18n="certs.english.org">UNINTER - U-BEST</small>
+                                </div>
+                                <a href="assets/certificates/uninter-ingles-avancado.pdf" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="assets/certificates/uninter-ingles-avancado.pdf" target="_blank" rel="noopener"
-                               class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
-                    </div>
 
-                    <!-- DevDojo Java & Spring Boot -->
-                    <div class="list-group-item p-3 mb-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1 fw-bold" data-i18n="certs.devdojo">Maratona Java & Spring Boot</h6>
-                                <small class="text-muted" data-i18n="certs.devdojo.org">DevDojo</small>
+                        <!-- DevDojo Java & Spring Boot -->
+                        <div class="list-group-item p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n="certs.devdojo">Maratona Java & Spring Boot</h6>
+                                    <small class="text-muted" data-i18n="certs.devdojo.org">DevDojo</small>
+                                </div>
+                                <a href="assets/certificates/devdojo.pdf" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="assets/certificates/devdojo.pdf" target="_blank" rel="noopener"
-                               class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
-                    </div>
 
-                    <!-- CWI Level 1 -->
-                    <div class="list-group-item p-3 mb-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1 fw-bold" data-i18n="certs.cwi">CWI Level 1</h6>
-                                <small class="text-muted" data-i18n="certs.cwi.org">CWI Crescer</small>
+                        <!-- CWI Level 1 -->
+                        <div class="list-group-item p-3 mb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n="certs.cwi">CWI Level 1</h6>
+                                    <small class="text-muted" data-i18n="certs.cwi.org">CWI Crescer</small>
+                                </div>
+                                <a href="assets/certificates/cwi-level1.pdf" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="assets/certificates/cwi-level1.pdf" target="_blank" rel="noopener"
-                               class="btn btn-outline-primary btn-view" title="Visualizar Certificado">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer border-0 pt-0">
-                <span class="me-auto text-muted small ps-2">
-                    <i class="fas fa-info-circle me-1"></i><span data-i18n="certs.info">Clique no ícone para visualizar o certificado</span>
-                </span>
-                <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal" data-i18n="contact.close">Fechar</button>
+                <div class="modal-footer border-0 pt-0">
+                    <span class="me-auto text-muted small ps-2">
+                        <i class="fas fa-info-circle me-1"></i><span data-i18n="certs.info">Clique no ícone para
+                            visualizar o certificado</span>
+                    </span>
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal"
+                        data-i18n="contact.close">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- build:contact-modal:start -->
+    <!-- build:contact-modal:start -->
 <!-- Contact Modal -->
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel">
     <div class="modal-dialog modal-dialog-centered">
@@ -987,13 +980,14 @@
 </div>
 <!-- build:contact-modal:end -->
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Custom JS (Local File) -->
-<script src="assets/js/script.js"></script>
+    <!-- Custom JS (Local File) -->
+    <script src="assets/js/script.js"></script>
 
-<!-- i18n JS (Local File) - Load after main script to ensure tooltips are initialized -->
-<script src="assets/js/i18n.js"></script>
+    <!-- i18n JS (Local File) - Load after main script to ensure tooltips are initialized -->
+    <script src="assets/js/i18n.js"></script>
 </body>
+
 </html>
